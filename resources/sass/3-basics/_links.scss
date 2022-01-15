@@ -1,0 +1,22 @@
+a {
+  text-decoration: none;
+  &:hover,
+  &:focus {
+  }
+  &:active {
+  }
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+.link {
+  &:visited {
+    color: rgb(41, 159, 243) !important;
+    color: rgb(41, 159, 243);
+  }
+  &:hover {
+    color: rgb(86, 184, 255);
+    text-decoration: underline;
+  }
+}

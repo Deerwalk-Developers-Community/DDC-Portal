@@ -1,0 +1,161 @@
+#description-page{
+    //   body 
+#descriptionpage{
+    background-color: white;
+}
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
+  /* font-family: 'Baloo 2', cursive; */
+  /* for top anchor tag to navigate between previous page */
+  .eventName{
+      padding:2vh;
+  }
+  .eventName>a{
+      font-size: 20px;
+  }
+  /* for actual image banner */
+.eventDetails{
+    display: flex;
+    justify-content: space-evenly;
+}
+.eventBannerimage{
+    margin:30px;
+    height:50vh;
+    width: 70vw;
+    border:2px solid black;
+    border-radius: 20px;
+}
+.eventDescriptionabout{
+    padding:20vh 5vh 0vh 5vh;
+    font-size: 25px;
+}
+.button{
+    padding-top: 5vh;
+    margin:auto;
+    width:50%
+}
+.btnPrimary{
+  background-color:lightblue;
+  color: black;
+  
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+.btnPrimary:hover{
+    background-color: black;
+    color: white;
+}
+ .aButton{
+    text-decoration: none;
+    font-size: 16px;
+    color:white;
+}
+  /* for Trainer */
+.eventTrainerheading{
+    padding-top:20px;
+    text-align: center;
+
+}
+#eventTrainer{
+    display:flex;
+    justify-content: space-between;
+}
+
+.eventTrainer1{
+    padding-right: 60px;
+}
+.eventTrainer2{
+    padding-right: 60px;
+}
+
+.eventTrainername{
+    /* text-align: center; */
+    padding-left: 15vh;
+    margin:2vh 0vh;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Baloo 2', cursive; 
+}
+.eventTrainerinfo{
+    font-size: 20px;
+    padding-left:10px;
+}
+.eventTrainerimage{
+
+    width:400px;
+    clip-path: circle();
+}
+@media only screen and (max-width: 600px ) {
+    .eventTrainerHeading{
+        text-align: center;
+    }
+    .eventTrainerinfo{
+       padding-left: 5vh;
+       text-align: center;
+    }
+    .socialLinks{
+        justify-content: center;
+    }
+    #eventTrainer{
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .eventTrainer1{
+        padding-top: 30px;
+      padding-bottom: 30px;
+      padding-right: 40px; 
+
+    }
+    .eventTrainer2{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    /* dfkldf */
+    .eventDetails{
+        display:flex;
+        flex-direction: column;
+    }
+    .eventBannerimage{
+        margin:2px;
+    }
+    .eventDescriptionabout{
+        padding-top: 20px;;
+    }
+
+  }
+  
+/* social links  */
+.socialLinks {
+    padding-left:5vh;
+    margin-top: 20px; /*use any margin that u need*/
+    display: flex;
+   
+  }
+  .aSocialLinks {
+    height: 5vh;
+    width: 5vh;
+    margin: 0 10px; /*as bigger margin as farther from each other will be social links*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color:rgb(79, 79, 148);
+      /*use the same color that body background or any other matching color that u like*/
+    border-radius: 50%; /*50% make round shape,
+    u can use border-radius less than 50% to have oval shape*/
+    border: 1px solid rgba(214, 202, 214, 0.72);
+    box-shadow: 8px 8px 12px -2px rgb(187, 192, 196),
+      -5px -5px 9px -2px rgb(173, 177, 177);
+    transition: transform 1s; /*any transition number from 0.3s to 1s*/
+  }
+  .aSocialLinks:hover{
+    box-shadow: inset 6px 6px 8px -2px rgb(168, 170, 172),
+    inset -6px -6px 8px -2px rgb(193, 211, 214),
+    0px 12px 10px -10px rgb(124, 146, 143);
+  border: 2px solid rgba(194, 171, 194, 0.3);
+  transform: translateY(3px);
+  };
+}

@@ -1,0 +1,31 @@
+#menu-11 {
+  background-color: black;
+  @include flex(none, center);
+  flex-direction: column;
+  #st-logo {
+    margin-top: 2.5rem;
+    @include flex(center, center);
+    img {
+      height: 8rem;
+    }
+  }
+  #menu-list {
+    width: 100%;
+    margin: 2.5rem 0rem;
+    li {
+      text-align: center;
+      transition: background-color ease-in-out 500ms;
+      &:hover {
+        transition: background-color ease-in-out 200ms;
+        background-color: rgb(44, 44, 44);
+      }
+
+      font-size: 1.6rem;
+    }
+  }
+}
+
+// ____side drawer
+.st-effect-11.st-menu-open .st-effect-11.st-menu {
+  cursor: help;
+}

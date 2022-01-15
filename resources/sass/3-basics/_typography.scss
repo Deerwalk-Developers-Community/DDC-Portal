@@ -1,0 +1,24 @@
+.aeonik_base {
+  font-family: 'aeonik-bold', sans-serif;
+}
+.consolas_base {
+  font-family: 'consolas-regular', sans-serif;
+}
+.inter_base {
+  font-family: 'inter-regular', sans-serif;
+}
+
+.aeonik_bold {
+  @extend .aeonik_base;
+  font-weight: 700;
+}
+
+.consolas_regular {
+  @extend .consolas_base;
+  font-weight: 400;
+}
+
+.inter_regular {
+  @extend .inter_base;
+  font-weight: 400;
+}

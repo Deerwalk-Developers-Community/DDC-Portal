@@ -1,0 +1,65 @@
+#public-header {
+  width: 100%;
+  margin-top: 5rem;
+  nav {
+    #right-nav {
+      button {
+        border-radius: 0.5rem;
+        border: 1px solid rgb(50, 49, 49);
+        background-color: transparent;
+        color: white;
+        font-size: 1.7rem;
+        padding: 0.5rem 1rem;
+        transition: background-color ease-out 400ms;
+        &:hover {
+          transition: background-color ease-out 500ms;
+          background-color: #47a7f5;
+        }
+      }
+    }
+
+    // background-color: red;
+    padding: 0rem 1rem;
+    @include flexi();
+    flex-wrap: wrap;
+    justify-content: space-around;
+    ul {
+      @include flexi();
+      list-style: none;
+
+      #logo {
+        height: 6rem;
+      }
+      li {
+        @include media('<=562px') {
+          margin: 1.5rem 0rem;
+        }
+        a {
+          font-size: 1.7rem;
+          color: white;
+        }
+      }
+    }
+    ul:nth-child(1) {
+      li {
+        img {
+        }
+      }
+    }
+    ul:nth-child(2) {
+      li {
+        margin: 0rem 2rem;
+      }
+    }
+    ul:nth-child(2) {
+      li {
+        margin: 0rem 2rem;
+      }
+    }
+  }
+}
+
+// header inner content block
+.main {
+  max-width: 150rem !important;
+}

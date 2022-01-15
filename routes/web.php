@@ -1,5 +1,13 @@
 <?php
 
+use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\MembersController;
+use App\Http\Controllers\Admin\PostsController;
+use App\Http\Controllers\BlogsController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UsersController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +21,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index']) -> name('home');
 
-Auth::routes();
+Route::get('/event', function () {
+    return view('event');
+}) -> name('event');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/aboutus', [AboutUsController::class, 'index'])->name('aboutus');
+Route::get('/blogs', [BlogsController::class, 'index'])->name('blogs');
+
+Auth::routes(['register' => false]);
+
+// admin
+Route::get('/admin/', [DashboardController::class, 'index'])->name('admin-dashboard');
+Route::get('/admin/posts', [PostsController::class, 'index'])->name('admin-posts');
+Route::get('/admin/members', [MembersController::class, 'index'])->name('admin-members');
+Route::get('/admin/users', [UsersController::class, 'index'])->name('admin-users');

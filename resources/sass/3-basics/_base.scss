@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+}
+
+html {
+    overflow-x: hidden;
+}
+body {
+    // cursor: none;
+
+    position: relative;
+    background-color: rgb(60, 60, 61) !important;
+}
+.st-content {
+    background-color: #000000 !important;
+}
+
+// !remove blue background in mobile screen
+* {
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-highlight: none;
+}
+button,
+div {
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-highlight: none;
+}
+a {
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-highlight: none;
+}
+::selection {
+    background-color: black;
+    color: white;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    // background-position: center;
+    // background-size: cover;
+    // background-image: url(../img/generalImage/backgroundI.jpg);
+}
+
+button,
+input {
+    outline: none;
+}
+
+:root {
+    font-size: 10px;
+
+    @media only screen and (max-width: 900px) {
+        font-size: 8px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 10px;
+    }
+
+    @media only screen and (max-width: 400px) {
+        font-size: 5px;
+    }
+
+    @media screen and (max-width: 20000px) and (min-width: 1800px) {
+        font-size: 0.5vw;
+    }
+}
