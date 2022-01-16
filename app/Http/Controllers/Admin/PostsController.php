@@ -11,4 +11,9 @@ class PostsController extends Controller
     {
         return view('admin.posts');
     }
+
+    // add post page
+    public function addPost() {
+        return view('admin.addPost');
+    }
 }

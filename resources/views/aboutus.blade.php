@@ -106,16 +106,17 @@
                 </div>
 
                 <div id="member-container">
+                    @foreach ($members as $member)
                     <div class="member-cards">
                         <div class="left">
-                            <img src="./assets/images/avatar/avatar-placeholder.jpg" alt="" />
+                            <img src="{{ Storage::url('images/'. $member->image) }}" alt="" />
                         </div>
                         <div class="right">
-                            <h2>KP OLI SHARMA</h2>
-                            <h4>Fullstack Developer</h4>
-                            <p>
+                            <h2>{{ $member->name }}</h2>
+                            <h4>{{ $member->role }}</h4>
+                            {{-- <p>
                                 Lorem, ipsum dolor sit amet consectetur adipisicing
-                            </p>
+                            </p> --}}
 
                             <div class="social-links-container">
                                 <a href=""><img src="./assets/images/icons/facebook.png" alt="" /></a <a href=""><img
@@ -124,6 +125,8 @@
                             </div>
                         </div>
                     </div>
+
+                    @endforeach
             </section>
 
             <section id="faq-section">

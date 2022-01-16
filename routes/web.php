@@ -35,5 +35,8 @@ Auth::routes(['register' => false]);
 // admin
 Route::get('/admin/', [DashboardController::class, 'index'])->name('admin-dashboard');
 Route::get('/admin/posts', [PostsController::class, 'index'])->name('admin-posts');
+Route::get('/admin/posts/add', [PostsController::class, 'addPost'])->name('admin-posts-add');
 Route::get('/admin/members', [MembersController::class, 'index'])->name('admin-members');
+Route::get('/admin/members/executive/add', [MembersController::class, 'addExecutive'])->name('admin-members-executive-add');
+Route::post('/admin/members/executive/add', [MembersController::class, 'storeExecutive']);
 Route::get('/admin/users', [UsersController::class, 'index'])->name('admin-users');
