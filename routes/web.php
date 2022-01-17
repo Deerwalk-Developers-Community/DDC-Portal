@@ -4,9 +4,9 @@ use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MembersController;
 use App\Http\Controllers\Admin\PostsController;
+use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
