@@ -46,6 +46,7 @@ class PostsController extends Controller
         ]);
 
 
+        // check and store image
         if ($request->hasFile('image')) {
 
             $image_name = $request->image->store("public/images");

@@ -47,7 +47,8 @@ class UsersController extends Controller
             'role' => ['required', 'integer', 'min:1', 'max:5']
         ]);
 
-        // check if current user role is 1 or 2
+        // 
+        // todo: check if current user role is 1 or 2
 
 
         // create user
