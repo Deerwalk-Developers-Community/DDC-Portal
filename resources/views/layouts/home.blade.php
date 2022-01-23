@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Deerwalk Developers Community</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/logo/logo.png') }}">
+
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 </head>
 

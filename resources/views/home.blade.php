@@ -7,27 +7,25 @@
         <div class="contentBlock" id="hero-section">
             <div class="left-division">
                 <div class="tag-block-wrapper">
-                    Introducing DDC
-                    <div class="dart-circle">⬤</div>
+                    Deerwalk Developers Community
+                    {{-- <div class="dart-circle">⬤</div>
                     <a class="link" href="#"> read post
                         <BsArrowRight />
-                    </a>
+                    </a> --}}
                 </div>
 
                 <h1 class="title-heading aeonik_bold">
-                    Build amazing real-time <br />
-                    collaborative products
+                    Introduction to Deerwalk Developers Community
                 </h1>
 
                 <p class="inter_regular title-paragraph">
-                    Liveblocks is a set of APIs and tools that helps you create
-                    performant and reliable collaborative experiences in
-                    minutes.
+                    Deerwalk Developers Community is a platform at DWIT (Deerwalk Institute of Technology) for students
+                    having the same interest to team up together and learn from each other through projects.
                 </p>
-                <button class="gradientBtn ripple">
+                {{-- <button class="gradientBtn ripple">
                     Start now
                     <BsArrowRight />
-                </button>
+                </button> --}}
             </div>
             <div class="right-division">
                 <img class="float" src="./assets/images/mockup/plane-laptop.png" alt="" />

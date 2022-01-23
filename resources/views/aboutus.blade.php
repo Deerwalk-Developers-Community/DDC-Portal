@@ -9,12 +9,12 @@
                 <div class="left-division">
                     <h1>
                         Hello, We're <br />
-                        Community For <br />
-                        Developers
+                        Deerwalk Developers <br/>
+                        Community
                     </h1>
                 </div>
                 <div class="right-division">
-                    <img src="./assets/images/illustrator/running-girl.png" alt="" />
+                    <img src="{{ asset('images/home/aboutus/running-girl.png') }}" alt="" />
                 </div>
             </section>
 
@@ -25,77 +25,41 @@
                 </div>
                 <div id="article-container">
                     <article id="left-division">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dolores nobis quae cum. Ipsam, deserunt. Nulla iusto
-                        aliquam debitis vero, reiciendis placeat odio. Quas, quis
-                        excepturi. Eligendi velit ad incidunt sunt soluta voluptas
-                        aperiam, maxime amet? Earum veniam quaerat assumenda
-                        numquam autem cumque minus quibusdam eligendi id provident
-                        eveniet repellat tenetur, quod ipsa magnam obcaecati ex
-                        ad! Aliquam facere perspiciatis, atque odit ducimus
-                        delectus est quas consequuntur necessitatibus quod
-                        temporibus dolorem quidem quae velit provident a, omnis
-                        optio molestiae amet cupiditate ipsam cum eius facilis.
-                        Explicabo suscipit commodi vel voluptatem ipsum natus
-                        molestiae beatae atque iste ratione. Asperiores, assumenda
-                        incidunt, fuga facilis doloribus repellat aliquam dolor
-                        maxime eveniet eaque neque. Voluptatem quo qui quae earum
-                        perferendis at, odit amet iusto aspernatur laudantium
-                        cumque vel delectus asperiores quibusdam debitis culpa sed
-                        possimus. Molestiae aperiam laboriosam suscipit doloribus
-                        assumenda reprehenderit, unde exercitationem voluptas ex
-                        odit nemo enim, a non praesentium earum, eaque iure.
+                        The Deerwalk Developers Community was formed in the year 2020 with the motive to make a group of
+                        enthusiastic learners and help them learn and grow together. During the first year of the
+                        Deerwalk Developers Community’s tenure, it had been actively involved in conducting events like
+                        Hour of Code, Tech Talks, and a few workshops and Facebook live sessions.
                     </article>
                     <article id="right-division">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Velit blanditiis voluptate nam, deleniti reiciendis eius
-                        fugit dicta obcaecati autem maiores exercitationem,
-                        accusantium ab quaerat soluta, non aspernatur dignissimos
-                        reprehenderit illo quibusdam quod et repellat quas esse?
-                        Ratione nostrum minus deleniti! Impedit fugit odio a
-                        accusantium expedita perspiciatis ab. Distinctio
-                        architecto voluptates nisi itaque magni veniam iure
-                        explicabo? Ex, aliquid voluptates qui a excepturi fuga
-                        numquam id nulla possimus. Excepturi iste vitae possimus
-                        nemo in ex hic voluptas magnam, maxime expedita eius porro
-                        nisi vero aliquid debitis ipsa dolorem amet. Libero
-                        corrupti, quo vitae dolorum error accusamus eligendi
-                        distinctio magnam molestiae molestias veniam, eum earum,
-                        cumque at nulla placeat unde. Excepturi dolorum vitae
-                        quam, aliquam, optio neque illum quos sunt quibusdam atque
-                        ad iure dignissimos praesentium tenetur, in beatae odio
-                        non consectetur quo nesciunt voluptatibus consequatur
-                        possimus ullam adipisci. Iusto cumque commodi, minus atque
-                        natus recusandae pariatur temporibus dolores incidunt
-                        veritatis.
+                        With all these productive events, the community had a pretty good start even for its first year.
+                        Finally on
+                        august of 2021, the tenure for the community ended then through a selective process, DDC
+                        selected and finalized the list of its 12 members for the new tenure with Aakash Bhandari as
+                        President, Raman Lamichhane as Vice-President and Deena Sitikhu as Treasurer for DDC.
                     </article>
                 </div>
             </section>
 
             <section id="story-section">
-                <h3>Our Story</h3>
+                <h3>WHAT WE PLAN</h3>
                 <div class="line-container">
                     <hr />
                 </div>
                 <div id="story-section-container">
                     <div id="left-division">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Illum assumenda delectus perspiciatis laborum quos iusto
-                            numquam deleniti, natus odio voluptas earum fuga
-                            corporis minima neque, molestiae architecto! Fugiat
-                            fugit obcaecati commodi voluptas ea, animi perspiciatis
-                            rerum dolorum optio ullam officia magnam eius autem
-                            doloremque laborum aliquid mollitia distinctio libero
-                            excepturi cupiditate aspernatur numquam! Tenetur ratione
-                            nesciunt non nemo velit, eligendi blanditiis quas
-                            repellendus id harum commodi tempora sed reiciendis,
-                            laboriosam placeat sint, facere soluta doloribus
-                            voluptas veritatis est dolores consectetur?
+                            Deerwalk Developers Community is a platform at DWIT for students having the same interest to
+                            team up together and learn from each other through projects. During the first year of DDC,
+                            different events were conducted the community plans to conduct the same events in upcoming
+                            future. For the new tenure, the Deerwalk Developers Community plans to build the community
+                            to be more like an Open Source Developers Community. DDC will be conducting similar events
+                            like last year but this time it will be focused more on developing and maintaining open
+                            source projects. DDC also plans to introduce other new programs which are suitable for
+                            students to develop their overall skills.
                         </p>
                     </div>
                     <div id="right-division">
-                        <img src="./assets/images/illustrator/girl-meditating.png" alt="" />
+                        <img src="{{ asset('images/home/aboutus/girl-meditating.png') }}" alt="" />
                     </div>
                 </div>
             </section>
@@ -140,44 +104,26 @@
                         <div class="tabs">
                             <div class="tab">
                                 <input type="checkbox" id="chck1" />
-                                <label class="tab-label" for="chck1">what are the steps do i need to contribute?</label>
+                                <label class="tab-label" for="chck1">What is the motto of our community?</label>
                                 <div class="tab-content">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing
-                                    elit. Ipsum, reiciendis!
+                                    The motto of DDC is to provide students a platform to learn through projects.
                                 </div>
                             </div>
                             <div class="tab">
                                 <input type="checkbox" id="chck2" />
-                                <label class="tab-label" for="chck2">what is the main obstacles of ddc ?</label>
+                                <label class="tab-label" for="chck2">How can I contribute?</label>
                                 <div class="tab-content">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit. A, in!
+                                    DDC is actively conducting different events. If you wish to be a part of any event
+                                    or to contribute, contact us and keep checking the community’s Facebook page
+                                    facebook.com/ddevcommunity.
                                 </div>
                             </div>
                             <div class="tab">
                                 <input type="checkbox" id="chck3" />
-                                <label class="tab-label" for="chck3">lorem ipsum retro spectocularit vacubullary
-                                    opsticius?</label>
+                                <label class="tab-label" for="chck3">How can I be a part on an upcoming event?</label>
                                 <div class="tab-content">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit. A, in!
-                                </div>
-                            </div>
-                            <div class="tab">
-                                <input type="checkbox" id="chck4" />
-                                <label class="tab-label" for="chck4">how to be part of deerwalk developer
-                                    community?</label>
-                                <div class="tab-content">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit. A, in!
-                                </div>
-                            </div>
-                            <div class="tab">
-                                <input type="checkbox" id="chck5" />
-                                <label class="tab-label" for="chck5"> what is the motto of our community ? ?</label>
-                                <div class="tab-content">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit. A, in!
+                                    All the details about the events are kept on the events section of this website or
+                                    you can also check the community’s Facebook page.
                                 </div>
                             </div>
                         </div>
