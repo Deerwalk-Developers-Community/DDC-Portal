@@ -53,10 +53,11 @@ class PostsController extends Controller
             $image_name = explode("/", $image_name)[2];
         }
 
+        
         $request->user()->posts()->create([
             'title' => $request->title,
             'content' => $request->content,
-            'image' => $request->image,
+            'image' => $image_name,
             'github' => $request->github,
             'link' => $request->link,
             'type' => $request->type

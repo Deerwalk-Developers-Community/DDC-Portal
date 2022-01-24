@@ -7,81 +7,35 @@
     <div class="containerCenter">
         <div class="contentBlock" id="blogs-container">
             <section id="left-section">
+                @if ($featured)
                 <div id="featured-blog-card">
-                    <img src="./assets/images/background/blog-bg.jpg" alt="" />
-                    <h4>january 1,2021</h4>
-                    <h2>Featured Post Title</h2>
+                    <img src="{{ Storage::url('images/'. $featured->image) }}" alt="" />
+                    <h4>{{ $featured->created_at }}</h4>
+                    <h2>{{ $featured->title }}</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Nisi voluptate molestias reiciendis numquam vitae. Soluta
-                        repellendus qui, dolorum, laudantium sint quas quo optio
-                        sequi atque libero ad obcaecati, velit temporibus eos ab
-                        cum earum accusamus accusantium culpa iste corporis
-                        nostrum maxime perspiciatis architecto. In aperiam illum
-                        ut iste, rem iure.
+                        {{ $featured->description }}
                     </p>
                     <a href="./blog.html">
                         <button>Read more</button>
                     </a>
                 </div>
 
+                @endif
+
                 <div id="blog-card-container">
+                    @foreach ($blogs as $blog)
                     <div class="blog-cards">
-                        <img src="./assets/images/background/blog-bg.jpg" alt="" />
-                        <h4>january 1,2021</h4>
-                        <h2>Featured Post Title</h2>
+                        <img src="{{ Storage::url('images/'. $blog->image) }}" alt="" />
+                        <h4>{{ $blog->created_at }}</h4>
+                        <h2>{{ $blog->title }}</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Nisi voluptate molestias reiciendis numquam vitae.
-                            Soluta repellendus qui, dolorum, laudantium sint quas
-                            quo optio
+                            {{ $blog->description }}
                         </p>
                         <a href="./blog.html">
                             <button>Read more</button>
                         </a>
                     </div>
-                    <div class="blog-cards">
-                        <img src="./assets/images/background/blog-bg.jpg" alt="" />
-                        <h4>january 1,2021</h4>
-                        <h2>Featured Post Title</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Nisi voluptate molestias reiciendis numquam vitae.
-                            Soluta repellendus qui, dolorum, laudantium sint quas
-                            quo optio
-                        </p>
-                        <a href="./blog.html">
-                            <button>Read more</button>
-                        </a>
-                    </div>
-                    <div class="blog-cards">
-                        <img src="./assets/images/background/blog-bg.jpg" alt="" />
-                        <h4>january 1,2021</h4>
-                        <h2>Featured Post Title</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Nisi voluptate molestias reiciendis numquam vitae.
-                            Soluta repellendus qui, dolorum, laudantium sint quas
-                            quo optio
-                        </p>
-                        <a href="./blog.html">
-                            <button>Read more</button>
-                        </a>
-                    </div>
-                    <div class="blog-cards">
-                        <img src="./assets/images/background/blog-bg.jpg" alt="" />
-                        <h4>january 1,2021</h4>
-                        <h2>Featured Post Title</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Nisi voluptate molestias reiciendis numquam vitae.
-                            Soluta repellendus qui, dolorum, laudantium sint quas
-                            quo optio
-                        </p>
-                        <a href="./blog.html">
-                            <button>Read more</button>
-                        </a>
-                    </div>
+                    @endforeach
                 </div>
             </section>
             <section id="right-section">

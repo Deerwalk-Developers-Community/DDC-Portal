@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\MembersController;
 use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\BlogsController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -24,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 
 // home
 Route::get('/', [HomeController::class, 'index']) -> name('home');
-Route::get('/event', function () { return view('event');}) -> name('event');
+Route::get('/event', [EventController::class, 'index'])-> name('event');
 Route::get('/aboutus', [AboutUsController::class, 'index'])->name('aboutus');
 Route::get('/blogs', [BlogsController::class, 'index'])->name('blogs');
 

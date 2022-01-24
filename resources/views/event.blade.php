@@ -42,16 +42,24 @@
     <div class="containerCenter">
         <div class="contentBlock">
             <section id="event-card-section">
+                @foreach ($events as $event)
                 <div class="event-card">
                     <div class="workshop-avatar-ico">
-                        <img src="./assets/images/avatar/react.png" alt="" />
+                        @if ($event->image)
+
+                        <img src="{{ Storage::url('images/' . $event->image) }}" alt="" />
+
+                        @endif
                     </div>
                     <h2>
-                        React Workshop <br />
-                        -Course M104
+                        {{ $event->title }}
                     </h2>
-                    <h4>September 21<sup>st</sup></h4>
-                    <img src="./assets/images/banner/reactcourse.png" alt="" />
+                    <h4>{{ $event->created_at }}</h4>
+                    @if ($event->image)
+
+                    <img src="{{ Storage::url('images/' . $event->image) }}" alt="" />
+
+                    @endif
 
                     <div class="event-card-footer">
                         <ul>
@@ -65,171 +73,12 @@
                         </ul>
                     </div>
                 </div>
-                <div class="event-card">
-                    <div class="workshop-avatar-ico">
-                        <img src="./assets/images/avatar/react.png" alt="" />
-                    </div>
-                    <h2>
-                        React Workshop <br />
-                        -Course M104
-                    </h2>
-                    <h4>September 21<sup>st</sup></h4>
-                    <img src="./assets/images/banner/reactcourse.png" alt="" />
 
-                    <div class="event-card-footer">
-                        <ul>
-                            <li>
-                                <button class="vote-btn">
-                                    <i class="fa fa-arrow-up"></i>
-                                    <span class="vote-no">0</span>
-                                </button>
-                            </li>
-                            <li><a href=""> Explore </a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="event-card">
-                    <div class="workshop-avatar-ico">
-                        <img src="./assets/images/avatar/react.png" alt="" />
-                    </div>
-                    <h2>
-                        React Workshop <br />
-                        -Course M104
-                    </h2>
-                    <h4>September 21<sup>st</sup></h4>
-                    <img src="./assets/images/banner/reactcourse.png" alt="" />
-
-                    <div class="event-card-footer">
-                        <ul>
-                            <li>
-                                <button class="vote-btn">
-                                    <i class="fa fa-arrow-up"></i>
-                                    <span class="vote-no">0</span>
-                                </button>
-                            </li>
-                            <li><a href=""> Explore </a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="event-card">
-                    <div class="workshop-avatar-ico">
-                        <img src="./assets/images/avatar/react.png" alt="" />
-                    </div>
-                    <h2>
-                        React Workshop <br />
-                        -Course M104
-                    </h2>
-                    <h4>September 21<sup>st</sup></h4>
-                    <img src="./assets/images/banner/reactcourse.png" alt="" />
-
-                    <div class="event-card-footer">
-                        <ul>
-                            <li>
-                                <button class="vote-btn">
-                                    <i class="fa fa-arrow-up"></i>
-                                    <span class="vote-no">0</span>
-                                </button>
-                            </li>
-                            <li><a href=""> Explore </a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="event-card">
-                    <div class="workshop-avatar-ico">
-                        <img src="./assets/images/avatar/react.png" alt="" />
-                    </div>
-                    <h2>
-                        React Workshop <br />
-                        -Course M104
-                    </h2>
-                    <h4>September 21<sup>st</sup></h4>
-                    <img src="./assets/images/banner/reactcourse.png" alt="" />
-
-                    <div class="event-card-footer">
-                        <ul>
-                            <li>
-                                <button class="vote-btn">
-                                    <i class="fa fa-arrow-up"></i>
-                                    <span class="vote-no">0</span>
-                                </button>
-                            </li>
-                            <li><a href=""> Explore </a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="event-card">
-                    <div class="workshop-avatar-ico">
-                        <img src="./assets/images/avatar/react.png" alt="" />
-                    </div>
-                    <h2>
-                        React Workshop <br />
-                        -Course M104
-                    </h2>
-                    <h4>September 21<sup>st</sup></h4>
-                    <img src="./assets/images/banner/reactcourse.png" alt="" />
-
-                    <div class="event-card-footer">
-                        <ul>
-                            <li>
-                                <button class="vote-btn">
-                                    <i class="fa fa-arrow-up"></i>
-                                    <span class="vote-no">0</span>
-                                </button>
-                            </li>
-                            <li><a href=""> Explore </a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="event-card">
-                    <div class="workshop-avatar-ico">
-                        <img src="./assets/images/avatar/react.png" alt="" />
-                    </div>
-                    <h2>
-                        React Workshop <br />
-                        -Course M104
-                    </h2>
-                    <h4>September 21<sup>st</sup></h4>
-                    <img src="./assets/images/banner/reactcourse.png" alt="" />
-
-                    <div class="event-card-footer">
-                        <ul>
-                            <li>
-                                <button class="vote-btn">
-                                    <i class="fa fa-arrow-up"></i>
-                                    <span class="vote-no">0</span>
-                                </button>
-                            </li>
-                            <li><a href=""> Explore </a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="event-card">
-                    <div class="workshop-avatar-ico">
-                        <img src="./assets/images/avatar/react.png" alt="" />
-                    </div>
-                    <h2>
-                        React Workshop <br />
-                        -Course M104
-                    </h2>
-                    <h4>September 21<sup>st</sup></h4>
-                    <img src="./assets/images/banner/reactcourse.png" alt="" />
-
-                    <div class="event-card-footer">
-                        <ul>
-                            <li>
-                                <button class="vote-btn">
-                                    <i class="fa fa-arrow-up"></i>
-                                    <span class="vote-no">0</span>
-                                </button>
-                            </li>
-                            <li><a href=""> Explore </a></li>
-                        </ul>
-                    </div>
-                </div>
+                @endforeach
             </section>
         </div>
     </div>
-    <div class="containerCenter">
+    {{-- <div class="containerCenter">
         <div class="contentBlock">
             <nav data-pagination>
                 <a href="#" disabled><i class="fa fa-angle-left"></i></a>
@@ -250,6 +99,6 @@
                 <a href="#2"><i class="fa fa-angle-right"></i></a>
             </nav>
         </div>
-    </div>
+    </div> --}}
 </main>
 @endsection
