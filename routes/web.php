@@ -37,6 +37,8 @@ Route::get('/admin/', [DashboardController::class, 'index'])->name('admin-dashbo
 Route::get('/admin/posts', [PostsController::class, 'index'])->name('admin-posts');
 Route::get('/admin/posts/add', [PostsController::class, 'addPost'])->name('admin-posts-add');
 Route::post('/admin/posts/add', [PostsController::class, 'storePost']);
+Route::get('/admin/posts/{id}/edit', [PostsController::class, 'editPostView'])->name('admin-posts-edit');
+Route::post('/admin/posts/{id}/edit', [PostsController::class, 'editPost']);
 
 Route::get('/admin/members', [MembersController::class, 'index'])->name('admin-members');
 Route::get('/admin/members/executive/add', [MembersController::class, 'addExecutive'])->name('admin-members-executive-add');

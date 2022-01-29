@@ -31,7 +31,6 @@ class UsersController extends Controller
     public function addUser(Request $request)
     {
 
-
         return view('admin.addUser');
     }
 

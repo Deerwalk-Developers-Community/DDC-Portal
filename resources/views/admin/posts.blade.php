@@ -45,7 +45,7 @@
                 {{ $post->type }}
             </td>
             <td class="py-3 px-6 text-center w-1/5">
-                <span class="text-primary font-bold mx-2 cursor-pointer">Edit</span>
+                <a href="{{ route('admin-posts-edit', ['id'=> $post->id]) }}" class="text-primary font-bold mx-2 cursor-pointer">Edit</a>
                 <span class="text-red-600 font-bold mx-2 cursor-pointer">Delete</span>
             </td>
         </tr>
