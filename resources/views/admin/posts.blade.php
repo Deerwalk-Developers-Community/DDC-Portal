@@ -10,6 +10,16 @@
         placeholder="Search">
 </div>
 
+{{-- Notifications --}}
+@if (session('status'))
+<div class="p-5">
+    <div class="bg-primary/[0.3] border-primary border-2 p-2 rounded-xl text-black font-bold">{{session('status')}}
+    </div>
+</div>
+
+@endif
+
+
 <!-- Add post button -->
 <div class="mb-5 flow-root">
     <a href="{{ route('admin-posts-add') }}"
@@ -45,8 +55,10 @@
                 {{ $post->type }}
             </td>
             <td class="py-3 px-6 text-center w-1/5">
-                <a href="{{ route('admin-posts-edit', ['id'=> $post->id]) }}" class="text-primary font-bold mx-2 cursor-pointer">Edit</a>
-                <span class="text-red-600 font-bold mx-2 cursor-pointer">Delete</span>
+                <a href="{{ route('admin-posts-edit', ['id'=> $post->id]) }}"
+                    class="text-primary font-bold mx-2 cursor-pointer">Edit</a>
+                <button class="text-red-600 font-bold mx-2 cursor-pointer delete-button"
+                    data-id="{{ $post->id }}">Delete</button>
             </td>
         </tr>
 
@@ -56,5 +68,48 @@
 
 
 <!-- End of Page section -->
+
+@endsection
+
+@section('script')
+
+<script defer="true">
+    (function() {
+    var dialog = document.querySelector('#dialog');
+    var dialogHeader = dialog.querySelector('#dialog-header');
+    var dialogBody = dialog.querySelector('#dialog-body');
+    var dialogFooter = dialog.querySelector('#dialog-footer');
+    var dialogConfirm = dialog.querySelector('#dialog-confirm');
+    var dialogConfirmButton = dialog.querySelector('#dialog-confirm-button');
+    var deleteButton = document.getElementsByClassName('delete-button');
+
+
+
+    // dialog delete button function
+    function deleteDialog(e) {
+
+        var id = e.target.getAttribute('data-id');
+
+        dialogHeader.innerText = "Delete";
+        dialogBody.innerText = "Are you sure you want to delete this post?";
+
+        dialogConfirm.action = "{{ route('admin-posts-delete', ['id' => ":id"]) }}".replace(":id", id);
+
+        dialogConfirmButton.innerText = "Delete";
+
+        dialog.classList.remove('hidden');
+    }
+
+    // init delete buttons
+    for (var d of deleteButton) {
+        d.addEventListener('click', deleteDialog);
+    }
+
+    }
+
+)()
+
+
+</script>
 
 @endsection

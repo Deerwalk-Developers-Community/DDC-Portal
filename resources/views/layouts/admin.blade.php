@@ -129,7 +129,33 @@
         </div>
     </div>
 
+    {{-- Confirmation Dialog --}}
+    <div class="fixed w-full h-full bg-black/50 inset-0 grid place-content-center hidden" id="dialog">
+        <div class="bg-white p-5 rounded divide-y divide-solid divide-zinc-400">
+            <section id="dialog-header" class="text-black font-bold text-center py-2"></section>
+            <section id="dialog-body" class="text-black py-2"></section>
+            <section id="dialog-footer" class="flex justify-end py-2 gap-2">
+                <form action="" method="post" id="dialog-confirm">
+                    @csrf
+                    <button class="px-4 py-3 font-bold bg-red-600 text-white rounded-lg" type="submit" id="dialog-confirm-button"></button>
+                </form>
+                <button id="dialog-cancel" class="px-4 py-3 font-bold bg-primary text-white rounded-lg">Cancel</button>
+
+            </section>
+        </div>
+    </div>
+
     @yield('script')
+    <script>
+        (function() {
+            var dialogCancel = document.getElementById('dialog-cancel');
+            var dialog = document.getElementById('dialog');
+            
+            dialogCancel.addEventListener('click', function() {
+                dialog.classList.add('hidden');
+            });
+        })()
+    </script>
 </body>
 
 </html>

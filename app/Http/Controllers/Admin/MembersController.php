@@ -17,6 +17,12 @@ class MembersController extends Controller
         $this->middleware(['auth']);
     }
 
+    private function checkPermission($user)
+    {
+        if ($user->role != 1 && $user->role != 2)
+            return response('Unauthorized', 403);
+    }
+
 
     // list executive members
     public function index()
@@ -37,10 +43,11 @@ class MembersController extends Controller
     public function addExecutive()
     {
         $context = [
-            "title" => "Add Executive Member"
+            "page" => "Add Executive Member",
+            "edit" => false
         ];
 
-        return view('admin.addoreditMember', $data = $context);
+        return view('admin.addorEditMember', $data = $context);
     }
 
     // store executive member
@@ -55,10 +62,10 @@ class MembersController extends Controller
 
         $image_name = '';
 
-        
+
         if ($request->hasFile('image')) {
             $image_name = time() . "-" . $request->name . "." . $request->image->extension();
-            
+
             $request->image->storeAs("public/images", $image_name);
         }
 
@@ -69,6 +76,62 @@ class MembersController extends Controller
             'linkedin' => $request->linkedin
         ]);
 
-        return redirect(route('admin-members'));
+        return redirect()->route('admin-members')->with('status', 'Member Added Successfully!');
+    }
+
+    public function editExecutiveView(Request $request, $id) {
+        $member = Member::where('id', $id)->first();
+
+        $this->checkPermission($request->user());
+
+        if ($member == null)
+            return response('Not found', 404);
+
+        $data = [
+            'edit' => true,
+            'page' => "Edit Executive Member",
+            'member' => $member
+        ];
+
+        return view('admin.addorEditMember', $data);
+
+    }
+
+    public function updateExecutive(Request $request, $id)
+    {
+        $request->validate([
+            'image' => 'mimes:jpg,jpeg,png',
+            'name' => 'required',
+            'github' => 'required|max:255',
+            'linkedin' => 'required|max:255'
+        ]);
+
+        $member = Member::where('id', $id)->first();
+
+        $this->checkPermission($request->user());
+
+        if ($member == null)
+            return response('Not found', 404);
+
+
+        if ($request->hasFile('image')) {
+            $prev_image = $member->image;
+
+            Storage::unlink('public/images/' . $prev_image);
+
+            $image_name = time() . "-" . $request->name . "." . $request->image->extension();
+
+            $request->image->storeAs("public/images", $image_name);
+
+            $member->image = $image_name;
+        }
+
+        $member->name = $request->name;
+        $member->github = $request->github;
+        $member->linkedin = $request->linkedin;
+
+        $member->save();
+
+        return redirect()->route('admin-members')->with('status', 'Updated member successfully!');
     }
 }

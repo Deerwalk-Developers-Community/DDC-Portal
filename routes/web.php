@@ -39,11 +39,17 @@ Route::get('/admin/posts/add', [PostsController::class, 'addPost'])->name('admin
 Route::post('/admin/posts/add', [PostsController::class, 'storePost']);
 Route::get('/admin/posts/{id}/edit', [PostsController::class, 'editPostView'])->name('admin-posts-edit');
 Route::post('/admin/posts/{id}/edit', [PostsController::class, 'editPost']);
+Route::post('/admin/posts/{id}/delete', [PostsController::class, 'deletePost'])->name('admin-posts-delete');
 
 Route::get('/admin/members', [MembersController::class, 'index'])->name('admin-members');
 Route::get('/admin/members/executive/add', [MembersController::class, 'addExecutive'])->name('admin-members-executive-add');
 Route::post('/admin/members/executive/add', [MembersController::class, 'storeExecutive']);
+Route::get('/admin/members/executive/{id}/edit', [MembersController::class, 'editExecutiveView'])->name('admin-members-executive-edit');
+Route::post('/admin/members/executive/{id}/edit', [MembersController::class, 'updateExecutive']);
 
 Route::get('/admin/users', [UsersController::class, 'index'])->name('admin-users');
 Route::get('/admin/user/add', [UsersController::class, 'addUser'])->name('admin-users-add');
 Route::post('/admin/user/add', [UsersController::class, 'store']);
+Route::get('/admin/user/{id}/edit', [UsersController::class, 'editUserView'])->name('admin-users-edit');
+Route::post('/admin/user/{id}/edit', [UsersController::class, 'updateUser']);
+Route::post('/admin/user/{id}/delete', [UsersController::class, 'deleteUser'])->name('admin-users-delete');

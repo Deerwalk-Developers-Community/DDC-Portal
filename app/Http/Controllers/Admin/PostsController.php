@@ -14,9 +14,10 @@ class PostsController extends Controller
     {
         $this->middleware(['auth']);
     }
-    
 
-    private function validatePost(Request $request) {
+
+    private function validatePost(Request $request)
+    {
 
         $request->validate([
             'title' => 'required',
@@ -26,8 +27,6 @@ class PostsController extends Controller
             'link' => 'url|nullable',
             'type' => 'required|in:blog,event,live-stream,project',
         ]);
-
-
     }
 
     public function index()
@@ -60,7 +59,7 @@ class PostsController extends Controller
         $this->validatePost($request);
 
         $image_name = null;
-        
+
         // check and store image
         if ($request->hasFile('image')) {
 
@@ -68,7 +67,7 @@ class PostsController extends Controller
             $image_name = explode("/", $image_name)[2];
         }
 
-        
+
         $request->user()->posts()->create([
             'title' => $request->title,
             'content' => $request->content,
@@ -81,13 +80,15 @@ class PostsController extends Controller
         return redirect(route('admin-posts'));
     }
 
-    private function checkPostPermission($user, $post) {
+    private function checkPostPermission($user, $post)
+    {
         if ($user->role != 1 && $user->role != 2 && $user != $post->user)
             return response('Unauthorized', 403);
     }
 
     // edit post view
-    public function editPostView(Request $request, $id) {
+    public function editPostView(Request $request, $id)
+    {
 
         // find post
         $post = Post::where('id', $id)->first();
@@ -107,10 +108,10 @@ class PostsController extends Controller
         ];
 
         return view('admin.addorEditPost', $data);
-        
     }
 
-    public function editPost(Request $request, $id) {
+    public function editPost(Request $request, $id)
+    {
 
         // find post
         $post = Post::where('id', $id)->first();
@@ -122,7 +123,7 @@ class PostsController extends Controller
 
         // check user permisison
         $this->checkPostPermission($request->user, $post);
-        
+
         $this->validatePost($request);
 
         $post->title = $request->title;
@@ -143,11 +144,31 @@ class PostsController extends Controller
             $image_name = explode("/", $image_name)[2];
 
             $post->image = $image_name;
-
         }
 
         $post->save();
 
         return redirect(route('admin-posts'));
+    }
+
+
+    // delete post
+    public function deletePost(Request $request, $id)
+    {
+
+        // find post
+        $post = Post::where('id', $id)->first();
+
+        // check permission
+        $this->checkPostPermission($request->user(), $post);
+
+        if ($post == null) {
+            return back()->with('status', 'Post not found!');
+        }
+
+        // delete
+        $post->delete();
+
+        return back()->with('status', 'Post Deleted Successfully');
     }
 }

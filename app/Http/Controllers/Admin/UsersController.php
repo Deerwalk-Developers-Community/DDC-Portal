@@ -15,6 +15,13 @@ class UsersController extends Controller
         $this->middleware(['auth']);
     }
 
+    private function checkPermission($user)
+    {
+
+        if ($user->role != 1 && $user->role != 2)
+            return response('Unauthorized', 403);
+    }
+
     // list user view
     public function index()
     {
@@ -30,14 +37,19 @@ class UsersController extends Controller
     // add user form view
     public function addUser(Request $request)
     {
+        $data = [
+            'page' => 'Add User',
+            'edit' => false
+        ];
 
-        return view('admin.addUser');
+        return view('admin.addorEditUser', $data);
     }
 
 
     // Creating user from post request
     public function store(Request $request)
     {
+
 
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
@@ -46,8 +58,8 @@ class UsersController extends Controller
             'role' => ['required', 'integer', 'min:1', 'max:5']
         ]);
 
-        // 
-        // todo: check if current user role is 1 or 2
+        // throw error if user don't have a permission
+        $this->checkPermission($request->user());
 
 
         // create user
@@ -57,5 +69,84 @@ class UsersController extends Controller
             'password' => Hash::make($request->password),
             'role' => $request->role
         ]);
+
+        return redirect()->route('admin-users')->with('status', 'User successfully created!');
+    }
+
+    // edit view
+    public function editUserView(Request $request, $id)
+    {
+
+        // get user
+        $user = User::where('id', $id)->first();
+
+        // check permission
+        $this->checkPermission($request->user());
+
+        if ($user == null)
+            return response('User not found!', 404);
+
+
+        // return view
+        $data = [
+            'user' => $user,
+            'edit' => true,
+            'page' => 'Edit User'
+        ];
+
+        return view('admin.addorEditUser', $data);
+    }
+
+    public function updateUser(Request $request, $id)
+    {
+
+
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', \Illuminate\Validation\Rule::unique('users')->ignore($id), 'regex:/(.*)deerwalk\.edu\.np$/i'],
+            'role' => ['required', 'integer', 'min:1', 'max:5']
+        ]);
+
+        // get user
+        $user = User::where('id', $id)->first();
+
+        $this->checkPermission($request->user());
+
+
+
+        if ($user == null)
+            return response('User not found!', 404);
+
+
+        $user->name = $request->name;
+        $user->role = $request->role;
+
+        if ($user->email != $request->email)
+            $user->email = $request->email;
+
+        $user->save();
+
+
+        return redirect()->route('admin-users')->with('status', 'Updated user succesfully!');
+    }
+
+    public function deleteUser(Request $request, $id)
+    {
+        // get user
+        $user = User::where('id', $id)->first();
+
+        $this->checkPermission($request->user());
+
+        // do not allow the current user to be deleted
+        if ($request->user() == $user)
+            return redirect()->route('admin-users')->with('status', 'You cannot delete yourself!');
+
+        if ($user == null)
+            return response('User not found!', 404);
+
+        $user->delete();
+
+
+        return redirect()->route('admin-users')->with('status', 'User deleted successfully!');
     }
 }
