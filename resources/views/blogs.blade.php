@@ -10,12 +10,12 @@
                 @if ($featured)
                 <div id="featured-blog-card">
                     <img src="{{ Storage::url('images/'. $featured->image) }}" alt="" />
-                    <h4>{{ $featured->created_at }}</h4>
+                    <h4>{{ $featured->created_at->format('d M, Y') }}</h4>
                     <h2>{{ $featured->title }}</h2>
                     <p>
                         {{ $featured->description }}
                     </p>
-                    <a href="./blog.html">
+                    <a href="{{ route('blog-detail', ['id'=>$featured->id]) }}">
                         <button>Read more</button>
                     </a>
                 </div>
@@ -26,19 +26,19 @@
                     @foreach ($blogs as $blog)
                     <div class="blog-cards">
                         <img src="{{ Storage::url('images/'. $blog->image) }}" alt="" />
-                        <h4>{{ $blog->created_at }}</h4>
+                        <h4>{{ $blog->created_at->format('d M, Y') }}</h4>
                         <h2>{{ $blog->title }}</h2>
                         <p>
                             {{ $blog->description }}
                         </p>
-                        <a href="./blog.html">
+                        <a href="{{ route('blog-detail', ['id'=>$blog->id]) }}">
                             <button>Read more</button>
                         </a>
                     </div>
                     @endforeach
                 </div>
             </section>
-            <section id="right-section">
+            {{-- <section id="right-section">
                 <div class="panel">
                     <h5>Search</h5>
                     <div class="panel--content">
@@ -77,7 +77,7 @@
                         </p>
                     </div>
                 </div>
-            </section>
+            </section> --}}
         </div>
     </div>
 

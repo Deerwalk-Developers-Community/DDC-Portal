@@ -20,4 +20,18 @@ class BlogsController extends Controller
 
         return view('blogs', $data);
     }
+
+
+    public function blogDetailView(Request $request, $id) {
+        $blog = Post::where('type', 'blog')->where('id', $id)->first();
+
+        if ($blog == null)
+            return response('Not Found', 404);
+
+        $data = [
+            'blog' => $blog
+        ];
+
+        return view('blogDetail', $data);
+    }
 }

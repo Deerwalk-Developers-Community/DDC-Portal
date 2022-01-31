@@ -74,7 +74,8 @@ class PostsController extends Controller
             'image' => $image_name,
             'github' => $request->github,
             'link' => $request->link,
-            'type' => $request->type
+            'type' => $request->type,
+            'tags' => $request->tags
         ]);
 
         return redirect(route('admin-posts'));
@@ -122,7 +123,7 @@ class PostsController extends Controller
 
 
         // check user permisison
-        $this->checkPostPermission($request->user, $post);
+        $this->checkPostPermission($request->user(), $post);
 
         $this->validatePost($request);
 
@@ -130,7 +131,8 @@ class PostsController extends Controller
         $post->content = $request->content;
         $post->github = $request->github;
         $post->link = $request->link;
-        $post->type = $post->type;
+        $post->type = $request->type;
+        $post->tags = $request->tags;
 
         if ($request->hasFile('image')) {
             $prev_image = $post->image;

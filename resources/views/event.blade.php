@@ -7,7 +7,7 @@
     <hr />
     <div class="containerCenter">
         <div class="contentBlock">
-            <section id="filter-event-section">
+            {{-- <section id="filter-event-section">
                 <ul>
                     <li class="filter-menu"><button>Popular</button></li>
                     <li class="filter-menu"><button>Popular</button></li>
@@ -20,21 +20,21 @@
                         </label>
                     </li>
                 </ul>
-            </section>
+            </section> --}}
         </div>
     </div>
 
     <div class="containerCenter">
         <div class="contentBlock">
             <div id="hash-tag-division">
-                <ul id="hash-list">
+                {{-- <ul id="hash-list">
                     <li><a href="">#hashtag</a></li>
                     <li><a href="">#hashtag</a></li>
                     <li><a href="">#hashtag</a></li>
                     <li><a href="">#hashtag</a></li>
                     <li><a href="">#hashtag</a></li>
                     <li><a href="">#hashtag</a></li>
-                </ul>
+                </ul> --}}
                 <ul id="list"></ul>
             </div>
         </div>
@@ -54,7 +54,7 @@
                     <h2>
                         {{ $event->title }}
                     </h2>
-                    <h4>{{ $event->created_at }}</h4>
+                    <h4>{{ $event->created_at->format('d M, Y') }}</h4>
                     @if ($event->image)
 
                     <img src="{{ Storage::url('images/' . $event->image) }}" alt="" />
