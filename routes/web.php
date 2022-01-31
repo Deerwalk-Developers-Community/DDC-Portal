@@ -47,6 +47,7 @@ Route::get('/admin/members/executive/add', [MembersController::class, 'addExecut
 Route::post('/admin/members/executive/add', [MembersController::class, 'storeExecutive']);
 Route::get('/admin/members/executive/{id}/edit', [MembersController::class, 'editExecutiveView'])->name('admin-members-executive-edit');
 Route::post('/admin/members/executive/{id}/edit', [MembersController::class, 'updateExecutive']);
+Route::post('/admin/members/executive/{id}/delete', [MembersController::class, 'deleteExecutive'])->name('admin-members-executive-delete');
 
 Route::get('/admin/users', [UsersController::class, 'index'])->name('admin-users');
 Route::get('/admin/user/add', [UsersController::class, 'addUser'])->name('admin-users-add');

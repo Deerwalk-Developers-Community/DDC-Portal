@@ -49,12 +49,16 @@
                         </a>
                     </div>
                     <div class="cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
-                            viewBox="0 0 24 24" style=" fill:#000000;">
-                            <path
-                                d="M 10 2 L 9 3 L 3 3 L 3 5 L 21 5 L 21 3 L 15 3 L 14 2 L 10 2 z M 4.3652344 7 L 5.8925781 20.263672 C 6.0245781 21.253672 6.877 22 7.875 22 L 16.123047 22 C 17.121047 22 17.974422 21.254859 18.107422 20.255859 L 19.634766 7 L 4.3652344 7 z">
-                            </path>
-                        </svg>
+                        <button class="delete-button" data-id="{{ $member->id }}">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                                viewBox="0 0 24 24" style=" fill:#000000;" class="pointer-events-none">
+                                <path
+                                    d="M 10 2 L 9 3 L 3 3 L 3 5 L 21 5 L 21 3 L 15 3 L 14 2 L 10 2 z M 4.3652344 7 L 5.8925781 20.263672 C 6.0245781 21.253672 6.877 22 7.875 22 L 16.123047 22 C 17.121047 22 17.974422 21.254859 18.107422 20.255859 L 19.634766 7 L 4.3652344 7 z">
+                                </path>
+                            </svg>
+                        </button>
+                        </form>
                     </div>
 
                 </div>
@@ -66,5 +70,46 @@
 
     </div>
 </div>
+
+@endsection
+
+@section('script')
+<script>
+    (function() {
+    var dialog = document.querySelector('#dialog');
+    var dialogHeader = dialog.querySelector('#dialog-header');
+    var dialogBody = dialog.querySelector('#dialog-body');
+    var dialogFooter = dialog.querySelector('#dialog-footer');
+    var dialogConfirm = dialog.querySelector('#dialog-confirm');
+    var dialogConfirmButton = dialog.querySelector('#dialog-confirm-button');
+    var deleteButton = document.getElementsByClassName('delete-button');
+
+
+
+    // dialog delete button function
+    function deleteDialog(e) {
+
+        var id = e.target.getAttribute('data-id');
+
+        dialogHeader.innerText = "Delete";
+        dialogBody.innerText = "Are you sure you want to delete this member?";
+
+        dialogConfirm.action = "{{ route('admin-members-executive-delete', ['id' => ":id"]) }}".replace(":id", id);
+
+        dialogConfirmButton.innerText = "Delete";
+
+        dialog.classList.remove('hidden');
+    }
+
+    // init delete buttons
+    for (var d of deleteButton) {
+        d.addEventListener('click', deleteDialog);
+    }
+
+    }
+
+)()
+
+</script>
 
 @endsection

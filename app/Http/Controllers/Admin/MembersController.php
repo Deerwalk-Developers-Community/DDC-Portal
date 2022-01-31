@@ -134,4 +134,20 @@ class MembersController extends Controller
 
         return redirect()->route('admin-members')->with('status', 'Updated member successfully!');
     }
+
+
+    // delete executive
+    public function deleteExecutive(Request $request, $id) {
+        $member = Member::where('id', $id)->first();
+
+        $this->checkPermission($request->user());
+
+        if ($member == null) 
+            return response('Not found', 404);
+
+        $member->delete();
+
+        
+        return redirect()->route('admin-members')->with('status', 'Deleted member successfully!');
+    }
 }
