@@ -34,7 +34,7 @@
     </div>
     <!-- herosection ends here  -->
 
-    <!-- info card section starts here  -->
+    {{-- <!-- info card section starts here  -->
     <div class="containerCenter" id="info-card-section-wrapper">
         <div class="contentBlock">
             <section id="info-card-section">
@@ -217,7 +217,7 @@
                 </div>
                 <a href="" class="visit-link link"> Visit</a>
             </div>
-        </section>
+        </section> --}}
     </div>
 </main>
 
