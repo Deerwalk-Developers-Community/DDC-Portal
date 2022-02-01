@@ -89,20 +89,20 @@
 // }
 
 .float {
-  animation-name: float;
-  animation-duration: 2.8s;
-  animation-iteration-count: infinite;
-  transition: all 2.8s;
+    animation-name: float;
+    animation-duration: 2.8s;
+    animation-iteration-count: infinite;
+    transition: all 2.8s;
 }
 
 @keyframes float {
-  0% {
-    transform: translatey(0px);
-  }
-  50% {
-    transform: translatey(-20px);
-  }
-  100% {
-    transform: translatey(0px);
-  }
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
 }

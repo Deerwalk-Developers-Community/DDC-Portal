@@ -1,22 +1,21 @@
 .flexContainer {
-  @include flexContainer;
-  flex-direction: row;
+    @include flexContainer;
+    flex-direction: row;
 }
 
 .containerCenter {
-  display: flex;
+    display: flex;
 
-  justify-content: center;
+    justify-content: center;
 }
 
 .contentBlock {
-  @include media('<=1351px') {
-    width: 95% !important;
-  }
-  @include media('<=958px') {
-    width: 90% !important;
-  }
-  display: flex;
-  width: 75% !important;
+    @include media("<=1351px") {
+        width: 95% !important;
+    }
+    @include media("<=958px") {
+        width: 90% !important;
+    }
+    display: flex;
+    width: 75% !important;
 }
-

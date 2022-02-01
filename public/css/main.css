@@ -5539,10 +5539,8 @@ a:visited {
   color: white;
   font-size: 1.7rem;
   padding: 0.5rem 1rem;
-  transition: background-color ease-out 400ms;
 }
 #public-header nav #right-nav button:hover {
-  transition: background-color ease-out 500ms;
   background-color: #47a7f5;
 }
 #public-header nav ul {
@@ -5661,10 +5659,8 @@ a:visited {
   color: white;
   font-size: 1.7rem;
   padding: 0.5rem 1rem;
-  transition: background-color ease-out 400ms;
 }
 #public-header nav #right-nav button:hover {
-  transition: background-color ease-out 500ms;
   background-color: #47a7f5;
 }
 #public-header nav ul {
@@ -5702,7 +5698,6 @@ a:visited {
   padding: 2rem;
 }
 #hamburger-container-btn div {
-  transition: all ease-in-out 600ms;
   margin-top: 0.5rem;
   background: white !important;
 }
@@ -6313,10 +6308,6 @@ a:visited {
   margin: 0rem 0.5rem;
   height: 3rem;
 }
-* {
-  transition: all ease-in-out 800ms;
-}
-
 #blog-page button {
   transition: all ease-in-out 500ms;
   color: white;
