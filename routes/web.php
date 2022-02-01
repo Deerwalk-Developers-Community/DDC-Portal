@@ -30,7 +30,7 @@ Route::get('/aboutus', [AboutUsController::class, 'index'])->name('aboutus');
 Route::get('/blogs', [BlogsController::class, 'index'])->name('blogs');
 Route::get('/blogs/{id}', [BlogsController::class, 'blogDetailView'])->name('blog-detail');
 
-Auth::routes(['register' => false]);
+Auth::routes();
 
 // admin
 Route::get('/admin/', [DashboardController::class, 'index'])->name('admin-dashboard');
