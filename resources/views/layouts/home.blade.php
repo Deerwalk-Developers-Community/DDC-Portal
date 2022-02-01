@@ -232,8 +232,8 @@
                                 </ul>
                             </div>
                         </footer>
-                        <div class="cursor"></div>
-                        <div class="cursor2"></div>
+                        <!-- <div class="cursor"></div>
+                        <div class="cursor2"></div> -->
                     </div>
                 </div>
                 /*
