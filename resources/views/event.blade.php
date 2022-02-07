@@ -69,7 +69,7 @@
                                     <span class="vote-no">0</span>
                                 </button>
                             </li>
-                            <li><a href=""> Explore </a></li>
+                            <li><a href="{{ route('events.show', ['id'=>$event->id]) }}"> Explore </a></li>
                         </ul>
                     </div>
                 </div>
