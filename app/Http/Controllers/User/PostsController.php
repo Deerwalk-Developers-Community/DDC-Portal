@@ -8,12 +8,6 @@ use Illuminate\Support\Facades\Storage;
 
 class PostsController extends Controller
 {
-    //
-    public function __construct()
-    {
-        $this->middleware(['auth', 'auth.memberonly']);
-    }
-
 
     private function validatePost(Request $request)
     {
@@ -23,6 +17,18 @@ class PostsController extends Controller
             'content' => 'required',
             'image' => 'mimes:jpg,jpeg,png|nullable',
         ]);
+    }
+
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        // redirect to pending post view
+        return redirect()->route('user.posts.pending');
     }
 
 
@@ -50,10 +56,14 @@ class PostsController extends Controller
         return view('user.posts', $data);
     }
 
-
-    // Create post
-    public function createPostView()
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
     {
+
         $data = [
             'edit' => false
         ];
@@ -61,9 +71,15 @@ class PostsController extends Controller
         return view('user.writePost', $data);
     }
 
-
-    public function createPost(Request $request)
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
     {
+
         $this->validatePost($request);
 
         $image_name = null;
@@ -84,14 +100,30 @@ class PostsController extends Controller
             'tags' => $request->tags,
         ]);
 
-        return redirect(route('user-posts-pending'))->with('status', 'Your blog has been posted for review.');
+        return redirect(route('user.posts.pending'))->with('status', 'Your blog has been posted for review.');
     }
 
-
-    // Edit post
-    public function editPostView(Request $request, $id)
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
     {
-        $post = $request->user()->posts->where('id', $id)->first();
+        dd($id);
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $post = auth()->user()->posts->where('id', $id)->first();
 
         if ($post == null)
             response('Not found', 404);
@@ -102,14 +134,22 @@ class PostsController extends Controller
         ];
 
         return view('user.writePost', $data);
+        
     }
 
-    public function editPost(Request $request, $id)
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
     {
-
+        //
         $this->validatePost($request);
 
-        $post = $request->user()->posts->where('id', $id)->first();
+        $post = auth()->user()->posts->where('id', $id)->first();
 
         if ($post == null)
             response('Not found', 404);
@@ -135,16 +175,19 @@ class PostsController extends Controller
 
         $post->save();
 
-        return redirect(route('user-posts-pending'))->with('status', 'Your post has been edited successfully and moved to pending for review!');
+        return redirect(route('user.posts.pending'))->with('status', 'Your post has been edited successfully and moved to pending for review!');
     }
 
-
-    // delete post
-    public function deletePost(Request $request, $id)
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
     {
-
         // find post
-        $post = $request->user()->posts->where('id', $id)->first();
+        $post = auth()->user()->posts->where('id', $id)->first();
 
         if ($post == null)
             return back()->with('status', 'Post not found!');

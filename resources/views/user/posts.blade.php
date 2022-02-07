@@ -10,11 +10,11 @@ Posts
         <nav class="flex flex-row">
             <button
                 class="text-gray-600 font-bold py-4 px-6 block hover:text-primary focus:outline-none @if ($page == 'pending') text-primary border-b-2 border-primary @endif">
-                <a href="{{ route('user-posts-pending') }}">Pending</a>
+                <a href="{{ route('user.posts.pending') }}">Pending</a>
             </button>
             <button
                 class="text-gray-600 font-bold py-4 px-6 block hover:text-primary focus:outline-none @if ($page == 'published') text-primary border-b-2 border-primary @endif">
-                <a href="{{ route('user-posts-published') }}">Published</a>
+                <a href="{{ route('user.posts.published') }}">Published</a>
             </button>
         </nav>
     </div>
@@ -22,11 +22,11 @@ Posts
     <div class="container">
         @foreach ($posts as $post)
         <div class="p-5">
-            <h3 class="text-xl font-bold"><a href="{{ route('user-posts-edit', ['id'=> $post->id]) }}">{{ $post->title
+            <h3 class="text-xl font-bold"><a href="{{ route('user.posts.edit', ['post'=> $post->id]) }}">{{ $post->title
                     }}</a></h3>
             <span>Created on {{ $post->created_at->format('d M, Y') }}</span>
 
-            <a href="{{ route('user-posts-edit', ['id'=> $post->id]) }}"
+            <a href="{{ route('user.posts.edit', ['post'=> $post->id]) }}"
                 class="text-primary font-bold mx-2 cursor-pointer">Edit</a>
 
             <button class="text-red-600 font-bold mx-2 cursor-pointer delete-button"
@@ -59,7 +59,7 @@ Posts
             dialogHeader.innerText = "Delete";
             dialogBody.innerText = "Are you sure you want to delete this post?";
 
-            dialogConfirm.action = "{{ route('user-posts-delete', ['id' => ":id"]) }}".replace(":id", id);
+            dialogConfirm.action = "{{ route('user.posts.destroy', ['post' => ":id"]) }}".replace(":id", id);
 
             dialogConfirmButton.innerText = "Delete";
 

@@ -2,9 +2,13 @@
 
 @section('content')
 
-<form action="@if ($edit) {{route('user-posts-edit', ['id' => $post->id])}} @else {{route('user-posts-create')}} @endif"
+<form
+    action="@if ($edit) {{route('user.posts.update', ['post' => $post->id])}} @else {{route('user.posts.store')}} @endif"
     method="post" enctype="multipart/form-data">
     @csrf
+    @if ($edit)
+    @method('put')
+    @endif
     <div class="flex flex-row w-full">
         <div class="p-5 w-auto flex-1 w-3/4">
             <input type="text" placeholder="Title" class="text-3xl font-bold outline-none w-full" id="title"
@@ -54,7 +58,7 @@
                     @else
                     Post
                     @endif</button>
-                <a href="{{ route('user-posts-pending') }}"
+                <a href="{{ route('user.posts.pending') }}"
                     class="bg-rose-700 text-white font-bold px-5 py-3 rounded">Cancel</a>
             </div>
 

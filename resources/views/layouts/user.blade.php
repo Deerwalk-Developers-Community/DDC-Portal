@@ -22,7 +22,7 @@
             </figure>
             <ul class="mt-5">
                 <li class="font-black p-2 ml-5">
-                    <a href="{{ route('user-notifications') }}" class="flex gap-1">
+                    <a href="{{ route('user.notifications') }}" class="flex gap-1">
                         <!-- icon -->
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
                             fill="#FFFFFF">
@@ -34,7 +34,7 @@
                     </a>
                 </li>
                 <li class="font-black p-2 ml-5">
-                    <a href="{{ route('user-posts-pending') }}" class="flex gap-1">
+                    <a href="{{ route('user.posts.pending') }}" class="flex gap-1">
                         <!-- icon -->
                         <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
                             viewBox="0 0 24 24" width="24px" fill="#FFFFFF">
@@ -55,7 +55,7 @@
                 </li>
                 <div class="border-b border-stone-200 border-[#2d2d2d] p-2 ml-5"></div>
                 <li class="font-black p-2 ml-5">
-                    <a href="{{ route('user-posts-create') }}" class="flex gap-1">
+                    <a href="{{ route('user.posts.create') }}" class="flex gap-1">
                         <!-- icon -->
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
                             fill="#FFFFFF">
@@ -130,6 +130,7 @@
             <section id="dialog-footer" class="flex justify-end py-2 gap-2">
                 <form action="" method="post" id="dialog-confirm">
                     @csrf
+                    @method('delete')
                     <button class="px-4 py-3 font-bold bg-red-600 text-white rounded-lg" type="submit"
                         id="dialog-confirm-button"></button>
                 </form>

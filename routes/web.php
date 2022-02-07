@@ -35,18 +35,23 @@ Route::get('/blogs/{id}', [BlogsController::class, 'blogDetailView'])->name('blo
 Auth::routes();
 
 // User dashboard
-Route::get('/u/notifications', [NotificationsController::class, 'index'])->name('user-notifications');
-Route::get('/u/posts/pending', [UserPostsController::class, 'pendingPostView'])->name('user-posts-pending');
-Route::get('/u/posts/', function () {
-    return redirect(route('user-posts-pending'));
-});
-Route::get('/u/posts/published', [UserPostsController::class, 'publishedPostView'])->name('user-posts-published');
-Route::get('/u/post/new', [UserPostsController::class, 'createPostView'])->name('user-posts-create');
-Route::post('/u/post/new', [UserPostsController::class, 'createPost']);
-Route::get('/u/post/{id}/edit', [UserPostsController::class, 'editPostView'])->name('user-posts-edit');
-Route::post('/u/post/{id}/edit', [UserPostsController::class, 'editPost']);
-Route::post('/u/post/{id}/delete', [UserPostsController::class, 'deletePost'])->name('user-posts-delete');
+Route::prefix('u')->middleware(['auth', 'auth.memberonly'])->name('user.')->group(function () {
 
+    Route::get('/', function () {
+        return redirect()->route('user.notifications');
+    });
+
+    Route::get('/notifications', [NotificationsController::class, 'index'])->name('notifications');
+
+    // posts
+    Route::get('/posts/pending', [UserPostsController::class, 'pendingPostView'])->name('posts.pending');
+    Route::get('/posts/published', [UserPostsController::class, 'publishedPostView'])->name('posts.published');
+
+    Route::resource('posts', UserPostsController::class);
+});
+
+
+// Todo: refactor this route to use resource
 // admin
 Route::get('/admin/', [DashboardController::class, 'index'])->name('admin-dashboard');
 
