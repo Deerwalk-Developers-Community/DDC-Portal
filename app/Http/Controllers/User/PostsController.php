@@ -111,8 +111,8 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        dd($id);
         //
+        return redirect()->route('blogs.show', ['id' => $id]);
     }
 
     /**
@@ -126,7 +126,7 @@ class PostsController extends Controller
         $post = auth()->user()->posts->where('id', $id)->first();
 
         if ($post == null)
-            response('Not found', 404);
+            return abort(404);
 
         $data = [
             'edit' => true,
@@ -134,7 +134,6 @@ class PostsController extends Controller
         ];
 
         return view('user.writePost', $data);
-        
     }
 
     /**
@@ -152,7 +151,7 @@ class PostsController extends Controller
         $post = auth()->user()->posts->where('id', $id)->first();
 
         if ($post == null)
-            response('Not found', 404);
+            return abort(404);
 
         $post->title = $request->title;
         $post->content = $request->content;
@@ -190,7 +189,7 @@ class PostsController extends Controller
         $post = auth()->user()->posts->where('id', $id)->first();
 
         if ($post == null)
-            return back()->with('status', 'Post not found!');
+            return abort(404);
 
         // delete
         $post->delete();

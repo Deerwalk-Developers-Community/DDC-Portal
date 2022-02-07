@@ -27,10 +27,11 @@ use Illuminate\Support\Facades\Route;
 
 // home
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/event', [EventController::class, 'index'])->name('event');
+Route::get('/events', [EventController::class, 'index'])->name('event');
+Route::get('/events/{id}', [EventController::class, 'show'])->name('events.show');
 Route::get('/aboutus', [AboutUsController::class, 'index'])->name('aboutus');
 Route::get('/blogs', [BlogsController::class, 'index'])->name('blogs');
-Route::get('/blogs/{id}', [BlogsController::class, 'blogDetailView'])->name('blog-detail');
+Route::get('/blogs/{id}', [BlogsController::class, 'blogDetailView'])->name('blogs.show');
 
 Auth::routes();
 
@@ -40,13 +41,11 @@ Route::prefix('u')->middleware(['auth', 'auth.memberonly'])->name('user.')->grou
     Route::get('/', function () {
         return redirect()->route('user.notifications');
     });
-
     Route::get('/notifications', [NotificationsController::class, 'index'])->name('notifications');
 
     // posts
     Route::get('/posts/pending', [UserPostsController::class, 'pendingPostView'])->name('posts.pending');
     Route::get('/posts/published', [UserPostsController::class, 'publishedPostView'])->name('posts.published');
-
     Route::resource('posts', UserPostsController::class);
 });
 

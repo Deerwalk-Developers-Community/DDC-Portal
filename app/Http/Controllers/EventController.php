@@ -10,7 +10,7 @@ class EventController extends Controller
     //
     public function index(Request $request) {
 
-        $events = Post::where('type', 'event')->get();
+        $events = Post::where('type', 'event')->where('published', true)->get();
 
         $data = [
             'events' => $events
@@ -18,5 +18,21 @@ class EventController extends Controller
 
 
         return view('event', $data);
+    }
+
+    public function show(Request $request, $id) {
+
+        $event = Post::where('type', 'event')->where('published', true)->where('id', $id)->first();
+
+        if ($event == null)
+            return abort(404);
+
+        
+        $data = [
+            'blog' => $event
+        ];
+
+        return view('blogDetail', $data);
+
     }
 }

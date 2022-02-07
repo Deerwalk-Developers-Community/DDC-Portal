@@ -26,7 +26,7 @@ class BlogsController extends Controller
         $blog = Post::where('type', 'blog')->where('published', true)->where('id', $id)->first();
 
         if ($blog == null)
-            return response('Not Found', 404);
+            return abort(404);
 
         $data = [
             'blog' => $blog
