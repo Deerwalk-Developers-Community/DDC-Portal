@@ -8,6 +8,8 @@ use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\User\NotificationsController;
+use App\Http\Controllers\User\PostsController as UserPostsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -24,13 +26,26 @@ use Illuminate\Support\Facades\Route;
 
 
 // home
-Route::get('/', [HomeController::class, 'index']) -> name('home');
-Route::get('/event', [EventController::class, 'index'])-> name('event');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/event', [EventController::class, 'index'])->name('event');
 Route::get('/aboutus', [AboutUsController::class, 'index'])->name('aboutus');
 Route::get('/blogs', [BlogsController::class, 'index'])->name('blogs');
 Route::get('/blogs/{id}', [BlogsController::class, 'blogDetailView'])->name('blog-detail');
 
 Auth::routes();
+
+// User dashboard
+Route::get('/u/notifications', [NotificationsController::class, 'index'])->name('user-notifications');
+Route::get('/u/posts/pending', [UserPostsController::class, 'pendingPostView'])->name('user-posts-pending');
+Route::get('/u/posts/', function () {
+    return redirect(route('user-posts-pending'));
+});
+Route::get('/u/posts/published', [UserPostsController::class, 'publishedPostView'])->name('user-posts-published');
+Route::get('/u/post/new', [UserPostsController::class, 'createPostView'])->name('user-posts-create');
+Route::post('/u/post/new', [UserPostsController::class, 'createPost']);
+Route::get('/u/post/{id}/edit', [UserPostsController::class, 'editPostView'])->name('user-posts-edit');
+Route::post('/u/post/{id}/edit', [UserPostsController::class, 'editPost']);
+Route::post('/u/post/{id}/delete', [UserPostsController::class, 'deletePost'])->name('user-posts-delete');
 
 // admin
 Route::get('/admin/', [DashboardController::class, 'index'])->name('admin-dashboard');
@@ -41,6 +56,7 @@ Route::post('/admin/posts/add', [PostsController::class, 'storePost']);
 Route::get('/admin/posts/{id}/edit', [PostsController::class, 'editPostView'])->name('admin-posts-edit');
 Route::post('/admin/posts/{id}/edit', [PostsController::class, 'editPost']);
 Route::post('/admin/posts/{id}/delete', [PostsController::class, 'deletePost'])->name('admin-posts-delete');
+Route::post('/admin/posts/{id}/{publish}', [PostsController::class, 'publishPost'])->name('admin-posts-publish');
 
 Route::get('/admin/members', [MembersController::class, 'index'])->name('admin-members');
 Route::get('/admin/members/executive/add', [MembersController::class, 'addExecutive'])->name('admin-members-executive-add');

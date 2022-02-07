@@ -12,7 +12,7 @@ class PostsController extends Controller
 
     public function __construct()
     {
-        $this->middleware(['auth']);
+        $this->middleware(['auth', 'auth.admin']);
     }
 
 
@@ -83,7 +83,7 @@ class PostsController extends Controller
 
     private function checkPostPermission($user, $post)
     {
-        if ($user->role != 1 && $user->role != 2 && $user != $post->user)
+        if ($user->role != 1 && $user != $post->user)
             return response('Unauthorized', 403);
     }
 
@@ -94,9 +94,9 @@ class PostsController extends Controller
         // find post
         $post = Post::where('id', $id)->first();
 
-        if ($post == null) {
+        if ($post == null)
             return response('Not Found', 404);
-        }
+
 
         // check user permisison
         $this->checkPostPermission($request->user(), $post);
@@ -117,9 +117,9 @@ class PostsController extends Controller
         // find post
         $post = Post::where('id', $id)->first();
 
-        if ($post == null) {
+        if ($post == null)
             return response('Not Found', 404);
-        }
+
 
 
         // check user permisison
@@ -137,9 +137,9 @@ class PostsController extends Controller
         if ($request->hasFile('image')) {
             $prev_image = $post->image;
 
-            if ($prev_image != null) {
+            if ($prev_image != null)
                 Storage::unlink('public/images/' . $prev_image);
-            }
+
 
 
             $image_name = $request->image->store("public/images");
@@ -164,13 +164,40 @@ class PostsController extends Controller
         // check permission
         $this->checkPostPermission($request->user(), $post);
 
-        if ($post == null) {
+        if ($post == null)
             return back()->with('status', 'Post not found!');
-        }
+
 
         // delete
         $post->delete();
 
         return back()->with('status', 'Post Deleted Successfully');
+    }
+
+
+    // publish or unpublish a post
+    public function publishPost(Request $request, $id, $publish)
+    {
+
+        // find post
+        $post = Post::where('id', $id)->first();
+
+        // check permission
+        $this->checkPostPermission($request->user(), $post);
+
+        if ($post == null)
+            return back()->with('status', 'Post not found!');
+
+        if ($publish == "publish") {
+            $post->published = true;
+            $post->save();
+            return back()->with('status', 'Post has been pubilshed!');
+        } else if ($publish == "unpublish") {
+            $post->published = false;
+            $post->save();
+            return back()->with('status', 'Post has been unpublished!');
+        }
+
+        return back();
     }
 }

@@ -35,6 +35,7 @@
             <th class="py-3 px-6 text-left">Title</th>
             <th class="py-3 px-6 text-left">Author</th>
             <th class="py-3 px-6 text-center">Type</th>
+            <th class="py-3 px-6 text-center">Published</th>
             <th class="py-3 px-6 text-center">Actions</th>
         </tr>
     </thead>
@@ -45,20 +46,26 @@
 
         @foreach ($posts as $post)
         <tr class="border-b border-gray-200 hover:bg-gray-100">
-            <td class="py-3 px-6 text-left whitespace-nowrap w-1/5 cursor-pointer">
+            <td class="py-3 px-6 text-left whitespace-nowrap w-2/8 cursor-pointer">
                 {{ $post->title }}
             </td>
-            <td class="py-3 px-6 text-left w-2/5">
+            <td class="py-3 px-6 text-left w-2/8">
                 {{ $post->user->name }}
             </td>
-            <td class="py-3 px-6 text-center w-1/5 font-bold">
+            <td class="py-3 px-6 text-center w-1/8 font-bold">
                 {{ $post->type }}
             </td>
-            <td class="py-3 px-6 text-center w-1/5">
-                <a href="{{ route('admin-posts-edit', ['id'=> $post->id]) }}"
-                    class="text-primary font-bold mx-2 cursor-pointer">Edit</a>
-                <button class="text-red-600 font-bold mx-2 cursor-pointer delete-button"
-                    data-id="{{ $post->id }}">Delete</button>
+            <td class="py-3 px-6 text-center w-1/8 font-bold">
+                {{ $post->published ? 'Yes' : 'No' }}
+            </td>
+            <td class="py-3 px-6 text-center w-2/8">
+                <button class="text-primary font-bold mx-2 cursor-pointer publish-button" data-id="{{ $post->id }}"
+                    data-publish="{{ !$post->published }}">{{ $post->published ? 'Unpublish' : 'Publish'
+                    }}</a>
+                    <a href="{{ route('admin-posts-edit', ['id'=> $post->id]) }}"
+                        class="text-primary font-bold mx-2 cursor-pointer">Edit</a>
+                    <button class="text-red-600 font-bold mx-2 cursor-pointer delete-button"
+                        data-id="{{ $post->id }}">Delete</button>
             </td>
         </tr>
 
@@ -75,35 +82,63 @@
 
 <script defer="true">
     (function() {
-    var dialog = document.querySelector('#dialog');
-    var dialogHeader = dialog.querySelector('#dialog-header');
-    var dialogBody = dialog.querySelector('#dialog-body');
-    var dialogFooter = dialog.querySelector('#dialog-footer');
-    var dialogConfirm = dialog.querySelector('#dialog-confirm');
-    var dialogConfirmButton = dialog.querySelector('#dialog-confirm-button');
-    var deleteButton = document.getElementsByClassName('delete-button');
+        var dialog = document.querySelector('#dialog');
+        var dialogHeader = dialog.querySelector('#dialog-header');
+        var dialogBody = dialog.querySelector('#dialog-body');
+        var dialogFooter = dialog.querySelector('#dialog-footer');
+        var dialogConfirm = dialog.querySelector('#dialog-confirm');
+        var dialogConfirmButton = dialog.querySelector('#dialog-confirm-button');
+        var deleteButton = document.getElementsByClassName('delete-button');
+        var publishButton = document.getElementsByClassName('publish-button');
 
 
+        // dialog delete button function
+        function deleteDialog(e) {
 
-    // dialog delete button function
-    function deleteDialog(e) {
+            var id = e.target.getAttribute('data-id');
 
-        var id = e.target.getAttribute('data-id');
+            dialogHeader.innerText = "Delete";
+            dialogBody.innerText = "Are you sure you want to delete this post?";
 
-        dialogHeader.innerText = "Delete";
-        dialogBody.innerText = "Are you sure you want to delete this post?";
+            dialogConfirm.action = "{{ route('admin-posts-delete', ['id' => ":id"]) }}".replace(":id", id);
 
-        dialogConfirm.action = "{{ route('admin-posts-delete', ['id' => ":id"]) }}".replace(":id", id);
+            dialogConfirmButton.innerText = "Delete";
 
-        dialogConfirmButton.innerText = "Delete";
+            dialog.classList.remove('hidden');
+        }
 
-        dialog.classList.remove('hidden');
-    }
+        // dialog publish button function
+        function publishDialog(e) {
+            var id = e.target.getAttribute('data-id');
 
-    // init delete buttons
-    for (var d of deleteButton) {
-        d.addEventListener('click', deleteDialog);
-    }
+            var publish = e.target.getAttribute('data-publish');
+
+            var publish_text =  publish ? "Publish" : "Unpublish";
+
+            dialogHeader.innerText = publish_text;
+
+            dialogConfirm.action = "{{ route('admin-posts-publish', ['id' => ":id", 'publish' => ":publish"]) }}".replace(":id", id).replace(":publish", publish ? "publish" : "unpublish");
+
+
+            dialogBody.innerText = `Do you want to ${publish_text} this post?`;
+
+            dialogConfirmButton.innerText = publish_text;
+
+            dialog.classList.remove('hidden');
+
+        }
+
+        // init delete buttons
+        for (var d of deleteButton) {
+            d.addEventListener('click', deleteDialog);
+        }
+
+        // init publish button
+        for (var p of publishButton) {
+            p.addEventListener('click', publishDialog);
+        }
+
+
 
     }
 

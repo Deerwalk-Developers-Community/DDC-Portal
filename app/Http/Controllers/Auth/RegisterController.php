@@ -40,6 +40,7 @@ class RegisterController extends Controller
     {
         // $this->middleware('auth');
         // $this->middleware('auth.super');
+        $this->middleware('guest')->except('logout');
     }
 
     /**

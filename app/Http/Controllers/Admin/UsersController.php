@@ -12,14 +12,7 @@ class UsersController extends Controller
 
     public function __construct()
     {
-        $this->middleware(['auth']);
-    }
-
-    private function checkPermission($user)
-    {
-
-        if ($user->role != 1 && $user->role != 2)
-            return response('Unauthorized', 403);
+        $this->middleware(['auth', 'auth.super']);
     }
 
     // list user view
@@ -59,7 +52,6 @@ class UsersController extends Controller
         ]);
 
         // throw error if user don't have a permission
-        $this->checkPermission($request->user());
 
 
         // create user
@@ -80,8 +72,6 @@ class UsersController extends Controller
         // get user
         $user = User::where('id', $id)->first();
 
-        // check permission
-        $this->checkPermission($request->user());
 
         if ($user == null)
             return response('User not found!', 404);
@@ -110,9 +100,6 @@ class UsersController extends Controller
         // get user
         $user = User::where('id', $id)->first();
 
-        $this->checkPermission($request->user());
-
-
 
         if ($user == null)
             return response('User not found!', 404);
@@ -134,8 +121,6 @@ class UsersController extends Controller
     {
         // get user
         $user = User::where('id', $id)->first();
-
-        $this->checkPermission($request->user());
 
         // do not allow the current user to be deleted
         if ($request->user() == $user)

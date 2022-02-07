@@ -14,13 +14,7 @@ class MembersController extends Controller
 
     public function __construct()
     {
-        $this->middleware(['auth']);
-    }
-
-    private function checkPermission($user)
-    {
-        if ($user->role != 1 && $user->role != 2)
-            return response('Unauthorized', 403);
+        $this->middleware(['auth', 'auth.super']);
     }
 
 
@@ -82,7 +76,6 @@ class MembersController extends Controller
     public function editExecutiveView(Request $request, $id) {
         $member = Member::where('id', $id)->first();
 
-        $this->checkPermission($request->user());
 
         if ($member == null)
             return response('Not found', 404);
@@ -108,7 +101,6 @@ class MembersController extends Controller
 
         $member = Member::where('id', $id)->first();
 
-        $this->checkPermission($request->user());
 
         if ($member == null)
             return response('Not found', 404);
@@ -140,7 +132,6 @@ class MembersController extends Controller
     public function deleteExecutive(Request $request, $id) {
         $member = Member::where('id', $id)->first();
 
-        $this->checkPermission($request->user());
 
         if ($member == null) 
             return response('Not found', 404);

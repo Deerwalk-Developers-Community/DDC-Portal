@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class BlogsController extends Controller
 {
     public function index() {
-        $blogs = Post::where('type', 'blog')->get();
+        $blogs = Post::where('type', 'blog')->where('published', true)->get();
         // $featured = Post::where()
 
         $data = [
@@ -23,7 +23,7 @@ class BlogsController extends Controller
 
 
     public function blogDetailView(Request $request, $id) {
-        $blog = Post::where('type', 'blog')->where('id', $id)->first();
+        $blog = Post::where('type', 'blog')->where('published', true)->where('id', $id)->first();
 
         if ($blog == null)
             return response('Not Found', 404);
