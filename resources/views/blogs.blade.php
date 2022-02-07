@@ -31,7 +31,7 @@
                         <p>
                             {{ $blog->description }}
                         </p>
-                        <a href="{{ route('blog-detail', ['id'=>$blog->id]) }}">
+                        <a href="{{ route('blogs.show', ['id'=>$blog->id]) }}">
                             <button>Read more</button>
                         </a>
                     </div>
