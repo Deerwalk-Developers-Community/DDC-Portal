@@ -10,11 +10,6 @@ use Illuminate\Support\Facades\Storage;
 class PostsController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware(['auth', 'auth.admin']);
-    }
-
 
     private function validatePost(Request $request)
     {
@@ -78,7 +73,7 @@ class PostsController extends Controller
             'tags' => $request->tags
         ]);
 
-        return redirect(route('admin-posts'));
+        return redirect(route('admin.posts'));
     }
 
     private function checkPostPermission($user, $post)
@@ -150,7 +145,7 @@ class PostsController extends Controller
 
         $post->save();
 
-        return redirect(route('admin-posts'));
+        return redirect(route('admin.posts'));
     }
 
 

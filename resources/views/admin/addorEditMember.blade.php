@@ -8,7 +8,7 @@
     </span>
 
     <form
-        action="@if ($edit) {{ route('admin-members-executive-edit', ['id'=> $member->id ?? '']) }} @else{{ route('admin-members-executive-add') }} @endif"
+        action="@if ($edit) {{ route('admin.members-executive-edit', ['id'=> $member->id ?? '']) }} @else{{ route('admin.members-executive-add') }} @endif"
         method="post" class="mt-5" enctype="multipart/form-data">
         @csrf
         <div class="flex flex-col md:flex-row">

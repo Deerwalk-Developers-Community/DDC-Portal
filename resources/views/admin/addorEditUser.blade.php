@@ -5,7 +5,7 @@
     <div class="text-3xl font-bold">{{ $page }}</div>
     <div class="grid place-content-center mt-40">
         <form class="w-full max-w-sm"
-            action="@if ($edit) {{ route('admin-users-edit', ['id'=>$user->id ?? '']) }} @else {{ route('admin-users-add') }} @endif"
+            action="@if ($edit) {{ route('admin.users-edit', ['id'=>$user->id ?? '']) }} @else {{ route('admin.users-add') }} @endif"
             method="POST">
             @csrf
             <div class="md:flex md:items-center mb-6">

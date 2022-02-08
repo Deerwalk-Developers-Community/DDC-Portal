@@ -22,7 +22,7 @@
             </figure>
             <ul class="mt-5">
                 <li class="font-black p-2 ml-5">
-                    <a href="{{ route('admin-dashboard') }}" class="flex gap-1">
+                    <a href="{{ route('admin.dashboard') }}" class="flex gap-1">
                         <!-- icon -->
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
                             fill="#FFFFFF">
@@ -33,7 +33,7 @@
                     </a>
                 </li>
                 <li class="font-black p-2 ml-5">
-                    <a href="{{ route('admin-posts') }}" class="flex gap-1">
+                    <a href="{{ route('admin.posts') }}" class="flex gap-1">
                         <!-- icon -->
                         <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
                             viewBox="0 0 24 24" width="24px" fill="#FFFFFF">
@@ -53,7 +53,7 @@
                     </a>
                 </li>
                 <li class="font-black p-2 ml-5">
-                    <a href="{{ route('admin-members') }}" class="flex gap-1">
+                    <a href="{{ route('admin.members') }}" class="flex gap-1">
                         <!-- icon -->
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
                             fill="#FFFFFF">
@@ -65,7 +65,7 @@
                     </a>
                 </li>
                 <li class="font-black p-2 ml-5">
-                    <a href="{{ route('admin-users') }}" class="flex gap-1">
+                    <a href="{{ route('admin.users') }}" class="flex gap-1">
                         <!-- icon -->
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
                             fill="#FFFFFF">

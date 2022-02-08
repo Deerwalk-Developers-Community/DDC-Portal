@@ -12,7 +12,7 @@ class UsersController extends Controller
 
     public function __construct()
     {
-        $this->middleware(['auth', 'auth.super']);
+        $this->middleware(['auth.super']);
     }
 
     // list user view
@@ -62,7 +62,7 @@ class UsersController extends Controller
             'role' => $request->role
         ]);
 
-        return redirect()->route('admin-users')->with('status', 'User successfully created!');
+        return redirect()->route('admin.users')->with('status', 'User successfully created!');
     }
 
     // edit view
@@ -114,7 +114,7 @@ class UsersController extends Controller
         $user->save();
 
 
-        return redirect()->route('admin-users')->with('status', 'Updated user succesfully!');
+        return redirect()->route('admin.users')->with('status', 'Updated user succesfully!');
     }
 
     public function deleteUser(Request $request, $id)
@@ -124,7 +124,7 @@ class UsersController extends Controller
 
         // do not allow the current user to be deleted
         if ($request->user() == $user)
-            return redirect()->route('admin-users')->with('status', 'You cannot delete yourself!');
+            return redirect()->route('admin.users')->with('status', 'You cannot delete yourself!');
 
         if ($user == null)
             return response('User not found!', 404);
@@ -132,6 +132,6 @@ class UsersController extends Controller
         $user->delete();
 
 
-        return redirect()->route('admin-users')->with('status', 'User deleted successfully!');
+        return redirect()->route('admin.users')->with('status', 'User deleted successfully!');
     }
 }

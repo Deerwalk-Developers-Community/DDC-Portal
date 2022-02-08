@@ -14,7 +14,7 @@ class MembersController extends Controller
 
     public function __construct()
     {
-        $this->middleware(['auth', 'auth.super']);
+        $this->middleware(['auth.super']);
     }
 
 
@@ -70,7 +70,7 @@ class MembersController extends Controller
             'linkedin' => $request->linkedin
         ]);
 
-        return redirect()->route('admin-members')->with('status', 'Member Added Successfully!');
+        return redirect()->route('admin.members')->with('status', 'Member Added Successfully!');
     }
 
     public function editExecutiveView(Request $request, $id) {
@@ -124,7 +124,7 @@ class MembersController extends Controller
 
         $member->save();
 
-        return redirect()->route('admin-members')->with('status', 'Updated member successfully!');
+        return redirect()->route('admin.members')->with('status', 'Updated member successfully!');
     }
 
 
@@ -139,6 +139,6 @@ class MembersController extends Controller
         $member->delete();
 
         
-        return redirect()->route('admin-members')->with('status', 'Deleted member successfully!');
+        return redirect()->route('admin.members')->with('status', 'Deleted member successfully!');
     }
 }

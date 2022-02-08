@@ -5,7 +5,7 @@
 <div class="p-7">
     <div class="text-3xl font-bold">{{ $page }}</div>
 
-    <form action="@if ($edit) {{route('admin-posts-edit', ['id' => $post->id])}} @else {{route('admin-posts-add')}} @endif" method="post"
+    <form action="@if ($edit) {{route('admin.posts-edit', ['id' => $post->id])}} @else {{route('admin.posts-add')}} @endif" method="post"
         enctype="multipart/form-data">
         @csrf
         <div class="flex flex-row w-full">
@@ -99,7 +99,7 @@
                         @else
                         Add
                         @endif</button>
-                    <a href="{{ route('admin-posts') }}"
+                    <a href="{{ route('admin.posts') }}"
                         class="bg-rose-700 text-white font-bold px-5 py-3 rounded">Cancel</a>
                 </div>
 

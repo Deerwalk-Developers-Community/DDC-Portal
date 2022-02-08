@@ -17,7 +17,7 @@ class MemberOnly
     public function handle(Request $request, Closure $next)
     {
         if ($request->user()->role < 3) 
-            return redirect(route('admin-dashboard'));
+            return redirect(route('admin.dashboard'));
 
         return $next($request);
     }

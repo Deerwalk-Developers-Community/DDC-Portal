@@ -22,7 +22,7 @@
 
 <!-- Add post button -->
 <div class="mb-5 flow-root">
-    <a href="{{ route('admin-posts-add') }}"
+    <a href="{{ route('admin.posts-add') }}"
         class="px-4 py-3 font-bold bg-primary text-white rounded-lg float-right">Add Post</a>
 </div>
 
@@ -62,7 +62,7 @@
                 <button class="text-primary font-bold mx-2 cursor-pointer publish-button" data-id="{{ $post->id }}"
                     data-publish="{{ !$post->published }}">{{ $post->published ? 'Unpublish' : 'Publish'
                     }}</a>
-                    <a href="{{ route('admin-posts-edit', ['id'=> $post->id]) }}"
+                    <a href="{{ route('admin.posts-edit', ['id'=> $post->id]) }}"
                         class="text-primary font-bold mx-2 cursor-pointer">Edit</a>
                     <button class="text-red-600 font-bold mx-2 cursor-pointer delete-button"
                         data-id="{{ $post->id }}">Delete</button>
@@ -100,7 +100,7 @@
             dialogHeader.innerText = "Delete";
             dialogBody.innerText = "Are you sure you want to delete this post?";
 
-            dialogConfirm.action = "{{ route('admin-posts-delete', ['id' => ":id"]) }}".replace(":id", id);
+            dialogConfirm.action = "{{ route('admin.posts-delete', ['id' => ":id"]) }}".replace(":id", id);
 
             dialogConfirmButton.innerText = "Delete";
 
@@ -117,7 +117,7 @@
 
             dialogHeader.innerText = publish_text;
 
-            dialogConfirm.action = "{{ route('admin-posts-publish', ['id' => ":id", 'publish' => ":publish"]) }}".replace(":id", id).replace(":publish", publish ? "publish" : "unpublish");
+            dialogConfirm.action = "{{ route('admin.posts-publish', ['id' => ":id", 'publish' => ":publish"]) }}".replace(":id", id).replace(":publish", publish ? "publish" : "unpublish");
 
 
             dialogBody.innerText = `Do you want to ${publish_text} this post?`;
