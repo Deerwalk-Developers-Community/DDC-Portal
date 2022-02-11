@@ -15,7 +15,7 @@
                 </div>
 
                 <h1 class="title-heading aeonik_bold">
-                    Introduction to Deerwalk Developers Community
+                    Introduction to Deerwalk <br> Developers Community
                 </h1>
 
                 <p class="inter_regular title-paragraph">
@@ -27,11 +27,60 @@
                     <BsArrowRight />
                 </button> --}}
             </div>
+            
             <div class="right-division">
                 <img class="float" src="./assets/images/mockup/plane-laptop.png" alt="" />
             </div>
+
+<!-- faq section shall start from here -->
+
+<section id="faq-section">
+                <h3>Frequently Asked Questions</h3>
+                <div class="line-container">
+                    <hr />
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="tabs">
+                            <div class="tab">
+                                <input type="checkbox" id="chck1" />
+                                <label class="tab-label" for="chck1">What is the motto of our community?</label>
+                                <div class="tab-content">
+                                    The motto of DDC is to provide students a platform to learn through projects.
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <input type="checkbox" id="chck2" />
+                                <label class="tab-label" for="chck2">How can I contribute?</label>
+                                <div class="tab-content">
+                                    DDC is actively conducting different events. If you wish to be a part of any event
+                                    or to contribute, contact us and keep checking the community’s Facebook page
+                                    facebook.com/ddevcommunity.
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <input type="checkbox" id="chck3" />
+                                <label class="tab-label" for="chck3">How can I be a part on an upcoming event?</label>
+                                <div class="tab-content">
+                                    All the details about the events are kept on the events section of this website or
+                                    you can also check the community’s Facebook page.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
     </div>
+
+
+    
+
+    
+
+
     <!-- herosection ends here  -->
 
     {{-- <!-- info card section starts here  -->
