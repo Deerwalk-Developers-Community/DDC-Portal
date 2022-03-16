@@ -5,8 +5,12 @@
 <div class="p-7">
     <div class="text-3xl font-bold">{{ $page }}</div>
 
-    <form action="@if ($edit) {{route('admin-posts-edit', ['id' => $post->id])}} @else {{route('admin-posts-add')}} @endif" method="post"
-        enctype="multipart/form-data">
+    <form
+        action="@if ($edit) {{route('admin.posts.update', ['post' => $post->id])}} @else {{route('admin.posts.store')}} @endif"
+        method="post" enctype="multipart/form-data">
+        @if ($edit)
+        @method('put')
+        @endif
         @csrf
         <div class="flex flex-row w-full">
             <div class="p-5 w-auto flex-1 w-3/4">
@@ -99,7 +103,7 @@
                         @else
                         Add
                         @endif</button>
-                    <a href="{{ route('admin-posts') }}"
+                    <a href="{{ route('admin.posts.index') }}"
                         class="bg-rose-700 text-white font-bold px-5 py-3 rounded">Cancel</a>
                 </div>
 

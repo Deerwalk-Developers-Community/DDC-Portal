@@ -13,7 +13,7 @@
 
     <!-- Add User button -->
     <div class="mb-5 mt-16 flow-root">
-        <a href="{{ route('admin-users-add') }}"
+        <a href="{{ route('admin.users-add') }}"
             class="px-4 py-3 font-bold bg-primary text-white rounded-lg float-right">Add User</a>
     </div>
 
@@ -52,7 +52,7 @@
                 </td>
                 @if (auth()->user()->role == 1 or auth()->user()->role == 2)
                 <td class="py-3 px-6 text-center">
-                    <a href="{{ route('admin-users-edit', ['id' => $u->id]) }}"
+                    <a href="{{ route('admin.users-edit', ['id' => $u->id]) }}"
                         class="text-primary font-bold mx-2 cursor-pointer">Edit</a>
                     <button class="text-red-600 font-bold mx-2 cursor-pointer delete-button" data-id="{{ $u->id }}">Delete</button>
                 </td>
@@ -88,7 +88,7 @@
         dialogHeader.innerText = "Delete";
         dialogBody.innerText = "Are you sure you want to delete this user?";
 
-        dialogConfirm.action = "{{ route('admin-users-delete', ['id' => ":id"]) }}".replace(":id", id);
+        dialogConfirm.action = "{{ route('admin.users-delete', ['id' => ":id"]) }}".replace(":id", id);
 
         dialogConfirmButton.innerText = "Delete";
 

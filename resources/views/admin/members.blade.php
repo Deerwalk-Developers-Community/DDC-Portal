@@ -21,7 +21,7 @@
             Executive Members
         </div>
 
-        <a href="{{ route('admin-members-executive-add') }}"
+        <a href="{{ route('admin.members-executive-add') }}"
             class="px-4 py-2 bg-primary text-white text-sm rounded">Add</a>
     </div>
 
@@ -39,7 +39,7 @@
                 <div class="text-gray-500">Executive Member</div>
                 <div class="flex flex-row">
                     <div class="cursor-pointer">
-                        <a href="{{ route('admin-members-executive-edit', ['id'=>$member->id]) }}">
+                        <a href="{{ route('admin.members-executive-edit', ['id'=>$member->id]) }}">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
                                 viewBox="0 0 24 24" style=" fill:#000000;">
                                 <path
@@ -94,7 +94,7 @@
         dialogHeader.innerText = "Delete";
         dialogBody.innerText = "Are you sure you want to delete this member?";
 
-        dialogConfirm.action = "{{ route('admin-members-executive-delete', ['id' => ":id"]) }}".replace(":id", id);
+        dialogConfirm.action = "{{ route('admin.members-executive-delete', ['id' => ":id"]) }}".replace(":id", id);
 
         dialogConfirmButton.innerText = "Delete";
 

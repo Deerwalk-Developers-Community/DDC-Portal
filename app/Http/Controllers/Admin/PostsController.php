@@ -9,13 +9,6 @@ use Illuminate\Support\Facades\Storage;
 
 class PostsController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware(['auth', 'auth.admin']);
-    }
-
-
     private function validatePost(Request $request)
     {
 
@@ -29,6 +22,17 @@ class PostsController extends Controller
         ]);
     }
 
+    private function checkPostPermission($user, $post)
+    {
+        if ($user->role != 1 && $user != $post->user)
+            return response('Unauthorized', 403);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         $posts = Post::where('deleted', false)->get();
@@ -40,9 +44,14 @@ class PostsController extends Controller
         return view('admin.posts', $data);
     }
 
-    // add post page
-    public function addPost()
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
     {
+        //
         $data = [
             'page' => 'Add Post',
             'edit' => false
@@ -52,10 +61,15 @@ class PostsController extends Controller
         return view('admin.addorEditPost', $data);
     }
 
-    // store post in db
-    public function storePost(Request $request)
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
     {
-
+        //
         $this->validatePost($request);
 
         $image_name = null;
@@ -78,19 +92,28 @@ class PostsController extends Controller
             'tags' => $request->tags
         ]);
 
-        return redirect(route('admin-posts'));
+        return redirect(route('admin.posts.index'));
     }
 
-    private function checkPostPermission($user, $post)
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
     {
-        if ($user->role != 1 && $user != $post->user)
-            return response('Unauthorized', 403);
+        //
     }
 
-    // edit post view
-    public function editPostView(Request $request, $id)
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
     {
-
         // find post
         $post = Post::where('id', $id)->first();
 
@@ -99,7 +122,7 @@ class PostsController extends Controller
 
 
         // check user permisison
-        $this->checkPostPermission($request->user(), $post);
+        $this->checkPostPermission(auth()->user(), $post);
 
         // load edit view
         $data = [
@@ -111,9 +134,15 @@ class PostsController extends Controller
         return view('admin.addorEditPost', $data);
     }
 
-    public function editPost(Request $request, $id)
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
     {
-
         // find post
         $post = Post::where('id', $id)->first();
 
@@ -123,7 +152,7 @@ class PostsController extends Controller
 
 
         // check user permisison
-        $this->checkPostPermission($request->user(), $post);
+        $this->checkPostPermission(auth()->user(), $post);
 
         $this->validatePost($request);
 
@@ -150,19 +179,22 @@ class PostsController extends Controller
 
         $post->save();
 
-        return redirect(route('admin-posts'));
+        return redirect(route('admin.posts.index'));
     }
 
-
-    // delete post
-    public function deletePost(Request $request, $id)
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
     {
-
         // find post
         $post = Post::where('id', $id)->first();
 
         // check permission
-        $this->checkPostPermission($request->user(), $post);
+        $this->checkPostPermission(auth()->user(), $post);
 
         if ($post == null)
             return back()->with('status', 'Post not found!');
@@ -174,9 +206,8 @@ class PostsController extends Controller
         return back()->with('status', 'Post Deleted Successfully');
     }
 
-
     // publish or unpublish a post
-    public function publishPost(Request $request, $id, $publish)
+    public function publish(Request $request, $id, $publish)
     {
 
         // find post

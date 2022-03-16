@@ -18,7 +18,8 @@ class Post extends Model
         'link',
         'image',
         'published',
-        'deleted'
+        'deleted',
+        'event_date'
     ];
 
     protected $attributes = [
