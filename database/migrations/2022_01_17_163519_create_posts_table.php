@@ -26,6 +26,7 @@ class CreatePostsTable extends Migration
             $table->text('tags')->nullable();
             $table->boolean('published');
             $table->boolean('deleted');
+            $table->date('event_date')->nullable();
         });
     }
 

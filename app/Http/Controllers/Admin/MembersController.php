@@ -109,7 +109,8 @@ class MembersController extends Controller
         if ($request->hasFile('image')) {
             $prev_image = $member->image;
 
-            Storage::unlink('public/images/' . $prev_image);
+            if ($prev_image != "")
+                Storage::unlink('public/images/' . $prev_image);
 
             $image_name = time() . "-" . $request->name . "." . $request->image->extension();
 

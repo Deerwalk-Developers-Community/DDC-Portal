@@ -55,13 +55,8 @@ Route::prefix('u')->middleware(['auth', 'auth.memberonly'])->name('user.')->grou
 Route::prefix('admin')->middleware(['auth', 'auth.admin'])->name('admin.')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
-    Route::get('/posts', [PostsController::class, 'index'])->name('posts');
-    Route::get('/posts/add', [PostsController::class, 'addPost'])->name('posts-add');
-    Route::post('/posts/add', [PostsController::class, 'storePost']);
-    Route::get('/posts/{id}/edit', [PostsController::class, 'editPostView'])->name('posts-edit');
-    Route::post('/posts/{id}/edit', [PostsController::class, 'editPost']);
-    Route::post('/posts/{id}/delete', [PostsController::class, 'deletePost'])->name('posts-delete');
-    Route::post('/posts/{id}/{publish}', [PostsController::class, 'publishPost'])->name('posts-publish');
+    Route::resource('posts', PostsController::class);
+    Route::post('/posts/{id}/{publish}', [PostsController::class, 'publish'])->name('posts.publish');
 
     Route::get('/members', [MembersController::class, 'index'])->name('members');
     Route::get('/members/executive/add', [MembersController::class, 'addExecutive'])->name('members-executive-add');
