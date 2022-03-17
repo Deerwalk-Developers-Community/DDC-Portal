@@ -3,7 +3,8 @@
 @section('content')
 <main id="home-page">
     <!-- herosection starts here  -->
-    <div class="containerCenter" id="vanta-canvas">
+    <!-- <div class="containerCenter" id="vanta-canvas"> -->
+    <div class="containerCenter" >
         <div class="contentBlock" id="hero-section">
             <div class="left-division">
                 <div class="tag-block-wrapper">

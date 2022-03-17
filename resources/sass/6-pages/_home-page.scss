@@ -1,140 +1,140 @@
 section,
 footer {
-  margin-top: 2.5rem;
+    margin-top: 2.5rem;
 }
 #home-page {
-  width: 100%;
+    width: 100%;
 
-  color: white;
+    color: white;
 
-  #hero-section {
-    margin: 15rem 0rem;
-    // background-color: red;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    @include media('<=1157px') {
-      justify-content: center;
-    }
-
-    .left-division {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-
-      .title-heading {
-        font-size: 4rem;
-        color: white;
-      }
-      .title-paragraph {
-        width: 40rem;
-        line-height: 2.5rem;
-        font-size: 2.2rem;
-        color: rgb(122, 128, 135);
-      }
-      button {
-        margin-top: 2rem;
-        border-radius: 2rem;
-        padding: 1rem 2rem;
-      }
-    }
-
-    .right-division {
-      display: flex;
-      align-items: center;
-
-      img {
-        height: 45rem;
-        @include media('<=1157px') {
+    #hero-section {
+        // margin: 15rem 0rem;
+        // background-color: red;
+        // display: flex;
+        // justify-content: space-between;
+        // flex-wrap: wrap;
+        @include media("<=1157px") {
+            // justify-content: center;
         }
-      }
+
+        .left-division {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            .title-heading {
+                font-size: 4rem;
+                color: white;
+            }
+            .title-paragraph {
+                width: 40rem;
+                line-height: 2.5rem;
+                font-size: 2.2rem;
+                color: rgb(122, 128, 135);
+            }
+            button {
+                margin-top: 2rem;
+                border-radius: 2rem;
+                padding: 1rem 2rem;
+            }
+        }
+
+        .right-division {
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 45rem;
+                @include media("<=1157px") {
+                }
+            }
+        }
     }
-  }
-  position: relative;
+    position: relative;
 }
 
 #carousel-section-wrapper {
-  // padding: 20rem 0rem;
+    // padding: 20rem 0rem;
 }
 
 #info-card-section-wrapper {
-  background: #14161b96;
+    background: #14161b96;
 }
 #info-card-section {
-  img {
-    transition: all ease 0.6s;
-  }
-  padding: 5rem 0;
-  width: 100%;
-  @include flexi();
-  justify-content: center;
-  @include media('<=1073px') {
-    // justify-content: center;
-  }
-  align-items: center;
-  flex-wrap: wrap;
+    img {
+        // transition: all ease 0.6s;
+    }
+    padding: 5rem 0;
+    width: 100%;
+    @include flexi();
+    justify-content: center;
+    @include media("<=1073px") {
+        // justify-content: center;
+    }
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 // twitter card
 #feedback-section {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  .illustrator-division img {
-    width: 80rem;
-    min-width: 20rem;
-  }
-  .card {
-    margin: 1rem;
-    border: 1px solid rgb(50, 49, 49);
-    padding: 2rem;
-    border-radius: 1rem;
-    width: 40rem;
-    min-width: 30rem;
-    background-color: black;
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      .left {
-        display: flex;
-        .avatar {
-          img {
-            height: 6rem;
-            border-radius: 50%;
-          }
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .illustrator-division img {
+        width: 80rem;
+        min-width: 20rem;
+    }
+    .card {
+        margin: 1rem;
+        border: 1px solid rgb(50, 49, 49);
+        padding: 2rem;
+        border-radius: 1rem;
+        width: 40rem;
+        min-width: 30rem;
+        background-color: black;
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            .left {
+                display: flex;
+                .avatar {
+                    img {
+                        height: 6rem;
+                        border-radius: 50%;
+                    }
+                }
+
+                .user-info {
+                    margin: 1rem 0.5rem;
+                    h3 {
+                        font-size: 2rem;
+                        color: white;
+                    }
+                    h4 {
+                        font-size: 1.5rem;
+                        color: white;
+                    }
+                }
+            }
+
+            .right {
+                .social-link {
+                    i {
+                        font-size: 2.5rem;
+                        color: #1da1f2;
+                    }
+                }
+            }
         }
 
-        .user-info {
-          margin: 1rem 0.5rem;
-          h3 {
-            font-size: 2rem;
-            color: white;
-          }
-          h4 {
+        .card-content {
+            padding: 1rem;
+            line-height: 2.4rem;
             font-size: 1.5rem;
-            color: white;
-          }
         }
-      }
-
-      .right {
-        .social-link {
-          i {
-            font-size: 2.5rem;
-            color: #1da1f2;
-          }
+        .visit-link {
+            font-size: 1.5rem;
         }
-      }
     }
-
-    .card-content {
-      padding: 1rem;
-      line-height: 2.4rem;
-      font-size: 1.5rem;
-    }
-    .visit-link {
-      font-size: 1.5rem;
-    }
-  }
 }

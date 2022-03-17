@@ -13,7 +13,7 @@
 
 <body>
     <div id="st-container" class="st-container">
-        <nav class="st-menu st-effect-11" id="menu-11">
+        <nav class="st-menu st-effect-1" id="menu-11">
             <div id="st-logo" class="icon icon-lab">
                 <img src="{{ asset('images/logo/logo.png') }}" alt="" />
             </div>
@@ -56,7 +56,7 @@
 
                     <div class="main clearfix">
                         <div id="st-trigger-effects" class="">
-                            <button id="hamburger-container-btn" data-effect="st-effect-11">
+                            <button id="hamburger-container-btn" data-effect="st-effect-1">
                                 <div class="line"></div>
                                 <div class="line"></div>
                                 <div class="line"></div>
@@ -64,6 +64,9 @@
                         </div>
                     </div>
                 </div>
+
+
+                <!-- //!jpt -->
                 <!-- header  starts here-->
                 <div class="containerCenter">
                     <div class="contentBlock">
@@ -71,35 +74,35 @@
                             <nav>
                                 <ul id="left-nav">
                                     <li>
-                                        <a class="link inter_regular" href="{{ route('home') }}">
-                                            <img id="logo" src="{{ asset('images/logo/logo.png') }}" alt="" />
+                                        <a class="link inter_regular " style="padding:1rem;"  href="{{ route('home') }}">
+                                            <img id="logo"  src="{{ asset('images/logo/logo.png') }}" alt="" />
                                         </a>
                                     </li>
                                 </ul>
                                 <ul id="center-nav">
                                     <li>
-                                        <a class="inter_regular" href="{{ route('home') }}"> Home </a>
+                                        <a class="inter_regular hvr-underline-from-center" style="padding:1.25rem;" href="{{ route('home') }}"> Home </a>
                                     </li>
                                     <li>
-                                        <a class="inter_regular" href="{{ route('event') }}"> Events </a>
+                                        <a class="inter_regular hvr-underline-from-center" style="padding:1.25rem;" href="{{ route('event') }}"> Events </a>
                                     </li>
                                     <li>
-                                        <a class="inter_regular" href="{{ route('blogs') }}">
+                                        <a class="inter_regular hvr-underline-from-center" style="padding:1.25rem;" href="{{ route('blogs') }}">
                                             Blogs
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="inter_regular" href="{{ route('aboutus') }}">
+                                        <a class="inter_regular hvr-underline-from-center" style="padding:1.25rem;" href="{{ route('aboutus') }}">
                                             About Us
                                         </a>
                                     </li>
                                 </ul>
                                 <ul id="right-nav">
-                                    <li>
+                                    <li style="padding:1rem;">
                                         @auth
                                         <form action="{{ route('logout') }}" method="post">
                                             @csrf
-                                            <button type="submit" class="inter_regular">
+                                            <button type="submit"  class="inter_regular">
                                                 Logout
                                             </button>
                                         </form>
@@ -122,123 +125,49 @@
                 @yield('content')
 
                 <!-- footer starts here  -->
-                */
-                <div class="containerCenter footer__wrapper">
-                    <div class="contentBlock">
-                        <footer>
-                            <div class="inter_regular">
-                                <ul>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                </ul>
+                
+<div id="footer-secondary">
 
-                                <ul>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <ul>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                </ul>
-
-                                <ul>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <ul>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <ul>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> Product </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </footer>
-                        <div class="cursor"></div>
-                        <div class="cursor2"></div>
+<section class="contact-area" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="contact-content text-center">
+                        <a href="#">
+                            
+                        
+                        <img src="{{ asset('images/logo/logo.png') }}" alt="" />
+                        </a>
+                        
+                        <div class="hr"></div>
+                        <h6>1120 Lorem ipsum dolor sit amet, KC 179050, Chandigarh.</h6>
+                        <h6>+01 2345 6789 12<span>|</span>+01 2345 6789 12</h6>
+                        <div class="contact-social">
+                            <ul>
+                                <li><a class="hover-target" href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a class="hover-target" href=""><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a class="hover-target" href=""><i class="fab fa-github"></i></a></li>
+                                <li><a class="hover-target" href=""><i class="fab fa-behance"></i></a></li>
+                                <li><a class="hover-target" href=""><i class="fab fa-pinterest-p"></i></a></li>
+                            </ul>
+                            <p>Copyright &copy; 2019  All Rights Reserved.</p>
+        
+                        </div>
                     </div>
                 </div>
-                /*
+            </div>
+        </div>
+        
+    </section>
+<!-- =============== 1.9 Contact Area End ====================-->
+    <!-- =============== 1.9 Footer Area Start ====================-->
+    
+
+</div>
+                
+    
                 <!-- footer ends here  -->
-                */
+             
             </div>
         </div>
     </div>
