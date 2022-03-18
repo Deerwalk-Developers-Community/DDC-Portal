@@ -23,6 +23,17 @@
         @include flexi();
         flex-wrap: wrap;
         justify-content: space-between;
+        @include media("<=tablet") {
+            display: flex;
+            justify-content: center;
+            #center-nav {
+                display: none;
+            }
+
+            #right-nav {
+                display: none;
+            }
+        }
         ul {
             @include flexi();
             list-style: none;
@@ -62,4 +73,10 @@
 // header inner content block
 .main {
     max-width: 150rem !important;
+}
+
+//!navbar
+#menu-11 {
+    border-right: 2px solid grey;
+    border-bottom-right-radius: 25rem;
 }

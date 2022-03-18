@@ -5548,6 +5548,18 @@ a:visited {
 #public-header nav #right-nav button:hover {
   background-color: #47a7f5;
 }
+@media (max-width: 768px) {
+  #public-header nav {
+    display: flex;
+    justify-content: center;
+  }
+  #public-header nav #center-nav {
+    display: none;
+  }
+  #public-header nav #right-nav {
+    display: none;
+  }
+}
 #public-header nav ul {
   display: flex;
   list-style: none;
@@ -5573,6 +5585,11 @@ a:visited {
 
 .main {
   max-width: 150rem !important;
+}
+
+#menu-11 {
+  border-right: 2px solid grey;
+  border-bottom-right-radius: 25rem;
 }
 
 #menu-11 {
@@ -5630,6 +5647,18 @@ a:visited {
 #public-header nav #right-nav button:hover {
   background-color: #47a7f5;
 }
+@media (max-width: 768px) {
+  #public-header nav {
+    display: flex;
+    justify-content: center;
+  }
+  #public-header nav #center-nav {
+    display: none;
+  }
+  #public-header nav #right-nav {
+    display: none;
+  }
+}
 #public-header nav ul {
   display: flex;
   list-style: none;
@@ -5655,6 +5684,11 @@ a:visited {
 
 .main {
   max-width: 150rem !important;
+}
+
+#menu-11 {
+  border-right: 2px solid grey;
+  border-bottom-right-radius: 25rem;
 }
 
 #footer-secondary {
