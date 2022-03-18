@@ -7210,6 +7210,45 @@ footer {
   color: white;
 }
 
+.video_section {
+  border-radius: 2rem;
+  display: flex;
+  width: 100rem;
+  background-color: #131212;
+  overflow: hidden;
+}
+.video_section iframe {
+  border: none;
+  outline: none;
+}
+.video_section .left-division {
+  width: 50%;
+}
+.video_section .right-division {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.video_section .right-division u {
+  font-size: 1.8rem;
+  color: #c1c1c1;
+}
+.video_section .right-division h3 {
+  margin-top: 2rem;
+  color: white;
+  font-size: 5.5rem;
+}
+.video_section .right-division button {
+  font-size: 2.2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background-color: #1da1f2;
+  color: white;
+  margin-top: 2rem;
+}
+
 #event-page {
   width: 100%;
   color: white;
@@ -8316,4 +8355,26 @@ body,
   box-shadow: inset 6px 6px 8px -2px #a8aaac, inset -6px -6px 8px -2px #c1d3d6, 0px 12px 10px -10px #7c928f;
   border: 2px solid rgba(194, 171, 194, 0.3);
   transform: translateY(3px);
+}
+
+#register-page {
+  width: 100%;
+  background-color: red;
+}
+#register-page .card {
+  background-color: blue;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#register-page form {
+  background: white !important;
+  padding: 4rem 1rem;
+}
+#register-page form input {
+  height: 2rem;
+}
+#register-page form button {
+  width: 100%;
+  font-size: 2.2rem;
 }

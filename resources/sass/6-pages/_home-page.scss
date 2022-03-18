@@ -201,3 +201,44 @@ footer {
         color: white;
     }
 }
+
+.video_section {
+    border-radius: 2rem;
+    display: flex;
+    width: 100rem;
+    background-color: #131212;
+    overflow: hidden;
+
+    iframe {
+        border: none;
+        outline: none;
+    }
+
+    .left-division {
+        width: 50%;
+    }
+    .right-division {
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        u {
+            font-size: 1.8rem;
+            color: #c1c1c1;
+        }
+        h3 {
+            margin-top: 2rem;
+            color: white;
+            font-size: 5.5rem;
+        }
+        button {
+            font-size: 2.2rem;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            background-color: #1da1f2;
+            color: white;
+            margin-top: 2rem;
+        }
+    }
+}

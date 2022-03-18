@@ -1,0 +1,21 @@
+#register-page {
+    width: 100%;
+    background-color: red;
+    .card {
+        background-color: blue;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    form {
+        background: white !important;
+        input {
+            height: 2rem;
+        }
+        padding: 4rem 1rem;
+        button {
+            width: 100%;
+            font-size: 2.2rem;
+        }
+    }
+}
