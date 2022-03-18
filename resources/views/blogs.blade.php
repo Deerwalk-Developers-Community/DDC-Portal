@@ -13,7 +13,7 @@
 
 
 
-<section >
+<section id='blog-page-section' >
 <div id="left-section">
 
 <div id="featured-blog-card">

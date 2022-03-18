@@ -1,12 +1,14 @@
 #event-card-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    // justify-content: center;
 }
 .event-card {
     cursor: pointer;
     margin: 1rem;
-    width: 35rem;
+    @include media(">=515px") {
+        width: 35rem;
+    }
     min-width: 20rem;
     border-radius: 1rem;
     padding: 1rem;
