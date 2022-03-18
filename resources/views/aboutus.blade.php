@@ -25,10 +25,8 @@
                 </div>
                 <div id="article-container">
                     <article id="left-division">
-                        The Deerwalk Developers Community was formed in the year 2020 with the motive to make a group of
-                        enthusiastic learners and help them learn and grow together. During the first year of the
-                        Deerwalk Developers Community’s tenure, it had been actively involved in conducting events like
-                        Hour of Code, Tech Talks, and a few workshops and Facebook live sessions.
+                                             <img src="{{ asset('images/home/aboutus/girl-history.png') }}" alt="" />
+                
                     </article>
                     <article id="right-division">
                         With all these productive events, the community had a pretty good start even for its first year.
@@ -78,6 +76,11 @@
                         <div class="right">
                             <h2>{{ $member->name }}</h2>
                             <h4>{{ $member->role }}</h4>
+                            <ul class='meet-our-team-social'>
+                                <li><a class="hover-target" href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a class="hover-target" href=""><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a class="hover-target" href=""><i class="fab fa-github"></i></a></li>
+                            </ul>
                             {{-- <p>
                                 Lorem, ipsum dolor sit amet consectetur adipisicing
                             </p> --}}

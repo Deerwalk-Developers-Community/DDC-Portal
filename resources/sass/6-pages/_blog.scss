@@ -40,9 +40,11 @@
             .featured-blog-card__img-container {
                 height: 50rem !important;
                 overflow: hidden;
+                border-radius: 1rem;
             }
             img {
                 width: 100%;
+                border-radius: 1rem;
             }
             h4 {
                 font-size: 1.4rem;

@@ -6252,6 +6252,26 @@ a:visited {
   line-height: 2.5rem;
   justify-content: space-around;
 }
+#history-section #article-container #left-division img {
+  max-height: 45rem;
+  max-width: 45rem;
+}
+@media (max-width: 1120px) {
+  #history-section #article-container #left-division img {
+    max-height: 30rem;
+    max-width: 30rem;
+  }
+}
+@media (max-width: 900px) {
+  #history-section #article-container #left-division img {
+    max-height: 50rem;
+    max-width: 50rem;
+  }
+}
+#history-section #article-container #right-division {
+  display: flex;
+  align-items: center;
+}
 #history-section #article-container #left-division,
 #history-section #article-container #right-division {
   width: 45%;
@@ -6369,6 +6389,10 @@ a:visited {
     justify-content: center;
   }
 }
+#story-section-container #left-division {
+  display: flex;
+  align-items: center !important;
+}
 #story-section-container #left-division p {
   max-width: 85rem;
   font-size: 1.8rem;
@@ -6379,9 +6403,26 @@ a:visited {
     max-width: 100%;
   }
 }
+@media (max-width: 1870px) {
+  #story-section-container #right-division {
+    margin-top: 5rem;
+  }
+}
 #story-section-container #right-division img {
-  width: 55rem;
-  min-width: 20rem;
+  max-height: 45rem;
+  max-width: 45rem;
+}
+@media (max-width: 1120px) {
+  #story-section-container #right-division img {
+    max-height: 30rem;
+    max-width: 30rem;
+  }
+}
+@media (max-width: 900px) {
+  #story-section-container #right-division img {
+    max-height: 50rem;
+    max-width: 50rem;
+  }
 }
 #story-section h3 {
   font-size: 3.6rem;
@@ -6434,6 +6475,29 @@ a:visited {
   margin: 0rem 0.5rem;
   height: 3rem;
 }
+.meet-our-team-social {
+  display: flex !important;
+  list-style: none;
+}
+.meet-our-team-social li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  padding: 1.5rem;
+  width: 2rem;
+  margin: 1rem;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+.meet-our-team-social li:hover {
+  border: 2px solid white;
+}
+.meet-our-team-social li a {
+  font-size: 1.8rem;
+  color: #c1c1c1;
+}
+
 #blog-page p {
   line-height: 2.6rem !important;
 }
@@ -6471,9 +6535,11 @@ a:visited {
 #blog-page #left-section #featured-blog-card .featured-blog-card__img-container {
   height: 50rem !important;
   overflow: hidden;
+  border-radius: 1rem;
 }
 #blog-page #left-section #featured-blog-card img {
   width: 100%;
+  border-radius: 1rem;
 }
 #blog-page #left-section #featured-blog-card h4 {
   font-size: 1.4rem;
