@@ -31,6 +31,12 @@
                 @include media("<=1455px") {
                     font-size: 4.2rem;
                 }
+                @include media("<=961px") {
+                    font-size: 3.2rem;
+                }
+                @include media("<=700px") {
+                    font-size: 5.2rem;
+                }
             }
         }
         .right-division {

@@ -68,12 +68,12 @@
     <div class="news ">
       <div class="container">
         <h1 class="news-heading source_700">Subscribe To Get The Latest <br> News About Us</h1>
-        <p class="des how-de">Get the Latest news about digital Marketing to Your Pocket, drop your <br> email below to
+        <p class="des how-de">Get the Latest news about ddc <br> email below to
           get daliy update about us</p>
 
-        <form action="">
-          <input type="email"  maxlength="50" required placeholder="Enter your email address">
-          <button class="bt">Subscribe</button>
+        <form action="https://formspree.io/f/mlezlorj" method="post">
+          <input name="Email" id='email' type="email"  maxlength="50" required placeholder="Enter your email address">
+          <button type='submit' class="bt">Subscribe</button>
 
 
 
@@ -89,6 +89,19 @@
 
 
 <!-- subscribe to news lettersecction start herer -->
+
+
+<!-- our team -->
+<div class="containerCenter">
+  
+<div class="contentBlock">
+<!-- sart  -->
+
+</div>
+</div>
+<!-- our team -->
+
+
 
 @endsection
 
