@@ -30,213 +30,30 @@
             </div>
             <div class="right-division">
                
-        
-        
-<div class="register-box">
-
-
-<form action="">
-
-<h3 class='register-box-title source_700'>Register & Join Us</h3>
-    <input placeholder='Enter your Full Name' type="text">
-
-<input placeholder='Enter Your email'  type="email">
-<input placeholder='Enter Your password'  type="password">
-<button class='register-box-btn'>Register</button>
-</form>
-
-</div>
-            
+                                                  
+                                                  
+                                          <div class="register-box">
+                                          
+                                          
+                                          <form action="">
+                                          
+                                          <h3 class='register-box-title source_700'>Register & Join Us</h3>
+                                              <input placeholder='Enter your Full Name' type="text">
+                                          
+                                          <input placeholder='Enter Your email'  type="email">
+                                          <input placeholder='Enter Your password'  type="password">
+                                          <button class='register-box-btn'>Register</button>
+                                          </form>
+                                          
+                                          </div>
+                                                      
         </div>
         </div>
     </div>
-    <!-- herosection ends here  -->
 
-    {{-- <!-- info card section starts here  -->
-    <div class="containerCenter" id="info-card-section-wrapper">
-        <div class="contentBlock">
-            <section id="info-card-section">
-                <a class="info-card" href="https://google.com">
-                    <img class="card-img" src="./assets/images/pages/home/card/react.jpeg"
-                        alt="card template description-here" />
-                    <h2 class="aeonik_bold card-title">
-                        Add live pointers and avatars to your product
-                    </h2>
-                    <p class="inter_regular card-paragraph">
-                        Liveblocks is the easiest and fastest way to add real‑time
-                        pointers and avatars to your product.
-                    </p>
-                </a>
-                <a class="info-card" href="https://google.com">
-                    <img class="card-img" src="./assets/images/pages/home/card/react.jpeg"
-                        alt="card template description-here" />
-                    <h2 class="aeonik_bold card-title">
-                        Add live pointers and avatars to your product
-                    </h2>
-                    <p class="inter_regular card-paragraph">
-                        Liveblocks is the easiest and fastest way to add real‑time
-                        pointers and avatars to your product.
-                    </p>
-                </a>
-                <a class="info-card" href="https://google.com">
-                    <img class="card-img" src="./assets/images/pages/home/card/react.jpeg"
-                        alt="card template description-here" />
-                    <h2 class="aeonik_bold card-title">
-                        Add live pointers and avatars to your product
-                    </h2>
-                    <p class="inter_regular card-paragraph">
-                        Liveblocks is the easiest and fastest way to add real‑time
-                        pointers and avatars to your product.
-                    </p>
-                </a>
-                <a class="info-card" href="https://google.com">
-                    <img class="card-img" src="./assets/images/pages/home/card/react.jpeg"
-                        alt="card template description-here" />
-                    <h2 class="aeonik_bold card-title">
-                        Add live pointers and avatars to your product
-                    </h2>
-                    <p class="inter_regular card-paragraph">
-                        Liveblocks is the easiest and fastest way to add real‑time
-                        pointers and avatars to your product.
-                    </p>
-                </a>
-                <a class="info-card" href="https://google.com">
-                    <img class="card-img" src="./assets/images/pages/home/card/react.jpeg"
-                        alt="card template description-here" />
-                    <h2 class="aeonik_bold card-title">
-                        Add live pointers and avatars to your product
-                    </h2>
-                    <p class="inter_regular card-paragraph">
-                        Liveblocks is the easiest and fastest way to add real‑time
-                        pointers and avatars to your product.
-                    </p>
-                </a>
-                <a class="info-card" href="https://google.com">
-                    <img class="card-img" src="./assets/images/pages/home/card/react.jpeg"
-                        alt="card template description-here" />
-                    <h2 class="aeonik_bold card-title">
-                        Add live pointers and avatars to your product
-                    </h2>
-                    <p class="inter_regular card-paragraph">
-                        Liveblocks is the easiest and fastest way to add real‑time
-                        pointers and avatars to your product.
-                    </p>
-                </a>
-                <a class="info-card" href="https://google.com">
-                    <img class="card-img" src="./assets/images/pages/home/card/react.jpeg"
-                        alt="card template description-here" />
-                    <h2 class="aeonik_bold card-title">
-                        Add live pointers and avatars to your product
-                    </h2>
-                    <p class="inter_regular card-paragraph">
-                        Liveblocks is the easiest and fastest way to add real‑time
-                        pointers and avatars to your product.
-                    </p>
-                </a>
-                <a class="info-card" href="https://google.com">
-                    <img class="card-img" src="./assets/images/pages/home/card/react.jpeg"
-                        alt="card template description-here" />
-                    <h2 class="aeonik_bold card-title">
-                        Add live pointers and avatars to your product
-                    </h2>
-                    <p class="inter_regular card-paragraph">
-                        Liveblocks is the easiest and fastest way to add real‑time
-                        pointers and avatars to your product.
-                    </p>
-                </a>
-            </section>
-        </div>
-    </div>
-    <!-- info card section ends here  -->
+    
 
-    <div class="containerCenter">
-        <section class="contentBlock" id="feedback-section">
-            <div class="card">
-                <div class="card-header">
-                    <div class="left">
-                        <div class="avatar">
-                            <img src="./assets/images/avatar/kp.jfif" alt="" />
-                        </div>
-                        <div class="user-info">
-                            <h3 class="inter_regular">Kshitiz</h3>
-                            <h4 class="inter_regular">
-                                <a class="link" href="">@CEO</a>
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="social-link">
-                            <i class="fa fa-twitter"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-content inter_regular">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Natus qui laudantium nostrum possimus voluptates, molestias,
-                    est, quidem fugit quibusdam aperiam mollitia officiis
-                    corporis a voluptatum?
-                </div>
-                <a href="" class="visit-link link"> Visit</a>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <div class="left">
-                        <div class="avatar">
-                            <img src="./assets/images/avatar/kp.jfif" alt="" />
-                        </div>
-                        <div class="user-info">
-                            <h3 class="inter_regular">Kshitiz</h3>
-                            <h4 class="inter_regular">
-                                <a class="link" href="">@CEO</a>
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="social-link">
-                            <i class="fa fa-twitter"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-content inter_regular">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Natus qui laudantium nostrum possimus voluptates, molestias,
-                    est, quidem fugit quibusdam aperiam mollitia officiis
-                    corporis a voluptatum?
-                </div>
-                <a href="" class="visit-link link"> Visit</a>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <div class="left">
-                        <div class="avatar">
-                            <img src="./assets/images/avatar/kp.jfif" alt="" />
-                        </div>
-                        <div class="user-info">
-                            <h3 class="inter_regular">Kshitiz</h3>
-                            <h4 class="inter_regular">
-                                <a class="link" href="">@CEO</a>
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="social-link">
-                            <i class="fa fa-twitter"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-content inter_regular">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Natus qui laudantium nostrum possimus voluptates, molestias,
-                    est, quidem fugit quibusdam aperiam mollitia officiis
-                    corporis a voluptatum?
-                </div>
-                <a href="" class="visit-link link"> Visit</a>
-            </div>
-        </section> --}}
-    </div>
+    
 </main>
 
 @endsection
