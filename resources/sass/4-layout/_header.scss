@@ -80,3 +80,8 @@
     border-right: 2px solid grey;
     border-bottom-right-radius: 25rem;
 }
+
+// make hamburger container loose its' space
+.st-content-inner {
+    position: absolute !important;
+}
