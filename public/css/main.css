@@ -5712,8 +5712,8 @@ a:visited {
   display: inline-flex;
 }
 #footer-secondary .contact-social ul li a {
-  border: 1px solid #8b9199;
   color: #8b9199;
+  font-size: 2rem;
   display: inline-block;
   height: 40px;
   margin: 0 10px;
@@ -5722,8 +5722,8 @@ a:visited {
   width: 40px;
 }
 #footer-secondary .contact-social ul li a:hover {
-  border: 1px solid #fab702;
-  color: #fab702;
+  border: 1px solid #1da1f2;
+  color: #147ab9cc;
 }
 #footer-secondary section,
 #footer-secondary footer {

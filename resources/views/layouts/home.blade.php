@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<script src="https://kit.fontawesome.com/40c4f25596.js" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@700&display=swap" rel="stylesheet">
@@ -161,7 +162,7 @@
                         </a>
                         
                         <div class="hr"></div>
-                        <h6>1120 Lorem ipsum dolor sit amet, KC 179050, Chandigarh.</h6>
+                        <h6>1120 Lorem ipsum dolor sit amet, KC 179050, DDC Place.</h6>
                         <h6>+01 2345 6789 12<span>|</span>+01 2345 6789 12</h6>
                         <div class="contact-social">
                             <ul>
