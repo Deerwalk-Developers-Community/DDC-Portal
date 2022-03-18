@@ -139,6 +139,7 @@
 
 
 @section('scripts')
+<<<<<<< HEAD
 <!-- **vanta cdn starts here  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.birds.min.js"
@@ -169,4 +170,6 @@
 
 <!-- carousel cdn import -->
 <!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
+=======
+>>>>>>> 3efa77d39afad408ee3eb75de96db76ddcbfd101
 @endsection

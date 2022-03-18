@@ -8358,23 +8358,81 @@ body,
 }
 
 #register-page {
+  padding: 10rem 0rem;
   width: 100%;
-  background-color: red;
+  width: 100%;
+}
+#register-page .contentBlock {
+  width: 100%;
+}
+#register-page .contentBlock .container {
+  width: 100% !important;
+}
+#register-page .contentBlock .container .row {
+  width: 100%;
+}
+#register-page .contentBlock .container .row .col-md-8 {
+  width: 100%;
 }
 #register-page .card {
-  background-color: blue;
-  width: 100%;
+  padding-top: 5rem;
+  align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 #register-page form {
-  background: white !important;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  position: relative;
+  min-width: 50rem;
+  background: #16161d !important;
   padding: 4rem 1rem;
 }
+#register-page form #circle {
+  top: -3rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #16161d;
+  position: absolute;
+  border-radius: 50%;
+  height: 9rem;
+  width: 9rem;
+}
+#register-page form #circle img {
+  height: 5rem;
+  width: 5rem;
+}
+#register-page form h1 {
+  letter-spacing: 0.25rem;
+  font-size: 3rem;
+  text-align: center;
+  color: white !important;
+}
 #register-page form input {
-  height: 2rem;
+  margin: 0.75rem 0rem;
+  border-radius: 0.75rem;
+  width: 100%;
+  font-size: 1.8rem;
+  height: 6rem;
+  outline: none;
+  padding-left: 2rem !important;
+}
+#register-page form input:focus {
+  border-color: #66a8e4 !important;
 }
 #register-page form button {
+  border-radius: 0.75rem;
+  color: white;
+  background: #66a8e4;
+  padding: 1.5rem 0rem;
+  margin: 1rem 0rem;
   width: 100%;
   font-size: 2.2rem;
+}
+#register-page form button:hover {
+  background: #4296e4af;
 }
