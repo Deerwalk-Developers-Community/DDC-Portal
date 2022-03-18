@@ -22,7 +22,7 @@
         padding: 0rem 1rem;
         @include flexi();
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
         ul {
             @include flexi();
             list-style: none;

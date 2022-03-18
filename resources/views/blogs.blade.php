@@ -8,9 +8,12 @@
 
     <div class="containerCenter">
         <div class="contentBlock" id="blogs-container">
-<h1 class='blog-page__title'>WELCOME TO OUR BLOG SECTION</h1>
+<h1 class='blog-page__title source_700'>Blogs & Articles <br>
+</h1>
 
-            <section >
+
+
+<section >
 <div id="left-section">
 
 <div id="featured-blog-card">

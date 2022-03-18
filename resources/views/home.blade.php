@@ -15,8 +15,8 @@
                     </a> --}}
                 </div>
 
-                <h1 class="title-heading aeonik_bold">
-                    Introduction to Deerwalk Developers Community
+                <h1 class="title-heading source_700">
+                    Introduction to <br> Deerwalk Developers <br> Community
                 </h1>
 
                 <p class="inter_regular title-paragraph">
@@ -29,8 +29,25 @@
                 </button> --}}
             </div>
             <div class="right-division">
-                <img class="float" src="./assets/images/mockup/plane-laptop.png" alt="" />
-            </div>
+               
+        
+        
+<div class="register-box">
+
+
+<form action="">
+
+<h3 class='register-box-title source_700'>Register & Join Us</h3>
+    <input placeholder='Enter your Full Name' type="text">
+
+<input placeholder='Enter Your email'  type="email">
+<input placeholder='Enter Your password'  type="password">
+<button class='register-box-btn'>Register</button>
+</form>
+
+</div>
+            
+        </div>
         </div>
     </div>
     <!-- herosection ends here  -->
