@@ -16,6 +16,7 @@
 
 
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+   
 </head>
 
 <body>
@@ -33,6 +34,9 @@
                 </li>
                 <li>
                     <a class="icon icon-study hvr-underline-from-center" href="{{ route('blogs') }}">Blogs</a>
+                </li>
+                <li>
+                    <a class="icon icon-study hvr-underline-from-center" href="{{ route('blogs') }}">SignUp</a>
                 </li>
                 <li>
                     <a class="icon icon-photo hvr-underline-from-center" href="{{ route('aboutus') }}">About Us</a>
@@ -120,6 +124,16 @@
                                             <a href="{{ route('login') }}"> Login </a>
                                         </button>
                                         @endguest
+                                    </li>
+                                    <li style="padding:1rem;">
+                                       
+
+                                    <a href="#">
+                                    <button type="submit"  class="inter_regular">
+                                                Sign Up
+                                            </button>
+                                    </a>
+
                                     </li>
                                 </ul>
                             </nav>

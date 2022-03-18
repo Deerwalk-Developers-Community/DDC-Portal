@@ -6367,6 +6367,9 @@ a:visited {
   margin: 0rem 0.5rem;
   height: 3rem;
 }
+#blog-page p {
+  line-height: 2.6rem !important;
+}
 #blog-page .blog-page__title {
   color: white;
   margin-top: 5rem;
@@ -6504,7 +6507,6 @@ a:visited {
   flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
-  background: #1d2125;
 }
 @media (max-width: 500px) {
   #blogs-container {
@@ -6775,6 +6777,11 @@ footer {
   margin-bottom: 1rem;
   font-size: 7rem;
   color: white;
+}
+@media (max-width: 1480px) {
+  #home-page #hero-section .left-division .title-heading {
+    font-size: 4rem;
+  }
 }
 #home-page #hero-section .left-division .title-paragraph {
   width: 40rem;
