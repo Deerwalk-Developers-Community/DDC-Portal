@@ -28,14 +28,20 @@
                 border-left: 0.5rem solid rgb(77, 170, 233);
                 font-size: 7.2rem;
                 padding-left: 1rem;
+                @include media("<=1706px") {
+                    font-size: 5rem !important;
+                }
                 @include media("<=1455px") {
-                    font-size: 4.2rem;
+                    font-size: 4rem;
                 }
-                @include media("<=961px") {
-                    font-size: 3.2rem;
+                @include media("<=1012px") {
+                    font-size: 4.2rem !important;
                 }
-                @include media("<=700px") {
-                    font-size: 5.2rem;
+                @include media("<=970px") {
+                    font-size: 3.5rem !important;
+                }
+                @include media("<=693px") {
+                    font-size: 5.2rem !important;
                 }
             }
         }

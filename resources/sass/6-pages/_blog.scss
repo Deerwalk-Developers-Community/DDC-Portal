@@ -1,4 +1,5 @@
-#blog-page {
+#blog-page,
+#blog-page-detail {
     p {
         line-height: 2.6rem !important;
     }
@@ -29,7 +30,6 @@
     #left-section {
         // margin-left: 50%;
         // transform: translateX(-50%);
-        // width: 82%;
         #featured-blog-card {
             border-radius: 2rem;
             margin: 0.55rem;
@@ -46,7 +46,7 @@
             }
             img {
                 width: 100%;
-                border-radius: 1rem;
+                border-radius: 1.5rem;
             }
             h4 {
                 font-size: 1.4rem;
@@ -94,12 +94,14 @@
                         color: white;
                         border: 1px solid white;
                     }
-                    background: #ccc;
-                    color: black;
                     margin: 0.5rem 0.5rem;
                     padding: 0.5rem 1.5rem;
                     font-size: 1.8rem;
-                    border-radius: 0.25rem;
+
+                    color: white;
+                    background: #77baff;
+                    color: white;
+                    border-radius: 8.25rem;
                 }
             }
             img {
@@ -302,5 +304,39 @@
     }
     @include media("<=800px") {
         width: 100%;
+    }
+}
+
+// ! detail blog page styles_____________________________
+
+#blog-page-detail {
+    p {
+        font-size: 1.9rem !important;
+    }
+    img {
+        border-radius: 0.75rem !important;
+    }
+    #left-section {
+        // margin-left: 50%;
+        // transform: translateX(-50%);
+        width: 55%;
+        @include media("<=1653px") {
+            width: 65%;
+        }
+        @include media("<=1553px") {
+            width: 70%;
+        }
+        @include media("<=1303px") {
+            width: 75%;
+        }
+        @include media("<=1000px") {
+            width: 85%;
+        }
+        @include media("<=900px") {
+            width: 90%;
+        }
+        @include media("<=800px") {
+            width: 100%;
+        }
     }
 }
