@@ -1,267 +1,342 @@
-* {
-  transition: all ease-in-out 800ms;
-}
-#blog-page {
-  button {
-    transition: all ease-in-out 500ms;
-    &:hover {
-      transition: all ease-in-out 300ms;
-      color: black;
-      border: 1px solid white;
-      background: white;
+#blog-page,
+#blog-page-detail {
+    p {
+        line-height: 2.6rem !important;
     }
-    color: white;
-    border: 1px solid white;
-    background: transparent;
-    border-radius: 0.25rem;
-  }
-  p {
-    line-height: 1.9rem;
-  }
-  #left-section {
-    width: 85rem;
-    min-width: 15rem;
-    #featured-blog-card {
-      border-radius: 2rem;
-      margin: 0.55rem;
-      padding: 2rem;
-      color: white;
-
-      background: #151515;
-
-      img {
-        width: 100%;
-      }
-      h4 {
-        color: #ccc;
-        margin: 1rem 0rem;
-      }
-      h2 {
-        margin: 1rem 0rem;
-        font-size: 2.2rem;
-      }
-      p {
-        margin: 1rem 0rem;
-        font-size: 1.6rem;
-      }
-      button {
-        margin: 1rem 0rem;
-        font-size: 2.2rem;
-        padding: 1rem 1.5rem;
-      }
-    }
-
-    #blog-content {
-      .line-container {
-        hr {
-          top: -2rem;
+    .blog-page__title {
+        color: white;
+        margin-top: 5rem;
+        font-size: 4rem;
+        @include media("<=tablet") {
+            font-size: 3rem;
         }
-      }
-
-      color: white;
-      h1 {
-        font-size: 3.5rem;
-      }
-      h4 {
-        font-size: 1.4rem;
-      }
-      .tag-container {
-        padding: 1.5rem 0rem;
-        .tags {
-          border: 1px solid transparent;
-          transition: all ease-in-out 300ms;
-          &:hover {
-            transition: all ease-in-out 150ms;
-            background: transparent;
-            color: white;
+    }
+    button {
+        // transition: all ease-in-out 500ms;
+        &:hover {
+            // transition: all ease-in-out 300ms;
+            color: black;
             border: 1px solid white;
-          }
-          background: #ccc;
-          color: black;
-          margin: 0.5rem 0.5rem;
-          padding: 0.5rem 1.5rem;
-          font-size: 1.8rem;
-          border-radius: 0.25rem;
+            background: white;
         }
-      }
-      img {
+        color: white;
+        border: 1px solid white;
+        background: transparent;
         border-radius: 0.25rem;
-        width: 100%;
-      }
-      p {
-        line-height: 2.5rem;
-        margin: 0.55rem 0rem;
-        font-size: 1.6rem;
-      }
-      h2 {
-        margin: 1rem 0rem;
-        font-size: 2.2rem;
-      }
     }
-  }
-  #right-section {
-    transition: all ease-in-out 800ms;
+    p {
+        line-height: 1.9rem;
+    }
+    #left-section {
+        // margin-left: 50%;
+        // transform: translateX(-50%);
+        #featured-blog-card {
+            border-radius: 2rem;
+            margin: 0.55rem;
+            padding: 2rem;
+            color: white;
 
-    padding: 1rem;
-    // background: blue;
-    .panel {
-      width: 100%;
-      margin: 1rem 0rem;
-      background: #151515;
+            background: #151515;
+            .featured-blog-card__img-container {
+                @include media(">=828px") {
+                    height: 60rem !important;
+                }
+                overflow: hidden;
+                border-radius: 1rem;
+            }
+            img {
+                width: 100%;
+                border-radius: 1.5rem;
+            }
+            h4 {
+                font-size: 1.4rem;
 
-      .panel--content {
-        p {
-          font-size: 1.6rem;
-          color: white;
+                color: #ccc;
+                margin: 1rem 0rem;
+            }
+            h2 {
+                margin: 1rem 0rem;
+                font-size: 2.2rem;
+            }
+            p {
+                margin: 1rem 0rem;
+                font-size: 1.7rem;
+            }
+            button {
+                margin: 1rem 0rem;
+                font-size: 2.2rem;
+                padding: 1rem 1.5rem;
+            }
         }
-        padding: 0.75rem;
-      }
-      h5 {
-        padding: 0.6rem;
-        background: rgb(39, 39, 39);
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        font-size: 1.8rem;
-        color: #ccc;
-      }
 
-      input {
-        width: 90%;
-        min-width: 2rem;
-        font-size: 2.1rem;
+        #blog-content {
+            .line-container {
+                hr {
+                    top: -2rem;
+                }
+            }
 
-        padding: 0.25rem 0.25rem;
-      }
-      button {
-        margin: 1rem 0rem;
-        font-size: 2.2rem;
-        padding: 0.25rem 0.25rem;
-      }
+            color: white;
+            h1 {
+                font-size: 3.5rem;
+            }
+            h4 {
+                font-size: 1.4rem;
+            }
+            .tag-container {
+                padding: 1.5rem 0rem;
+                .tags {
+                    border: 1px solid transparent;
+                    // transition: all ease-in-out 300ms;
+                    &:hover {
+                        // transition: all ease-in-out 150ms;
+                        background: transparent;
+                        color: white;
+                        border: 1px solid white;
+                    }
+                    margin: 0.5rem 0.5rem;
+                    padding: 0.5rem 1.5rem;
+                    font-size: 1.8rem;
+
+                    color: white;
+                    background: #77baff;
+                    color: white;
+                    border-radius: 8.25rem;
+                }
+            }
+            img {
+                border-radius: 0.25rem;
+                width: 100%;
+            }
+            p {
+                line-height: 2.5rem;
+                margin: 0.55rem 0rem;
+                font-size: 1.6rem;
+            }
+            h2 {
+                margin: 1rem 0rem;
+                font-size: 2.2rem;
+            }
+        }
     }
-  }
+    #right-section {
+        // transition: all ease-in-out 800ms;
+
+        padding: 1rem;
+        // background: blue;
+        .panel {
+            width: 100%;
+            margin: 1rem 0rem;
+            background: #151515;
+
+            .panel--content {
+                p {
+                    font-size: 1.6rem;
+                    color: white;
+                }
+                padding: 0.75rem;
+            }
+            h5 {
+                padding: 0.6rem;
+                background: rgb(39, 39, 39);
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                font-size: 1.8rem;
+                color: #ccc;
+            }
+
+            input {
+                width: 90%;
+                min-width: 2rem;
+                font-size: 2.1rem;
+
+                padding: 0.25rem 0.25rem;
+            }
+            button {
+                margin: 1rem 0rem;
+                font-size: 2.2rem;
+                padding: 0.25rem 0.25rem;
+            }
+        }
+    }
 }
 #blogs-container {
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: space-between;
-  background: rgb(29, 33, 37);
-  @include media('<=500px') {
-    flex-direction: row-reverse;
-  }
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    // background: rgb(29, 33, 37);
+    @include media("<=500px") {
+        flex-direction: row-reverse;
+    }
 }
 
 #right-category-panel {
-  //   background: red;
-  width: 30rem;
-  min-width: 15rem;
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    li {
-      margin: 0.25rem;
-      width: 10rem;
-      //   background: blue;
-      a {
-        font-size: 1.7rem;
-        text-decoration: none;
-        color: white;
-      }
+    //   background: red;
+    width: 30rem;
+    min-width: 15rem;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        li {
+            margin: 0.25rem;
+            width: 10rem;
+            //   background: blue;
+            a {
+                font-size: 1.7rem;
+                text-decoration: none;
+                color: white;
+            }
+        }
     }
-  }
 }
 
 .blog-cards {
-  width: 40rem;
-  min-width: 25rem;
-  border-radius: 0.3rem;
-  margin: 0.55rem;
-  padding: 2rem;
-  color: white;
-  transition: all ease-in-out 300ms;
-  &:hover {
-    transform: translateY(-1.2rem);
-    transition: all ease-in-out 400ms;
-  }
+    @include media(">=600px") {
+        width: 40rem;
+    }
+    min-width: 20rem;
+    border-radius: 0.75rem;
+    margin: 0.55rem;
+    padding: 2rem;
+    color: white;
+    cursor: pointer;
+    // transition: all ease-in-out 300ms;
+    // &:hover {
+    //     transform: translateY(-1.2rem);
+    //     // transition: all ease-in-out 400ms;
+    // }
 
-  background: #151515;
-  img {
-    border-radius: 0.25rem;
-    width: 100%;
-  }
-  h4 {
-    color: #ccc;
-    margin: 1rem 0rem;
-  }
-  h2 {
-    margin: 1rem 0rem;
-    font-size: 2.2rem;
-  }
-  p {
-    margin: 1rem 0rem;
-    font-size: 1.6rem;
-  }
-  button {
-    margin: 1rem 0rem;
-    font-size: 1.8rem;
-    padding: 0.5rem 0.9rem;
-  }
+    overflow: hidden;
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px;
+    }
+    background: #151515;
+    img {
+        border-radius: 0.25rem;
+        width: 100%;
+    }
+    h4 {
+        font-size: 1.3rem;
+        color: #ccc;
+        margin: 1rem 0rem;
+    }
+    h2 {
+        margin: 1rem 0rem;
+        font-size: 2.8rem;
+    }
+    p {
+        margin: 1rem 0rem;
+        font-size: 1.7rem;
+    }
+    button {
+        margin: 1rem 0rem;
+        font-size: 1.8rem;
+        padding: 0.5rem 0.9rem;
+    }
 }
 
 #blog-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: center;
 }
 
 #blogs-container {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 #comment-section {
-  margin: 1rem 0rem;
-  background: black;
-  padding: 1.5rem 1rem;
-  border-radius: 0.25rem;
-  color: white;
-  textarea {
-    outline: none;
-    padding: 0rem 1rem;
-    font-size: 1.8rem;
-    color: black;
-    min-width: 100%;
-  }
-
-  .comments {
     margin: 1rem 0rem;
-    display: flex;
-    img {
-      border-radius: 50%;
-      height: 5rem;
-      width: 5rem;
+    background: black;
+    padding: 1.5rem 1rem;
+    border-radius: 0.25rem;
+    color: white;
+    textarea {
+        outline: none;
+        padding: 0rem 1rem;
+        font-size: 1.8rem;
+        color: black;
+        min-width: 100%;
     }
-    .comment-details {
-      padding-left: 0.5rem;
-      padding-top: 0.5rem;
-      .user-name {
-        font-size: 1.6rem;
-      }
-      .user-comment {
-        font-size: 1.4rem;
-      }
+
+    .comments {
+        margin: 1rem 0rem;
+        display: flex;
+        img {
+            border-radius: 50%;
+            height: 5rem;
+            width: 5rem;
+        }
+        .comment-details {
+            padding-left: 0.5rem;
+            padding-top: 0.5rem;
+            .user-name {
+                font-size: 1.6rem;
+            }
+            .user-comment {
+                font-size: 1.4rem;
+            }
+        }
     }
-  }
 }
 .line-container {
-  min-height: 1rem;
-  // background: blue;
-  position: relative;
-  hr {
-    background: rgb(94, 178, 234);
-    width: 8rem;
-    height: 0.4rem;
-    border: none;
-    position: absolute;
-  }
+    min-height: 1rem;
+    // background: blue;
+    position: relative;
+    hr {
+        background: rgb(94, 178, 234);
+        width: 8rem;
+        height: 0.4rem;
+        border: none;
+        position: absolute;
+    }
+}
+
+#blog-page-section {
+    width: 83%;
+    @include media("<=1420px") {
+        width: 90%;
+    }
+    @include media("<=1065px") {
+        width: 95%;
+    }
+    @include media("<=800px") {
+        width: 100%;
+    }
+}
+
+// ! detail blog page styles_____________________________
+
+#blog-page-detail {
+    p {
+        font-size: 1.9rem !important;
+    }
+    img {
+        border-radius: 0.75rem !important;
+    }
+    #left-section {
+        // margin-left: 50%;
+        // transform: translateX(-50%);
+        width: 55%;
+        @include media("<=1653px") {
+            width: 65%;
+        }
+        @include media("<=1553px") {
+            width: 70%;
+        }
+        @include media("<=1303px") {
+            width: 75%;
+        }
+        @include media("<=1000px") {
+            width: 85%;
+        }
+        @include media("<=900px") {
+            width: 90%;
+        }
+        @include media("<=800px") {
+            width: 100%;
+        }
+    }
 }

@@ -3,7 +3,8 @@
 @section('content')
 <main id="home-page">
     <!-- herosection starts here  -->
-    <div class="containerCenter" id="vanta-canvas">
+    <!-- <div class="containerCenter" id="vanta-canvas"> -->
+    <div class="containerCenter" >
         <div class="contentBlock" id="hero-section">
             <div class="left-division">
                 <div class="tag-block-wrapper">
@@ -14,8 +15,8 @@
                     </a> --}}
                 </div>
 
-                <h1 class="title-heading aeonik_bold">
-                    Introduction to Deerwalk Developers Community
+                <h1 class="title-heading source_700">
+                    Introduction to <br> Deerwalk Developers <br> Community
                 </h1>
 
                 <p class="inter_regular title-paragraph">
@@ -28,200 +29,86 @@
                 </button> --}}
             </div>
             <div class="right-division">
-                <img class="float" src="./assets/images/mockup/plane-laptop.png" alt="" />
-            </div>
+               
+                                                  
+                                                  
+                                          <div class="register-box">
+                                          
+                                          
+                                          <form action="">
+                                          
+                                          <h3 class='register-box-title source_700'>Register & Join Us</h3>
+                                              <input placeholder='Enter your Full Name' type="text">
+                                          
+                                          <input placeholder='Enter Your email'  type="email">
+                                          <input placeholder='Enter Your password'  type="password">
+                                          <button class='register-box-btn'>Register</button>
+                                          </form>
+                                          
+                                          </div>
+                                                      
+        </div>
         </div>
     </div>
-    <!-- herosection ends here  -->
 
-    {{-- <!-- info card section starts here  -->
-    <div class="containerCenter" id="info-card-section-wrapper">
-        <div class="contentBlock">
-            <section id="info-card-section">
-                <a class="info-card" href="https://google.com">
-                    <img class="card-img" src="./assets/images/pages/home/card/react.jpeg"
-                        alt="card template description-here" />
-                    <h2 class="aeonik_bold card-title">
-                        Add live pointers and avatars to your product
-                    </h2>
-                    <p class="inter_regular card-paragraph">
-                        Liveblocks is the easiest and fastest way to add real‑time
-                        pointers and avatars to your product.
-                    </p>
-                </a>
-                <a class="info-card" href="https://google.com">
-                    <img class="card-img" src="./assets/images/pages/home/card/react.jpeg"
-                        alt="card template description-here" />
-                    <h2 class="aeonik_bold card-title">
-                        Add live pointers and avatars to your product
-                    </h2>
-                    <p class="inter_regular card-paragraph">
-                        Liveblocks is the easiest and fastest way to add real‑time
-                        pointers and avatars to your product.
-                    </p>
-                </a>
-                <a class="info-card" href="https://google.com">
-                    <img class="card-img" src="./assets/images/pages/home/card/react.jpeg"
-                        alt="card template description-here" />
-                    <h2 class="aeonik_bold card-title">
-                        Add live pointers and avatars to your product
-                    </h2>
-                    <p class="inter_regular card-paragraph">
-                        Liveblocks is the easiest and fastest way to add real‑time
-                        pointers and avatars to your product.
-                    </p>
-                </a>
-                <a class="info-card" href="https://google.com">
-                    <img class="card-img" src="./assets/images/pages/home/card/react.jpeg"
-                        alt="card template description-here" />
-                    <h2 class="aeonik_bold card-title">
-                        Add live pointers and avatars to your product
-                    </h2>
-                    <p class="inter_regular card-paragraph">
-                        Liveblocks is the easiest and fastest way to add real‑time
-                        pointers and avatars to your product.
-                    </p>
-                </a>
-                <a class="info-card" href="https://google.com">
-                    <img class="card-img" src="./assets/images/pages/home/card/react.jpeg"
-                        alt="card template description-here" />
-                    <h2 class="aeonik_bold card-title">
-                        Add live pointers and avatars to your product
-                    </h2>
-                    <p class="inter_regular card-paragraph">
-                        Liveblocks is the easiest and fastest way to add real‑time
-                        pointers and avatars to your product.
-                    </p>
-                </a>
-                <a class="info-card" href="https://google.com">
-                    <img class="card-img" src="./assets/images/pages/home/card/react.jpeg"
-                        alt="card template description-here" />
-                    <h2 class="aeonik_bold card-title">
-                        Add live pointers and avatars to your product
-                    </h2>
-                    <p class="inter_regular card-paragraph">
-                        Liveblocks is the easiest and fastest way to add real‑time
-                        pointers and avatars to your product.
-                    </p>
-                </a>
-                <a class="info-card" href="https://google.com">
-                    <img class="card-img" src="./assets/images/pages/home/card/react.jpeg"
-                        alt="card template description-here" />
-                    <h2 class="aeonik_bold card-title">
-                        Add live pointers and avatars to your product
-                    </h2>
-                    <p class="inter_regular card-paragraph">
-                        Liveblocks is the easiest and fastest way to add real‑time
-                        pointers and avatars to your product.
-                    </p>
-                </a>
-                <a class="info-card" href="https://google.com">
-                    <img class="card-img" src="./assets/images/pages/home/card/react.jpeg"
-                        alt="card template description-here" />
-                    <h2 class="aeonik_bold card-title">
-                        Add live pointers and avatars to your product
-                    </h2>
-                    <p class="inter_regular card-paragraph">
-                        Liveblocks is the easiest and fastest way to add real‑time
-                        pointers and avatars to your product.
-                    </p>
-                </a>
-            </section>
-        </div>
-    </div>
-    <!-- info card section ends here  -->
+    
 
-    <div class="containerCenter">
-        <section class="contentBlock" id="feedback-section">
-            <div class="card">
-                <div class="card-header">
-                    <div class="left">
-                        <div class="avatar">
-                            <img src="./assets/images/avatar/kp.jfif" alt="" />
-                        </div>
-                        <div class="user-info">
-                            <h3 class="inter_regular">Kshitiz</h3>
-                            <h4 class="inter_regular">
-                                <a class="link" href="">@CEO</a>
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="social-link">
-                            <i class="fa fa-twitter"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-content inter_regular">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Natus qui laudantium nostrum possimus voluptates, molestias,
-                    est, quidem fugit quibusdam aperiam mollitia officiis
-                    corporis a voluptatum?
-                </div>
-                <a href="" class="visit-link link"> Visit</a>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <div class="left">
-                        <div class="avatar">
-                            <img src="./assets/images/avatar/kp.jfif" alt="" />
-                        </div>
-                        <div class="user-info">
-                            <h3 class="inter_regular">Kshitiz</h3>
-                            <h4 class="inter_regular">
-                                <a class="link" href="">@CEO</a>
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="social-link">
-                            <i class="fa fa-twitter"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-content inter_regular">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Natus qui laudantium nostrum possimus voluptates, molestias,
-                    est, quidem fugit quibusdam aperiam mollitia officiis
-                    corporis a voluptatum?
-                </div>
-                <a href="" class="visit-link link"> Visit</a>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <div class="left">
-                        <div class="avatar">
-                            <img src="./assets/images/avatar/kp.jfif" alt="" />
-                        </div>
-                        <div class="user-info">
-                            <h3 class="inter_regular">Kshitiz</h3>
-                            <h4 class="inter_regular">
-                                <a class="link" href="">@CEO</a>
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="social-link">
-                            <i class="fa fa-twitter"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-content inter_regular">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Natus qui laudantium nostrum possimus voluptates, molestias,
-                    est, quidem fugit quibusdam aperiam mollitia officiis
-                    corporis a voluptatum?
-                </div>
-                <a href="" class="visit-link link"> Visit</a>
-            </div>
-        </section> --}}
-    </div>
+    
 </main>
 
+<!-- subscribe to news lettersecction start herer -->
+<div class="containerCenter">
+
+<div class="contentBlock">
+
+
+
+<section id="newsLetterSection">
+    <section class="news-letter" id="News-letter">
+    <div class="news ">
+      <div class="container">
+        <h1 class="news-heading source_700">Subscribe To Get The Latest <br> News About Us</h1>
+        <p class="des how-de">Get the Latest news about ddc <br> email below to
+          get daliy update about us</p>
+
+        <form action="https://formspree.io/f/mlezlorj" method="post">
+          <input name="Email" id='email' type="email"  maxlength="50" required placeholder="Enter your email address">
+          <button type='submit' class="bt">Subscribe</button>
+
+
+
+        </form>
+      </div>
+    </div>
+
+  </section>
+</section>
+</div>
+
+</div>
+
+
+<!-- subscribe to news lettersecction start herer -->
+
+
+<!-- our team -->
+<div class="containerCenter">
+  
+<div class="contentBlock">
+<!-- sart  -->
+
+</div>
+</div>
+<!-- our team -->
+
+
+
 @endsection
+
+
+
+
+
 
 
 @section('scripts')

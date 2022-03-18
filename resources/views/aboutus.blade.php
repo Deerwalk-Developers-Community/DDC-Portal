@@ -6,8 +6,8 @@
     <div class="containerCenter">
         <div class="contentBlock" id="about-us-page">
             <section id="hero-section">
-                <div class="left-division">
-                    <h1>
+                <div class="left-division source_700">
+                    <h1 >
                         Hello, We're <br />
                         Deerwalk Developers <br/>
                         Community
@@ -19,16 +19,14 @@
             </section>
 
             <section id="history-section">
-                <h3>History</h3>
+                <h3 class='source_700'>History</h3>
                 <div class="line-container">
                     <hr />
                 </div>
                 <div id="article-container">
                     <article id="left-division">
-                        The Deerwalk Developers Community was formed in the year 2020 with the motive to make a group of
-                        enthusiastic learners and help them learn and grow together. During the first year of the
-                        Deerwalk Developers Community’s tenure, it had been actively involved in conducting events like
-                        Hour of Code, Tech Talks, and a few workshops and Facebook live sessions.
+                                             <img src="{{ asset('images/home/aboutus/girl-history.png') }}" alt="" />
+                
                     </article>
                     <article id="right-division">
                         With all these productive events, the community had a pretty good start even for its first year.
@@ -41,7 +39,7 @@
             </section>
 
             <section id="story-section">
-                <h3>WHAT WE PLAN</h3>
+                <h3 class='source_700'>WHAT WE PLAN</h3>
                 <div class="line-container">
                     <hr />
                 </div>
@@ -64,7 +62,7 @@
                 </div>
             </section>
             <section id="team-section">
-                <h3>Meet Our Team</h3>
+                <h3 class='source_700'>Meet Our Team</h3>
                 <div class="line-container">
                     <hr />
                 </div>
@@ -78,6 +76,11 @@
                         <div class="right">
                             <h2>{{ $member->name }}</h2>
                             <h4>{{ $member->role }}</h4>
+                            <ul class='meet-our-team-social'>
+                                <li><a class="hover-target" href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a class="hover-target" href=""><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a class="hover-target" href=""><i class="fab fa-github"></i></a></li>
+                            </ul>
                             {{-- <p>
                                 Lorem, ipsum dolor sit amet consectetur adipisicing
                             </p> --}}
@@ -94,7 +97,7 @@
             </section>
 
             <section id="faq-section">
-                <h3>Frequently Asked Questions</h3>
+                <h3 class='source_700'>Frequently Asked Questions</h3>
                 <div class="line-container">
                     <hr />
                 </div>
