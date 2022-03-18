@@ -6250,10 +6250,6 @@ a:visited {
 #about-us-page .line-container {
   margin-bottom: 5rem !important;
 }
-#about-us-page article,
-#about-us-page p {
-  line-height: 32px !important;
-}
 #about-us-page section {
   margin: 10rem 0rem !important;
 }
@@ -6326,7 +6322,6 @@ a:visited {
   font-size: 2.2rem;
   display: flex;
   flex-wrap: wrap;
-  line-height: 2.5rem;
   justify-content: space-around;
 }
 #history-section #article-container #left-division img {
@@ -6378,7 +6373,6 @@ a:visited {
 }
 #faq-section h1 {
   margin: 0;
-  line-height: 2;
   text-align: center;
 }
 #faq-section h2 {
@@ -6473,7 +6467,6 @@ a:visited {
 #story-section-container #left-division p {
   max-width: 85rem;
   font-size: 2.2rem;
-  line-height: 2.5rem;
 }
 @media (max-width: 1870px) {
   #story-section-container #left-division p {
@@ -7359,6 +7352,11 @@ footer {
   padding: 0.25rem;
   background: #555;
   font-size: 2rem;
+}
+
+.event-page__title {
+  font-size: 4rem;
+  text-align: center;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {

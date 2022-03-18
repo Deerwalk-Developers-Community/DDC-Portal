@@ -4,7 +4,6 @@
     }
     article,
     p {
-        line-height: 32px !important;
     }
     section {
         margin: 10rem 0rem !important;
@@ -78,7 +77,6 @@
         font-size: 2.2rem;
         display: flex;
         flex-wrap: wrap;
-        line-height: 2.5rem;
         justify-content: space-around;
         #left-division {
             img {
@@ -130,7 +128,6 @@
     }
     h1 {
         margin: 0;
-        line-height: 2;
         text-align: center;
     }
     h2 {
@@ -234,7 +231,6 @@
                 }
                 max-width: 85rem;
                 font-size: 2.2rem;
-                line-height: 2.5rem;
             }
         }
         #right-division {
