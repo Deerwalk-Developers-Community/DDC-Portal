@@ -56,7 +56,46 @@
     
 </main>
 
+<!-- subscribe to news lettersecction start herer -->
+<div class="containerCenter">
+
+<div class="contentBlock">
+
+
+
+<section id="newsLetterSection">
+    <section class="news-letter" id="News-letter">
+    <div class="news ">
+      <div class="container">
+        <h1 class="news-heading source_700">Subscribe To Get The Latest <br> News About Us</h1>
+        <p class="des how-de">Get the Latest news about digital Marketing to Your Pocket, drop your <br> email below to
+          get daliy update about us</p>
+
+        <form action="">
+          <input type="email"  maxlength="50" required placeholder="Enter your email address">
+          <button class="bt">Subscribe</button>
+
+
+
+        </form>
+      </div>
+    </div>
+
+  </section>
+</section>
+</div>
+
+</div>
+
+
+<!-- subscribe to news lettersecction start herer -->
+
 @endsection
+
+
+
+
+
 
 
 @section('scripts')
