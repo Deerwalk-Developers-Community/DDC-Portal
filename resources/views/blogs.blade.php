@@ -4,9 +4,42 @@
 <main id="blog-page">
     <!-- ****___________________________________body content  starts here  -->
 
+
+
     <div class="containerCenter">
         <div class="contentBlock" id="blogs-container">
-            <section id="left-section">
+<h1 class='blog-page__title source_700'>Blogs & Articles <br>
+</h1>
+
+
+
+<section id='blog-page-section' >
+<div id="left-section">
+
+<div id="featured-blog-card">
+<div class="featured-blog-card__img-container">
+
+    <img src="https://laxmanbaralblog.com/wp-content/uploads/2021/01/blogging-1.jpg" alt="" />
+</div>                   
+                    <h4>january 1,2021</h4>
+                    <h2>Featured Post Title</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Nisi voluptate molestias reiciendis numquam vitae. Soluta
+                      repellendus qui, dolorum, laudantium sint quas quo optio
+                      sequi atque libero ad obcaecati, velit temporibus eos ab
+                      cum earum accusamus accusantium culpa iste corporis
+                      nostrum maxime perspiciatis architecto. In aperiam illum
+                      ut iste, rem iure.
+                    </p>
+                    <a href="./blog.html">
+                      <button>Read more</button>
+                    </a>
+                  </div>
+</div>
+
+            
+
                 @if ($featured)
                 <div id="featured-blog-card">
                     <img src="{{ Storage::url('images/'. $featured->image) }}" alt="" />

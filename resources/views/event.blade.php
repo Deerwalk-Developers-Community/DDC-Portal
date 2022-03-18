@@ -39,6 +39,11 @@
             </div>
         </div>
     </div>
+
+
+    <h1 class='event-page__title source_700'>Events & WorkShops <br>
+
+
     <div class="containerCenter">
         <div class="contentBlock">
             <section id="event-card-section">

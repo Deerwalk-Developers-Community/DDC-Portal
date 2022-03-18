@@ -1,41 +1,41 @@
 .cursor {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  border: 1px solid white;
-  transition: all 200ms ease-out;
-  position: fixed;
-  pointer-events: none;
-  left: 0;
-  top: 0;
-  transform: translate(calc(-50% + 15px), -50%);
-  z-index: 10000;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid white;
+    // transition: all 200ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+    z-index: 10000;
 }
 
 .cursor2 {
-  z-index: 10000;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background-color: white;
-  opacity: 0.3;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  transition: width 0.3s, height 0.3s, opacity 0.3s;
+    z-index: 10000;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: white;
+    opacity: 0.3;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    // transition: width 0.3s, height 0.3s, opacity 0.3s;
 }
 
 .hover {
-  height: 100px;
-  width: 100px;
-  // background: linear-gradient(90deg, rgb(0, 149, 254), white);
-  animation: animate 20s linear infinite;
+    height: 100px;
+    width: 100px;
+    // background: linear-gradient(90deg, rgb(0, 149, 254), white);
+    animation: animate 20s linear infinite;
 
-  opacity: 0.5;
+    opacity: 0.5;
 }
 
 .cursorinnerhover {
-  width: 50px;
-  height: 50px;
-  opacity: 0.5;
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
 }

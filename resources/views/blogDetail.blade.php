@@ -1,7 +1,7 @@
 @extends('layouts.home')
 
 @section('content')
-<main id="blog-page">
+<main id="blog-page-detail">
     <!-- ****___________________________________body content  starts here  -->
 
     <div class="containerCenter">
