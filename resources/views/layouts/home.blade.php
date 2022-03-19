@@ -189,8 +189,8 @@
                                         </a>
 
                                         <div class="hr"></div>
-                                        <h6>1120 Lorem ipsum dolor sit amet, KC 179050, DDC Place.</h6>
-                                        <h6>+01 2345 6789 12<span>|</span>+01 2345 6789 12</h6>
+                                        <h6>Deerwalk Developer Community, Jaya Bageshwori Road</h6>
+                                        <h6>Kathmandu 44600<span>|</span>Nepal</h6>
                                         <div class="contact-social">
                                             <ul>
                                                 <li><a class="hover-target" href=""><i
@@ -199,12 +199,13 @@
                                                             class="fab fa-linkedin-in"></i></a></li>
                                                 <li><a class="hover-target" href=""><i class="fab fa-github"></i></a>
                                                 </li>
-                                                <li><a class="hover-target" href=""><i class="fab fa-behance"></i></a>
-                                                </li>
-                                                <li><a class="hover-target" href=""><i
-                                                            class="fab fa-pinterest-p"></i></a></li>
+                                                {{-- <li><a class="hover-target" href=""><i
+                                                            class="fab fa-behance"></i></a>
+                                                </li> --}}
+                                                {{-- <li><a class="hover-target" href=""><i
+                                                            class="fab fa-pinterest-p"></i></a></li> --}}
                                             </ul>
-                                            <p>Copyright &copy; 2019 All Rights Reserved.</p>
+                                            <p>Copyright &copy; 2019 All Rights Reserved, DDC.</p>
 
                                         </div>
                                     </div>
