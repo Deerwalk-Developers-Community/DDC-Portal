@@ -16,7 +16,7 @@
         </div>
 
         <h1 class="title-heading source_700">
-          Introduction to <br> Deerwalk Developers <br> Community
+          Welcome to <br> Deerwalk Developers <br> Community
         </h1>
 
         <p class="inter_regular title-paragraph">
@@ -87,7 +87,7 @@
           Check out our video
         </u>
         <h3 class="source_700">
-          Watch our video
+          Sneak peak of hour of code
         </h3>
         <button>Watch Now</button>
 
