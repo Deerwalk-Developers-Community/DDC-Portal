@@ -6651,6 +6651,36 @@ a:visited {
 #blog-page-detail #left-section #blog-content {
   color: white;
 }
+#blog-page #left-section #blog-content .header_container,
+#blog-page-detail #left-section #blog-content .header_container {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 684px) {
+  #blog-page #left-section #blog-content .header_container,
+#blog-page-detail #left-section #blog-content .header_container {
+    flex-wrap: wrap;
+  }
+}
+#blog-page #left-section #blog-content .header_right h3,
+#blog-page-detail #left-section #blog-content .header_right h3 {
+  color: white;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  background: #77baff;
+  font-size: 1.8rem;
+}
+#blog-page #left-section #blog-content .header_right h3 span,
+#blog-page-detail #left-section #blog-content .header_right h3 span {
+  color: black;
+}
+@media (max-width: 684px) {
+  #blog-page #left-section #blog-content .header_right h3,
+#blog-page-detail #left-section #blog-content .header_right h3 {
+    margin: 1.25rem 0rem;
+    font-size: 1.7rem;
+  }
+}
 #blog-page #left-section #blog-content .line-container hr,
 #blog-page-detail #left-section #blog-content .line-container hr {
   top: -2rem;
