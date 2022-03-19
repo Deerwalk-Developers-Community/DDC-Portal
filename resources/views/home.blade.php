@@ -37,12 +37,12 @@
 
           <form action="">
 
-            <h3 class='register-box-title source_700'>Register & Join Us</h3>
+            <h3 class='register-box-title source_700'>Request for workshops</h3>
             <input placeholder='Enter your Full Name' type="text">
 
             <input placeholder='Enter Your email' type="email">
-            <input placeholder='Enter Your password' type="password">
-            <button class='register-box-btn'>Register</button>
+            <input placeholder='Workshop Name' type="text">
+            <button class='register-box-btn'>Request</button>
           </form>
 
         </div>
