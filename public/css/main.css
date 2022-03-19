@@ -7210,12 +7210,29 @@ footer {
   color: white;
 }
 
+.video_section-container {
+  display: flex;
+  justify-content: center;
+}
+
 .video_section {
   border-radius: 2rem;
   display: flex;
-  width: 100rem;
+  width: 150rem;
   background-color: #131212;
   overflow: hidden;
+  flex-wrap: wrap;
+}
+@media (max-width: 1015px) {
+  .video_section {
+    flex-direction: column;
+    width: 50%;
+  }
+}
+@media (max-width: 800px) {
+  .video_section {
+    width: 100%;
+  }
 }
 .video_section iframe {
   border: none;
@@ -7224,12 +7241,28 @@ footer {
 .video_section .left-division {
   width: 50%;
 }
+@media (max-width: 1015px) {
+  .video_section .left-division {
+    width: 100%;
+  }
+}
 .video_section .right-division {
   display: flex;
   width: 50%;
+  padding: 5rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 1015px) {
+  .video_section .right-division {
+    width: 100%;
+  }
+}
+@media (min-width: 1015px) {
+  .video_section .right-division {
+    padding: 8rem;
+  }
 }
 .video_section .right-division u {
   font-size: 1.8rem;
@@ -7239,6 +7272,16 @@ footer {
   margin-top: 2rem;
   color: white;
   font-size: 5.5rem;
+}
+@media (max-width: 1540px) {
+  .video_section .right-division h3 {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 1015px) {
+  .video_section .right-division h3 {
+    font-size: 3rem;
+  }
 }
 .video_section .right-division button {
   font-size: 2.2rem;
