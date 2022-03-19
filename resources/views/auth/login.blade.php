@@ -84,13 +84,15 @@
 <main>
     <!-- ***********************************BODY  CONTENT STARTS HERE-->
 
-    <section id="login-section">
+                              <section id="login-section">
         <form id="login-form" action="{{ route('login') }}" method="post">
             @csrf
             <div id="circle">
                 <img src="{{ asset('images/logo/logo.png') }}" alt="" />
             </div>
 
+            <h1 class='login-page_title source_700'>Login</h1>
+ 
             <label for="email">
                 <input name="email" id="email" placeholder="email" type="text" value="{{ old('email') }}" required />
             </label>
