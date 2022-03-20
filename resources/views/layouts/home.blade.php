@@ -37,7 +37,7 @@
                     <a class="icon icon-study hvr-underline-from-center" href="{{ route('blogs') }}">Blogs</a>
                 </li>
                 <li>
-                    <a class="icon icon-study hvr-underline-from-center" href="{{ route('register') }}">SignUp</a>
+                    <a class="icon icon-study hvr-underline-from-center" href="{{ route('register') }}">Register</a>
                 </li>
                 <li>
                     <a class="icon icon-photo hvr-underline-from-center" href="{{ route('aboutus') }}">About Us</a>
@@ -114,6 +114,25 @@
                                     </li>
                                 </ul>
                                 <ul id="right-nav">
+
+
+                                    <li style="padding:1rem;">
+                                        @auth
+                                        <form action="{{ route('admin.dashboard') }}">
+                                            @csrf
+                                            <button class="inter_regular">
+                                                Dashboard
+                                            </button>
+                                        </form>
+                                        @endauth
+
+                                        @guest
+                                        <span></span>
+                                        @endguest
+                                    </li>
+
+
+
                                     <li style="padding:1rem;">
                                         @auth
                                         <form action="{{ route('logout') }}" method="post">
@@ -132,16 +151,17 @@
                                     </li>
                                     @guest
                                     <li style="padding:1rem;">
-                                        
+
 
 
                                         <a href="{{ route('register') }}">
-                                            <button type="submit" class="inter_regular">
-                                                Sign Up
+                                            <button class="inter_regular">
+                                                Register
                                             </button>
                                         </a>
 
                                     </li>
+
                                     @endguest
                                 </ul>
                             </nav>
@@ -169,8 +189,8 @@
                                         </a>
 
                                         <div class="hr"></div>
-                                        <h6>1120 Lorem ipsum dolor sit amet, KC 179050, DDC Place.</h6>
-                                        <h6>+01 2345 6789 12<span>|</span>+01 2345 6789 12</h6>
+                                        <h6>Deerwalk Developer Community, Jaya Bageshwori Road</h6>
+                                        <h6>Kathmandu 44600<span>|</span>Nepal</h6>
                                         <div class="contact-social">
                                             <ul>
                                                 <li><a class="hover-target" href=""><i
@@ -179,12 +199,13 @@
                                                             class="fab fa-linkedin-in"></i></a></li>
                                                 <li><a class="hover-target" href=""><i class="fab fa-github"></i></a>
                                                 </li>
-                                                <li><a class="hover-target" href=""><i class="fab fa-behance"></i></a>
-                                                </li>
-                                                <li><a class="hover-target" href=""><i
-                                                            class="fab fa-pinterest-p"></i></a></li>
+                                                {{-- <li><a class="hover-target" href=""><i
+                                                            class="fab fa-behance"></i></a>
+                                                </li> --}}
+                                                {{-- <li><a class="hover-target" href=""><i
+                                                            class="fab fa-pinterest-p"></i></a></li> --}}
                                             </ul>
-                                            <p>Copyright &copy; 2019 All Rights Reserved.</p>
+                                            <p>Copyright &copy; 2019 All Rights Reserved, DDC.</p>
 
                                         </div>
                                     </div>

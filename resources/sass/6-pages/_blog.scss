@@ -70,6 +70,29 @@
         }
 
         #blog-content {
+            .header_container {
+                display: flex;
+                @include media("<685px") {
+                    flex-wrap: wrap;
+                }
+                justify-content: space-between;
+            }
+            .header_right {
+                h3 {
+                    color: white;
+                    span {
+                        color: black;
+                    }
+                    border-radius: 0.25rem;
+                    padding: 0.25rem 0.75rem;
+                    background: #77baff;
+                    font-size: 1.8rem;
+                    @include media("<685px") {
+                        margin: 1.25rem 0rem;
+                        font-size: 1.7rem;
+                    }
+                }
+            }
             .line-container {
                 hr {
                     top: -2rem;
