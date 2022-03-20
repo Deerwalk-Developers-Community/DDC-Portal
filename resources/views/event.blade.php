@@ -55,8 +55,7 @@
 
         <div class='featured_events-img-container'>
             <img src="
-            https://cdn4.vectorstock.com/i/1000x1000/58/48/layout-banner-template-design-for-sport-event-2019-vector-23505848.jpg
-            " alt="">
+            https://laxmanbaralblog.com/wp-content/uploads/2021/01/blogging-1.jpg            " alt="">
 
         </div>
         <div class="featured_events-footer">
