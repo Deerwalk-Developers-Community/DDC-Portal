@@ -1,6 +1,12 @@
 #event-page {
-    width: 100%;
+    width: 70%;
+    @include media("<=720px") {
+        width: 100%;
+    }
+    transform: translateX(-50%);
+    margin-left: 50%;
     color: white;
+    // background-color: red;
     hr {
         margin-top: 5rem;
         border: 0.1rem solid #323131;
@@ -158,4 +164,60 @@
 .event-page__title {
     font-size: 4rem;
     text-align: center;
+}
+
+.featured_events {
+    margin: 0rem 0.75rem;
+    background-color: #131212;
+    padding: 2.45rem 0rem;
+
+    font-size: 1.8rem;
+    span {
+        font-size: 1.4rem;
+        color: #c1c1c1;
+    }
+}
+
+.featured_events-img-container {
+    width: 100%;
+    max-height: 45rem;
+    border-radius: 0.75rem;
+
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+}
+
+.featured_events-footer {
+    h2 {
+        margin: 1rem 0rem;
+    }
+    p {
+        margin-top: 2rem;
+    }
+    button {
+        border-radius: 0.75rem;
+        padding: 0.7rem 1.5rem;
+        background-color: #66a8e4;
+        &:hover {
+            background-color: #498ac7e5;
+        }
+        color: white;
+        margin: 2rem 0rem;
+        a {
+            color: inherit;
+            font-size: 3rem;
+        }
+    }
+
+    padding: 1rem 2rem;
+}
+
+#past-event_title {
+    margin-top: 5rem;
+    padding: 1rem 0rem;
+    font-size: 3rem;
+    padding-left: 2rem;
+    border-left: 5px solid #66a8e4;
 }
