@@ -7068,6 +7068,12 @@ a:visited {
   color: #6497c7;
 }
 
+.login-page_title {
+  color: white;
+  letter-spacing: 0.25rem;
+  font-size: 3rem;
+}
+
 section,
 footer {
   margin-top: 2.5rem;

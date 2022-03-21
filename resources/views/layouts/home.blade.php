@@ -112,6 +112,12 @@
                                             About Us
                                         </a>
                                     </li>
+                                    <li>
+                                        <a class="inter_regular hvr-underline-from-center" style="padding:1.25rem;"
+                                            href="{{ route('aboutus') }}">
+                                            Rules
+                                        </a>
+                                    </li>
                                 </ul>
                                 <ul id="right-nav">
 
