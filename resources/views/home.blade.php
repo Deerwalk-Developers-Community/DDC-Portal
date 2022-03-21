@@ -92,7 +92,12 @@
         <h3 class="source_700">
           Sneak peak of hour of code
         </h3>
-        <button>Watch Now</button>
+        <a href="
+        https://www.youtube.com/watch?v=snuwIQuktS8&ab_channel=DeerwalkDevelopersCommunity
+        " target="_blank">
+
+          <button>Watch Now</button>
+        </a>
 
       </div>
 
