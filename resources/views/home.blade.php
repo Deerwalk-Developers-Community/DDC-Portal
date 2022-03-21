@@ -97,10 +97,10 @@
         " target="_blank">
 
           <button>Watch Now</button>
+          {{-- btn --}}
         </a>
 
       </div>
-
 
 
     </section>

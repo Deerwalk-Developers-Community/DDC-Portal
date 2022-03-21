@@ -211,7 +211,7 @@
                                                 {{-- <li><a class="hover-target" href=""><i
                                                             class="fab fa-pinterest-p"></i></a></li> --}}
                                             </ul>
-                                            <p>Copyright &copy; 2019 All Rights Reserved, DDC.</p>
+                                            <p>Copyright &copy; 2022 All Rights Reserved, DDC.</p>
 
                                         </div>
                                     </div>
