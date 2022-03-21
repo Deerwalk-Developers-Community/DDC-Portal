@@ -56,7 +56,7 @@
         <div class='featured_events-img-container'>
             <img src="
             https://laxmanbaralblog.com/wp-content/uploads/2021/01/blogging-1.jpg            " alt="">
-
+2
         </div>
         <div class="featured_events-footer">
 

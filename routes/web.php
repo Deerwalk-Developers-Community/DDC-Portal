@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\MembersController;
 use App\Http\Controllers\Admin\PostsController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\BlogsController;
+use App\Http\Controllers\CodeOfConductController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\User\NotificationsController;
@@ -32,6 +33,7 @@ Route::get('/events/{id}', [EventController::class, 'show'])->name('events.show'
 Route::get('/aboutus', [AboutUsController::class, 'index'])->name('aboutus');
 Route::get('/blogs', [BlogsController::class, 'index'])->name('blogs');
 Route::get('/blogs/{id}', [BlogsController::class, 'blogDetailView'])->name('blogs.show');
+Route::get('/code-of-conduct/', [CodeOfConductController::class, 'index'])->name('code-of-conduct');
 
 Auth::routes();
 

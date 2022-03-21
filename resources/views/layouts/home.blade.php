@@ -114,7 +114,7 @@
                                     </li>
                                     <li>
                                         <a class="inter_regular hvr-underline-from-center" style="padding:1.25rem;"
-                                            href="{{ route('aboutus') }}">
+                                            href="{{ route('code-of-conduct') }}">
                                             Rules
                                         </a>
                                     </li>
