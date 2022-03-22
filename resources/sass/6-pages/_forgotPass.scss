@@ -1,0 +1,55 @@
+#forgotPass_main {
+    width: 100%;
+    h3 {
+        text-align: center;
+        color: white;
+        font-size: 3rem;
+        letter-spacing: 0.45rem;
+        margin-bottom: 1rem;
+    }
+    // background-color: red;
+    display: flex;
+    justify-content: center;
+    form {
+        border-radius: 0.75rem;
+        font-size: 2rem;
+        color: white;
+        margin: 5rem 0rem;
+        padding: 3rem 1.75rem;
+        input {
+            padding-left: 0.75rem;
+            margin-top: 1rem;
+            border-radius: 0.15rem;
+            outline: none;
+            border: 1px solid transparent;
+            background-color: -internal-light-dark(
+                rgb(232, 240, 254),
+                rgba(155, 167, 189, 0.4)
+            ) !important;
+            color: black;
+            height: 4rem;
+            width: 100%;
+        }
+        button {
+            border-radius: 0.15rem;
+            padding: 1rem;
+            margin: 1rem 0rem;
+            width: 100%;
+            background-color: #66a8e4;
+            color: white;
+            &:hover {
+                background-color: #6497c7;
+            }
+
+            &:active {
+                transition: all ease-in-out 400ms;
+                transform: scale(0.95);
+            }
+        }
+        width: 65rem;
+        @media only screen and (max-width: 600px) {
+            width: 95vw !important;
+        }
+        background-color: #131212;
+    }
+}
