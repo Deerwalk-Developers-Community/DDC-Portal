@@ -199,11 +199,15 @@
                                         <h6>Kathmandu 44600<span>|</span>Nepal</h6>
                                         <div class="contact-social">
                                             <ul>
-                                                <li><a class="hover-target" href=""><i
+                                                <li><a class="hover-target"
+                                                        href="https://www.facebook.com/ddevcommunity"><i
                                                             class="fab fa-facebook-f"></i></a></li>
-                                                <li><a class="hover-target" href=""><i
+                                                <li><a class="hover-target"
+                                                        href="https://www.linkedin.com/company/d-dev-community/"><i
                                                             class="fab fa-linkedin-in"></i></a></li>
-                                                <li><a class="hover-target" href=""><i class="fab fa-github"></i></a>
+                                                <li><a class="hover-target"
+                                                        href="https://github.com/Deerwalk-Developers-Community"><i
+                                                            class="fab fa-github"></i></a>
                                                 </li>
                                                 {{-- <li><a class="hover-target" href=""><i
                                                             class="fab fa-behance"></i></a>
@@ -211,7 +215,7 @@
                                                 {{-- <li><a class="hover-target" href=""><i
                                                             class="fab fa-pinterest-p"></i></a></li> --}}
                                             </ul>
-                                            <p>Copyright &copy; 2019 All Rights Reserved, DDC.</p>
+                                            <p>Copyright &copy; 2022 All Rights Reserved, DDC.</p>
 
                                         </div>
                                     </div>
