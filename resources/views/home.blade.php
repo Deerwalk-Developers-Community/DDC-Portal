@@ -72,10 +72,13 @@
       <div class="left-division">
 
 
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/OQF8WHbOFQU" title="YouTube video player"
+
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/snuwIQuktS8" title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
+
+
         {{--
         <iframe width="500" height="415" src="https://www.youtube.com/watch?v=MUddtVKe3qQ">
         </iframe> --}}
@@ -89,10 +92,15 @@
         <h3 class="source_700">
           Sneak peak of hour of code
         </h3>
-        <button>Watch Now</button>
+        <a href="
+        https://www.youtube.com/watch?v=snuwIQuktS8&ab_channel=DeerwalkDevelopersCommunity
+        " target="_blank">
+
+          <button>Watch Now</button>
+          {{-- btn --}}
+        </a>
 
       </div>
-
 
 
     </section>

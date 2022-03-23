@@ -15,7 +15,7 @@
   \*****************************/
 /***/ (() => {
 
-eval("// require('./bootstrap');\n// require('./home');//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvYXBwLmpzP2NlZDYiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi8vIHJlcXVpcmUoJy4vYm9vdHN0cmFwJyk7XG4vLyByZXF1aXJlKCcuL2hvbWUnKTsiXSwiZmlsZSI6Ii4vcmVzb3VyY2VzL2pzL2FwcC5qcy5qcyIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/js/app.js\n");
+eval("// require('./bootstrap');\n// require('./home');//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvYXBwLmpzP2NlZDYiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi8vIHJlcXVpcmUoJy4vYm9vdHN0cmFwJyk7XHJcbi8vIHJlcXVpcmUoJy4vaG9tZScpOyJdLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvYXBwLmpzLmpzIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/js/app.js\n");
 
 /***/ }),
 

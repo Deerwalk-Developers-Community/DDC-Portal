@@ -1,0 +1,32 @@
+#rule_page {
+    padding: 5rem 0rem;
+    ul {
+        li {
+            margin: 2.5rem 0rem;
+            font-size: 1.8rem;
+            color: white;
+        }
+    }
+}
+.rules-container {
+    flex-direction: column;
+}
+.coc_title {
+    margin-top: 2rem;
+    margin-bottom: 1.25rem;
+    color: white;
+    font-size: 3rem;
+}
+.coc_paragraph {
+    color: rgb(219, 219, 219);
+    font-size: 2rem;
+}
+
+.coc_title-main {
+    margin-top: 2rem;
+    margin-bottom: 1.25rem;
+    color: white;
+    font-size: 4rem;
+    padding-left: 1rem;
+    border-left: 0.5rem solid #4daae9;
+}

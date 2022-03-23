@@ -55,20 +55,22 @@
 
         <div class='featured_events-img-container'>
             <img src="
-            https://laxmanbaralblog.com/wp-content/uploads/2021/01/blogging-1.jpg            " alt="">
+            
+            https://cdn.discordapp.com/attachments/876335754421366864/955892857087082616/comingUPlaede.JPG
+            
 
+            " alt="">
         </div>
         <div class="featured_events-footer">
 
 
-            <h2 class='consolas_regular'>Event Name</h2>
+            <h2 class='consolas_regular'>Comming Soon</h2>
             <span id='featured_event-date'>17 Mar,2022</span>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt fugiat nesciunt unde eius quidem
-                aliquid
-                excepturi repellendus dolorem perspiciatis magnam?</p>
+            <p>Our next event will be as amazing as it had been.So, stay tuned & we will soon launch our next event .
+            </p>
 
             <button>
-                <a href="">Read More</a>
+                <a href="https://www.facebook.com/ddevcommunity">Read More</a>
             </button>
         </div>
 

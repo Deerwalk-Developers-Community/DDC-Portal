@@ -7,9 +7,9 @@
         <div class="contentBlock" id="about-us-page">
             <section id="hero-section">
                 <div class="left-division source_700">
-                    <h1 >
+                    <h1>
                         Hello, We're <br />
-                        Deerwalk Developers <br/>
+                        Deerwalk Developers <br />
                         Community
                     </h1>
                 </div>
@@ -25,8 +25,8 @@
                 </div>
                 <div id="article-container">
                     <article id="left-division">
-                                             <img src="{{ asset('images/home/aboutus/girl-history.png') }}" alt="" />
-                
+                        <img src="{{ asset('images/home/aboutus/girl-history.png') }}" alt="" />
+
                     </article>
                     <article id="right-division">
                         With all these productive events, the community had a pretty good start even for its first year.
@@ -38,7 +38,7 @@
                 </div>
             </section>
 
-            <section id="story-section">
+            <section id="story-section" class='reveal'>
                 <h3 class='source_700'>WHAT WE PLAN</h3>
                 <div class="line-container">
                     <hr />

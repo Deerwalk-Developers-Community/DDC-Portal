@@ -7068,6 +7068,12 @@ a:visited {
   color: #6497c7;
 }
 
+.login-page_title {
+  color: white;
+  letter-spacing: 0.25rem;
+  font-size: 3rem;
+}
+
 section,
 footer {
   margin-top: 2.5rem;
@@ -8582,4 +8588,91 @@ body,
 }
 #register-page form button:hover {
   background: #4296e4af;
+}
+
+#rule_page {
+  padding: 5rem 0rem;
+}
+#rule_page ul li {
+  margin: 2.5rem 0rem;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.rules-container {
+  flex-direction: column;
+}
+
+.coc_title {
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  color: white;
+  font-size: 3rem;
+}
+
+.coc_paragraph {
+  color: #dbdbdb;
+  font-size: 2rem;
+}
+
+.coc_title-main {
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  color: white;
+  font-size: 4rem;
+  padding-left: 1rem;
+  border-left: 0.5rem solid #4daae9;
+}
+
+#forgotPass_main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#forgotPass_main h3 {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  letter-spacing: 0.45rem;
+  margin-bottom: 1rem;
+}
+#forgotPass_main form {
+  border-radius: 0.75rem;
+  font-size: 2rem;
+  color: white;
+  margin: 5rem 0rem;
+  padding: 3rem 1.75rem;
+  width: 65rem;
+  background-color: #131212;
+}
+#forgotPass_main form input {
+  padding-left: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 0.15rem;
+  outline: none;
+  border: 1px solid transparent;
+  background-color: -internal-light-dark(#e8f0fe, rgba(155, 167, 189, 0.4)) !important;
+  color: black;
+  height: 4rem;
+  width: 100%;
+}
+#forgotPass_main form button {
+  border-radius: 0.15rem;
+  padding: 1rem;
+  margin: 1rem 0rem;
+  width: 100%;
+  background-color: #66a8e4;
+  color: white;
+}
+#forgotPass_main form button:hover {
+  background-color: #6497c7;
+}
+#forgotPass_main form button:active {
+  transition: all ease-in-out 400ms;
+  transform: scale(0.95);
+}
+@media only screen and (max-width: 600px) {
+  #forgotPass_main form {
+    width: 95vw !important;
+  }
 }
