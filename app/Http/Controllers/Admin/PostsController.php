@@ -76,9 +76,13 @@ class PostsController extends Controller
 
         // check and store image
         if ($request->hasFile('image')) {
-
-            $image_name = $request->image->store("public/images");
-            $image_name = explode("/", $image_name)[2];
+            $image = request('image');
+            $tmpFilePath=sys_get_temp_dir().'/'.uniqid();
+            file_put_contents($tmpFilePath, $image);
+            $imageName = time().'.'.rand(1,100000000).'.'.'jpg';
+            $tmpFile=new File($tmpFilePath);
+            $tmpFile->move(public_path('uploads/post-images'), $imageName);
+            $image_name = "uploads/post-images/".$imageName;
         }
 
 
