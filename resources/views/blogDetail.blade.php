@@ -39,7 +39,7 @@
 
 
 
-                    <img src="{{ Storage::url('images/'. $blog->image) }}" alt="" />
+                    <img src="{{$blog->image}}" alt="" />
                     <p>
                         {!! $blog->content !!}
                     </p>

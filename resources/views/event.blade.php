@@ -95,7 +95,7 @@
                         <div class="workshop-avatar-ico">
                             @if ($event->image)
 
-                            <img src="{{ Storage::url('images/' . $event->image) }}" alt="" />
+                            <img src="{{$event->image}}" alt="" />
 
                             @endif
                         </div>
@@ -105,7 +105,7 @@
                         <h4>{{ $event->created_at->format('d M, Y') }}</h4>
                         @if ($event->image)
 
-                        <img src="{{ Storage::url('images/' . $event->image) }}" alt="" />
+                        <img src="{{$event->image}}" alt="" />
 
                         @endif
 

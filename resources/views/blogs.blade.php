@@ -58,7 +58,7 @@
                 <div id="blog-card-container">
                     @foreach ($blogs as $blog)
                     <div class="blog-cards">
-                        <img src="{{ Storage::url('images/'. $blog->image) }}" alt="" />
+                        <img src="{{$blog->image}}" alt="" />
                         <h4>{{ $blog->created_at->format('d M, Y') }}</h4>
                         <h2>{{ $blog->title }}</h2>
                         <p>
