@@ -16,7 +16,7 @@
         <!-- Navbar -->
         <nav class="bg-secondary h-screen p-2 text-white rounded-r-lg sticky top-0">
             <figure class="p-5 w-60">
-                <a href="/admin">
+                <a href="{{ route('user.dashboard') }}">
                     <img src="{{ asset('images/logo/white.png') }}" alt="logo">
                 </a>
             </figure>
