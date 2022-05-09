@@ -124,12 +124,30 @@
 
                                     <li style="padding:1rem;">
                                         @auth
-                                        <form action="{{ route('admin.dashboard') }}">
+                                        {{-- <form action="{{ route('admin.dashboard') }}">
                                             @csrf
                                             <button class="inter_regular">
                                                 Dashboard
                                             </button>
-                                        </form>
+                                        </form> --}}
+                                        @if (auth()->user()->role == 1 or auth()->user()->role == 2) 
+                                        <a href="{{ route('admin.dashboard') }}">
+                                            <button class="inter_regular">
+                                                Dashboard
+                                            </button>
+
+                                        </a>
+                                            
+                                        @else
+                                        <a href="{{ route('user.dashboard') }}">
+                                            <button class="inter_regular">
+                                                Dashboard
+                                            </button>
+
+                                        </a>
+                                            
+                                        @endif
+
                                         @endauth
 
                                         @guest
