@@ -37,14 +37,14 @@
                     <a class="icon icon-study hvr-underline-from-center" href="{{ route('blogs') }}">Blogs</a>
                 </li>
                 <li>
-                    <a class="icon icon-study hvr-underline-from-center" href="{{ route('register') }}">Register</a>
-                </li>
-                <li>
                     <a class="icon icon-photo hvr-underline-from-center" href="{{ route('aboutus') }}">About Us</a>
                 </li>
                 @auth
                 <li>
-                    <form action="{{ route('logout') }}" method="post">
+                    <a class="icon icon-study hvr-underline-from-center" href="{{ route('user.dashboard') }}">Dashboard</a>
+                </li>
+                <li>
+                    <form class="icon icon-photo hvr-underline-from-center" action="{{ route('logout') }}" method="post">
                         @csrf
                         <button type="submit">Logout</button>
                     </form>
@@ -53,6 +53,9 @@
                 @guest
                 <li>
                     <a class="icon icon-wallet hvr-underline-from-center" href="{{ route('login') }}">Login</a>
+                </li>
+                <li>
+                    <a class="icon icon-study hvr-underline-from-center" href="{{ route('register') }}">Register</a>
                 </li>
                 @endguest
             </ul>
@@ -124,12 +127,30 @@
 
                                     <li style="padding:1rem;">
                                         @auth
-                                        <form action="{{ route('admin.dashboard') }}">
+                                        {{-- <form action="{{ route('admin.dashboard') }}">
                                             @csrf
                                             <button class="inter_regular">
                                                 Dashboard
                                             </button>
-                                        </form>
+                                        </form> --}}
+                                        @if (auth()->user()->role == 1 or auth()->user()->role == 2) 
+                                        <a href="{{ route('admin.dashboard') }}">
+                                            <button class="inter_regular">
+                                                Dashboard
+                                            </button>
+
+                                        </a>
+                                            
+                                        @else
+                                        <a href="{{ route('user.dashboard') }}">
+                                            <button class="inter_regular">
+                                                Dashboard
+                                            </button>
+
+                                        </a>
+                                            
+                                        @endif
+
                                         @endauth
 
                                         @guest

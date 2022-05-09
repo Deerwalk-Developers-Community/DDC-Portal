@@ -42,7 +42,7 @@ Route::prefix('u')->middleware(['auth', 'auth.memberonly'])->name('user.')->grou
 
     Route::get('/', function () {
         return redirect()->route('user.notifications');
-    });
+    })->name('dashboard');
     Route::get('/notifications', [NotificationsController::class, 'index'])->name('notifications');
 
     // posts

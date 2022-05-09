@@ -119,7 +119,7 @@
                 <!-- User profile  -->
                 <div class="flex flex-row justify-end items-center">
                     <span class="font-bold text-2xl">{{ auth()->user()->name }}</span>
-                    <span class="w-10 h-10 block rounded-full bg-gray-400 ml-3"></span>
+                    {{-- <span class="w-10 h-10 block rounded-full bg-gray-400 ml-3"></span> --}}
                 </div>
 
                 <div>

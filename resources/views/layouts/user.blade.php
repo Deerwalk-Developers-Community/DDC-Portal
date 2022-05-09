@@ -16,7 +16,7 @@
         <!-- Navbar -->
         <nav class="bg-secondary h-screen p-2 text-white rounded-r-lg sticky top-0">
             <figure class="p-5 w-60">
-                <a href="/admin">
+                <a href="{{ route('user.dashboard') }}">
                     <img src="{{ asset('images/logo/white.png') }}" alt="logo">
                 </a>
             </figure>
@@ -112,7 +112,7 @@
                 <!-- User profile  -->
                 <div class="flex flex-row justify-end items-center">
                     <span class="font-bold text-2xl">{{ auth()->user()->name }}</span>
-                    <span class="w-10 h-10 block rounded-full bg-gray-400 ml-3"></span>
+                    {{-- <span class="w-10 h-10 block rounded-full bg-gray-400 ml-3"></span> --}}
                 </div>
 
                 <div>
