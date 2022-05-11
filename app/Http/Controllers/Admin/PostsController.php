@@ -76,16 +76,8 @@ class PostsController extends Controller
 
         // check and store image
         if ($request->hasFile('image')) {
-     
-            $fileName = time() . '_' . $request->file('image')->getClientOriginalName();
-            $filePath = $request->file('image')->storeAs('uploads', $fileName, 'public');
-            $image_name = '/storage/' . $filePath;
-//             $tmpFilePath=sys_get_temp_dir().'/'.uniqid();
-//             file_put_contents($tmpFilePath, $image);
-//             $imageName = time().'.'.rand(1,100000000).'.'.'jpg';
-//             $tmpFile=new File($tmpFilePath);
-//             $tmpFile->move(public_path('uploads/post-images'), $imageName);
-//             $image_name = "uploads/post-images/".$imageName;
+            $image_name = $request->image->store("images");
+            $image_name = explode("/", $image_name)[1];
         }
 
 
@@ -174,12 +166,12 @@ class PostsController extends Controller
             $prev_image = $post->image;
 
             if ($prev_image != null)
-                Storage::unlink('public/images/' . $prev_image);
+                Storage::unlink('images/' . $prev_image);
 
 
 
-            $image_name = $request->image->store("public/images");
-            $image_name = explode("/", $image_name)[2];
+            $image_name = $request->image->store("images");
+            $image_name = explode("/", $image_name)[1];
 
             $post->image = $image_name;
         }

@@ -84,7 +84,7 @@
 <main>
     <!-- ***********************************BODY  CONTENT STARTS HERE-->
 
-                              <section id="login-section">
+    <section id="login-section">
         <form id="login-form" action="{{ route('login') }}" method="post">
             @csrf
             <div id="circle">
@@ -92,20 +92,25 @@
             </div>
 
             <h1 class='login-page_title source_700'>Login</h1>
- 
+
             <label for="email">
                 <input name="email" id="email" placeholder="email" type="text" value="{{ old('email') }}" required />
             </label>
-            @error('email')
-            {{ $message }}
-            @enderror
+            <div class="form-error">
+                @error('email')
+                {{ $message }}
+                @enderror
+
+            </div>
 
             <label for="password">
                 <input name="password" id="password" placeholder="password" type="password" required />
             </label>
-            @error('password')
-            {{ $message }}
-            @enderror
+            <div class="form-error">
+                @error('password')
+                {{ $message }}
+                @enderror
+            </div>
             <button type="submit">Login</button>
         </form>
         {{-- <p>

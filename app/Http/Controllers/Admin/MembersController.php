@@ -57,10 +57,11 @@ class MembersController extends Controller
         $image_name = '';
 
 
+
         if ($request->hasFile('image')) {
             $image_name = time() . "-" . $request->name . "." . $request->image->extension();
 
-            $request->image->storeAs("public/images", $image_name);
+            $request->image->storeAs("images", $image_name);
         }
 
         Member::create([
@@ -110,11 +111,11 @@ class MembersController extends Controller
             $prev_image = $member->image;
 
             if ($prev_image != "")
-                Storage::unlink('public/images/' . $prev_image);
+                Storage::delete('images/' . $prev_image);
 
             $image_name = time() . "-" . $request->name . "." . $request->image->extension();
 
-            $request->image->storeAs("public/images", $image_name);
+            $request->image->storeAs("images", $image_name);
 
             $member->image = $image_name;
         }

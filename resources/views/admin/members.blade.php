@@ -32,7 +32,7 @@
         <section class="flex flex-row">
             <div class="p-3">
                 <img class="w-28 h-28 block rounded-full bg-gray-400 mt-3 mx-auto cursor-pointer" @if ($member->image !=
-                "") src="{{ Storage::url('images/'. $member->image) }}" @endif id="profile-image"></img>
+                "") src="{{ '/storage/images/'. $member->image }}" @endif id="profile-image"></img>
             </div>
             <div class="flex flex-col justify-center">
                 <div class="font-bold">{{ $member->name }}</div>

@@ -21,9 +21,11 @@
                             </div>
                             <h4>Posted on {{ $blog->created_at->format('d M, Y') }} by {{ $blog->user->name }}</h4>
                             <div class="tag-container">
+                                @if (strlen($blog->tags) > 0)
                                 @foreach (explode(' ', $blog->tags) as $tag)
                                 <span class="tags"> {{ $tag }} </span>
                                 @endforeach
+                                @endif
                             </div>
                         </div>
                         <div class="header_right">
@@ -39,7 +41,7 @@
 
 
 
-                    <img src="{{$blog->image}}" alt="" />
+                    <img src="{{ '/storage/images/'. $blog->image}}" alt="" />
                     <p>
                         {!! $blog->content !!}
                     </p>

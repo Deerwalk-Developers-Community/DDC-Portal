@@ -87,8 +87,8 @@ class PostsController extends Controller
         // check and store image
         if ($request->hasFile('image')) {
 
-            $image_name = $request->image->store("public/images");
-            $image_name = explode("/", $image_name)[2];
+            $image_name = $request->image->store("images");
+            $image_name = explode("/", $image_name)[1];
         }
 
 
@@ -164,10 +164,10 @@ class PostsController extends Controller
             $prev_image = $post->image;
 
             if ($prev_image != null)
-                Storage::unlink('public/images/' . $prev_image);
+                Storage::unlink('images/' . $prev_image);
 
             $image_name = $request->image->store("public/images");
-            $image_name = explode("/", $image_name)[2];
+            $image_name = explode("/", $image_name)[1];
 
             $post->image = $image_name;
         }

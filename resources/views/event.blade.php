@@ -7,20 +7,6 @@
     <hr />
     <div class="containerCenter">
         <div class="contentBlock">
-            {{-- <section id="filter-event-section">
-                <ul>
-                    <li class="filter-menu"><button>Popular</button></li>
-                    <li class="filter-menu"><button>Popular</button></li>
-                    <li class="filter-menu"><button>Popular</button></li>
-                    <li class="filter-menu"><button>Popular</button></li>
-                    <li id="search-event-field">
-                        <label>
-                            <input type="text" placeholder="type and Enter ..." id="txt" />
-                            <button>Explore</button>
-                        </label>
-                    </li>
-                </ul>
-            </section> --}}
         </div>
     </div>
 
@@ -89,13 +75,13 @@
 
             <section id="event-card-section">
                 @foreach ($events as $event)
-                <a href="https://google.com">
+                <a href="{{ route('events.show', ['id'=>$event->id]) }}">
 
                     <div class="event-card">
                         <div class="workshop-avatar-ico">
                             @if ($event->image)
 
-                            <img src="{{$event->image}}" alt="" />
+                            <img src="{{"/storage/images/".$event->image}}" alt="" />
 
                             @endif
                         </div>
@@ -105,7 +91,7 @@
                         <h4>{{ $event->created_at->format('d M, Y') }}</h4>
                         @if ($event->image)
 
-                        <img src="{{$event->image}}" alt="" />
+                        <img src="{{"/storage/images/".$event->image}}" alt="" />
 
                         @endif
 
