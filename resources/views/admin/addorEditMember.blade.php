@@ -13,10 +13,16 @@
         @csrf
         <div class="flex flex-col md:flex-row">
             <div class="p-7 w-1/3">
-                <img class="w-28 h-28 block rounded-full bg-gray-400 mt-3 mx-auto cursor-pointer" @if ($member->image ?? false !=
-                "") src="{{ Storage::url('images/'. $member->image) }}" @endif
+                <img class="w-28 h-28 block rounded-full bg-gray-400 mt-3 mx-auto cursor-pointer" @if ($member->image ??
+                false !=
+                "") src="{{ '/storage/images/'. $member->image }}" @endif
                 id="profile-image"></img>
                 <input type="file" src="" alt="" class="hidden" id="profile-image-input" name="image">
+                @error('image')
+                <div>
+                    {{ $message }}
+                </div>
+                @enderror
             </div>
 
             <div class="flex flex-col">
@@ -57,11 +63,13 @@
                 </section>
 
 
-                <button type="submit" class="bg-primary font-bold text-white p-3 mt-7 rounded">@if ($edit)
+                <button type="submit" class="bg-primary font-bold text-white p-3 mt-7 rounded">
+                    @if ($edit)
                     Edit
                     @else
                     Add
-                    @endif</button>
+                    @endif
+                </button>
 
             </div>
         </div>

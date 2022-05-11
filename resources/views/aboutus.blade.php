@@ -71,25 +71,29 @@
                     @foreach ($members as $member)
                     <div class="member-cards">
                         <div class="left">
-                            <img src="{{ Storage::url('images/'. $member->image) }}" alt="" />
+                            <img src="{{ '/storage/images/'. $member->image }}" alt="" />
                         </div>
                         <div class="right">
                             <h2>{{ $member->name }}</h2>
-                            <h4>{{ $member->role }}</h4>
+                            <h4>
+                                @switch($member->role)
+                                    @case('president')
+                                        President
+                                        @break
+                                    @case('vice-president')
+                                        Vice President
+                                        @break
+                                    @case('executive-member')
+                                        Executive member
+                                        @break
+                                    @default
+                                        {{$member->role}}
+                                @endswitch
+                            </h4>
                             <ul class='meet-our-team-social'>
-                                <li><a class="hover-target" href=""><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a class="hover-target" href=""><i class="fab fa-linkedin-in"></i></a></li>
-                                <li><a class="hover-target" href=""><i class="fab fa-github"></i></a></li>
+                                <li><a class="hover-target" href="{{ $member->linkedin }}"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a class="hover-target" href="{{ $member->github }}"><i class="fab fa-github"></i></a></li>
                             </ul>
-                            {{-- <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing
-                            </p> --}}
-
-                            <div class="social-links-container">
-                                <a href=""><img src="./assets/images/icons/facebook.png" alt="" /></a <a href=""><img
-                                    src="./assets/images/icons/linkedin.png" alt="" /></a <a href=""><img
-                                    src="./assets/images/icons/insta.png" alt="" /></a </div>
-                            </div>
                         </div>
                     </div>
 

@@ -7074,6 +7074,10 @@ a:visited {
   font-size: 3rem;
 }
 
+.form-error {
+  color: white;
+}
+
 section,
 footer {
   margin-top: 2.5rem;
