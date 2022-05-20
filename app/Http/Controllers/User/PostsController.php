@@ -164,7 +164,7 @@ class PostsController extends Controller
             $prev_image = $post->image;
 
             if ($prev_image != null)
-                Storage::unlink('images/' . $prev_image);
+                Storage::delete('images/' . $prev_image);
 
             $image_name = $request->image->store("public/images");
             $image_name = explode("/", $image_name)[1];
