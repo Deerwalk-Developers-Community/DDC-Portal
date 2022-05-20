@@ -166,7 +166,7 @@ class PostsController extends Controller
             $prev_image = $post->image;
 
             if ($prev_image != null)
-                Storage::unlink('images/' . $prev_image);
+                Storage::delete('images/' . $prev_image);
 
 
 
