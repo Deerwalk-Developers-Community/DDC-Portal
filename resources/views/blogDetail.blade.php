@@ -22,7 +22,7 @@
                             <h4>Posted on {{ $blog->created_at->format('d M, Y') }} by {{ $blog->user->name }}</h4>
                             <div class="tag-container">
                                 @if (strlen($blog->tags) > 0)
-                                @foreach (explode(' ', $blog->tags) as $tag)
+                                @foreach (explode(',', $blog->tags) as $tag)
                                 <span class="tags"> {{ $tag }} </span>
                                 @endforeach
                                 @endif
