@@ -10,7 +10,7 @@ class EventController extends Controller
     //
     public function index(Request $request) {
 
-        $events = Post::where('type', 'event')->where('published', true)->get();
+        $events = Post::where('type', 'event')->where('published', true)->orderBy('created_at', 'desc')->get();
 
         $data = [
             'events' => $events

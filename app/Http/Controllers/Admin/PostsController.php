@@ -35,7 +35,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::where('deleted', false)->get();
+        $posts = Post::where('deleted', false)->orderBy('created_at', 'desc')->get();
 
         $data = [
             'posts' => $posts

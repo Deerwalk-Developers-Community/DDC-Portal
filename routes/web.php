@@ -56,9 +56,10 @@ Route::prefix('u')->middleware(['auth', 'auth.memberonly'])->name('user.')->grou
 // admin
 Route::prefix('admin')->middleware(['auth', 'auth.admin'])->name('admin.')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-
+    
     Route::resource('posts', PostsController::class);
     Route::post('/posts/{id}/{publish}', [PostsController::class, 'publish'])->name('posts.publish');
+    Route::post('/posts/featured', [DashboardController::class, 'storeFeaturedPost'])->name('posts.featured');
 
     Route::get('/members', [MembersController::class, 'index'])->name('members');
     Route::get('/members/executive/add', [MembersController::class, 'addExecutive'])->name('members-executive-add');
