@@ -46,7 +46,7 @@ class PostsController extends Controller
 
     public function publishedPostView(Request $request)
     {
-        $posts = $request->user()->posts->where('published', true);
+        $posts = $request->user()->posts->where('published', true)->sortByDesc('created_at');
 
         $data = [
             'posts' => $posts,

@@ -16,44 +16,27 @@
             <section id='blog-page-section'>
                 <div id="left-section">
 
+                    @if ($featured)
                     <div id="featured-blog-card">
                         <div class="featured-blog-card__img-container">
 
-                            <img src="https://laxmanbaralblog.com/wp-content/uploads/2021/01/blogging-1.jpg" alt="" />
+                            <img src="{{ 'storage/images/'. $featured->image }}" alt="" />
                         </div>
-                        <h4>january 1,2021</h4>
-                        <h2>Featured Post Title</h2>
+                        <h4>{{ $featured->created_at->format('d M, Y') }}</h4>
+                        <h2>{{ $featured->title }}</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Nisi voluptate molestias reiciendis numquam vitae. Soluta
-                            repellendus qui, dolorum, laudantium sint quas quo optio
-                            sequi atque libero ad obcaecati, velit temporibus eos ab
-                            cum earum accusamus accusantium culpa iste corporis
-                            nostrum maxime perspiciatis architecto. In aperiam illum
-                            ut iste, rem iure.
+                            {{ Illuminate\Support\Str::words($featured->description, 100, $end='...') }}
                         </p>
-                        <a href="./blog.html">
+                        <a href="{{ route('blogs.show', ['id'=>$featured->id]) }}">
                             <button>Read more</button>
                         </a>
                     </div>
+
+                    @endif
                 </div>
 
 
 
-                @if ($featured)
-                <div id="featured-blog-card">
-                    <img src="{{ '/storage/images/'. $featured->image }}" alt="" />
-                    <h4>{{ $featured->created_at->format('d M, Y') }}</h4>
-                    <h2>{{ $featured->title }}</h2>
-                    <p>
-                        {{ $featured->description }}
-                    </p>
-                    <a href="{{ route('blog-detail', ['id'=>$featured->id]) }}">
-                        <button>Read more</button>
-                    </a>
-                </div>
-
-                @endif
 
                 <div id="blog-card-container">
                     @foreach ($blogs as $blog)
