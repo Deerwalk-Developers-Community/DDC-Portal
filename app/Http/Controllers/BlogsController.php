@@ -10,10 +10,15 @@ class BlogsController extends Controller
 {
     public function index() {
         $featured = FeaturedBlog::all()->first();
-        $blogs = Post::where('type', 'blog')->where('published', true)->where('id', '!=', $featured->post->id)->orderBy('created_at', 'desc')->get();
+        $blogs = Post::where('type', 'blog')->where('published', true)->orderBy('created_at', 'desc')->get();
+
+        if ($featured != null) {
+            $blogs = $blogs->where('id', '!=', $featured->post->id);
+        }
+
         $data = [
             'blogs' => $blogs,
-            'featured' => $featured->post
+            'featured' => $featured != null ? $featured->post : null
         ];
 
 

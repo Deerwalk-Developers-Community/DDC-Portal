@@ -19,7 +19,7 @@
             <select name="featured" id="featured" class="w-full p-1 mt-5">
                 <option value=""></option>
                 @foreach ($posts as $post)
-                <option value="{{ $post->id }}" @if ($featured->id == $post->id) selected @endif>
+                <option value="{{ $post->id }}" @if ($featured != null && $featured->id == $post->id) selected @endif>
                     {{ $post->title }} - {{ $post->user->name }}
                 </option>
 
