@@ -61,11 +61,11 @@
             <td class="py-3 px-6 text-center w-2/8">
                 <button class="text-primary font-bold mx-2 cursor-pointer publish-button" data-id="{{ $post->id }}"
                     data-publish="{{ !$post->published }}">{{ $post->published ? 'Unpublish' : 'Publish'
-                    }}</a>
-                    <a href="{{ route('admin.posts.edit', ['post'=> $post->id]) }}"
-                        class="text-primary font-bold mx-2 cursor-pointer">Edit</a>
-                    <button class="text-red-600 font-bold mx-2 cursor-pointer delete-button"
-                        data-id="{{ $post->id }}">Delete</button>
+                    }}</button>
+                <a href="{{ route('admin.posts.edit', ['post'=> $post->id]) }}"
+                    class="text-primary font-bold mx-2 cursor-pointer">Edit</a>
+                <button class="text-red-600 font-bold mx-2 cursor-pointer delete-button"
+                    data-id="{{ $post->id }}">Delete</button>
             </td>
         </tr>
 
