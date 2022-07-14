@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+
+  web:
+    build: 
+      context: .
+    restart: always
+    env_file: 
+      - "./ddc-portal/.env"
+    ports:
+      - "80:80"
+    volumes:
+      - "./ddc-portal:/var/www/html/"
+      - "./docker/apache2.conf:/etc/apache2/apache2.conf"
+
+    depends_on:
+      - db
+
+    
+
+  db:
+    image: mariadb
+    restart: always
+    env_file:
+      - "./ddc-portal/.env"
+    volumes:
+      - "dbdata:/var/lib/mysql"
+
+
+volumes:
+  dbdata:
